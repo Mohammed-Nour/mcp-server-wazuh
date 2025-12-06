@@ -85,7 +85,7 @@ For enhanced threat intelligence capabilities, the Wazuh MCP Server can be combi
 
 1.  **Download the Binary:**
     *   Go to the [Releases page](https://github.com/gbrigandi/mcp-server-wazuh/releases) of the `mcp-server-wazuh` GitHub repository.
-    *   Download the appropriate binary for your operating system (e.g., `mcp-server-wazuh-linux-amd64`, `mcp-server-wazuh-macos-amd64`, `mcp-server-wazuh-windows-amd64.exe`).
+    *   Download the appropriate binary for your operating system (e.g., `mcp-server-wazuh-linux-amd64`, `mcp-server-wazuh-macos-amd64`, `mcp-server-wazuh-macos-arm64`, `mcp-server-wazuh-windows-amd64.exe`).
     *   Make the downloaded binary executable (e.g., `chmod +x mcp-server-wazuh-linux-amd64`).
     *   (Optional) Rename it to something simpler like `mcp-server-wazuh` and move it to a directory in your system's `PATH` for easier access.
 
@@ -247,7 +247,7 @@ sequenceDiagram
     
     ClientApp->>+WazuhMCPServer: (stdio) MCP Request (tools/call for wazuhAlerts)
     WazuhMCPServer->>WazuhMCPServer: Parse MCP Request
-    WazuhMCPServer->>+WazuhAPI: Request Wazuh Alerts (with WAZUH_USER, WAZUH_PASS)
+    WazuhMCPServer->>+WazuhAPI: Request Wazuh Alerts (with WAZUH_API_USERNAME, WAZUH_API_PASSWORD)
     WazuhAPI-->>-WazuhMCPServer: Wazuh Alert Data (JSON)
     WazuhMCPServer->>WazuhMCPServer: Transform Wazuh Alerts to MCP Format
     WazuhMCPServer-->>-ClientApp: (stdout) MCP Response (alerts)
@@ -261,9 +261,9 @@ sequenceDiagram
 4.  **Processing:**
     *   The server parses the MCP command.
     *   If the command requires fetching data from Wazuh (e.g., "get latest alerts"):
-        *   The server connects to the Wazuh API (authenticating if necessary using configured credentials like `WAZUH_USER`, `WAZUH_PASS`).
+        *   The server connects to the Wazuh API (authenticating if necessary using configured credentials like `WAZUH_API_USERNAME`, `WAZUH_API_PASSWORD`).
         *   It fetches the required data (e.g., security alerts).
-        *   The server's transformation logic (`src/mcp/transform.rs`) processes each alert, mapping Wazuh fields to MCP fields.
+        *   The server's transformation logic processes each alert, mapping Wazuh fields to MCP format.
     *   If the command is internal (e.g., a status check specific to the MCP server), it processes it directly.
 5.  The server sends an MCP-formatted JSON response (e.g., transformed alerts, command acknowledgment, or error messages) to the application via its `stdout`.
 6.  The application reads and processes the MCP response from the server's `stdout`.
@@ -310,8 +310,8 @@ Example interaction flow:
           "tools": {}
         },
         "serverInfo": {
-          "name": "rmcp",
-          "version": "0.1.5"
+          "name": "mcp-server-wazuh",
+          "version": "0.2.5"
         },
         "instructions": "This server provides tools to interact with a Wazuh SIEM instance for security monitoring and analysis.\nAvailable tools:\n- 'get_wazuh_alert_summary': Retrieves a summary of Wazuh security alerts. Optionally takes 'limit' parameter to control the number of alerts returned (defaults to 100)."
       }
