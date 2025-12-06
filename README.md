@@ -57,7 +57,13 @@ The Wazuh MCP Server provides direct access to Wazuh security data through natur
 
 ### Threat Intelligence Gathering and Response
 
-For enhanced threat intelligence capabilities, the Wazuh MCP Server can be combined with the **[Cortex MCP Server](https://github.com/gbrigandi/mcp-server-cortex/)** to create a powerful security analysis ecosystem.
+For enhanced threat intelligence and incident response capabilities, the Wazuh MCP Server can be combined with complementary security MCP servers:
+
+| Server | Description |
+|--------|-------------|
+| **[Cortex MCP Server](https://github.com/gbrigandi/mcp-server-cortex/)** | Artifact analysis and IOC enrichment via 140+ analyzers |
+| **[TheHive MCP Server](https://github.com/gbrigandi/mcp-server-thehive/)** | Case management and incident response orchestration |
+| **[MISP MCP Server](https://github.com/gbrigandi/mcp-server-misp/)** | Threat intelligence sharing and IOC lookup |
 
 **Enhanced Capabilities with Cortex Integration:**
 *   **Artifact Analysis:** Automatically analyze suspicious files, URLs, domains, and IP addresses found in Wazuh alerts using Cortex's 140+ analyzers
@@ -66,12 +72,28 @@ For enhanced threat intelligence capabilities, the Wazuh MCP Server can be combi
 *   **Multi-Source Intelligence:** Leverage analyzers for reputation checks, malware analysis, domain analysis, and behavioral analysis
 *   **Response Orchestration:** Use analysis results to inform automated response actions and alert prioritization
 
+**Enhanced Capabilities with TheHive Integration:**
+*   **Case Creation:** Automatically create cases in TheHive from Wazuh alerts for structured incident tracking
+*   **Alert Correlation:** Link related Wazuh alerts to existing cases for comprehensive incident timelines
+*   **Task Management:** Create and track investigation tasks based on alert severity and type
+*   **Observable Management:** Extract and manage IOCs as observables within case investigations
+*   **Collaboration:** Enable security team collaboration on incidents detected by Wazuh
+
+**Enhanced Capabilities with MISP Integration:**
+*   **IOC Lookup:** Check if indicators from Wazuh alerts are known in your threat intelligence database
+*   **Threat Context:** Retrieve event context, threat actor attribution, and MITRE ATT&CK mappings for IOCs
+*   **False Positive Reduction:** Validate IOCs against MISP warninglists to reduce false positives
+*   **Sighting Tracking:** Record and query sighting history to assess IOC prevalence
+*   **Galaxy Exploration:** Access threat actor profiles, malware families, and attack patterns
+
 **Example Workflow:**
 1. Wazuh detects a suspicious file hash or network connection in an alert
-2. The AI assistant automatically queries the Cortex MCP Server to analyze the artifact using multiple analyzers
-3. Results from VirusTotal, hybrid analysis, domain reputation, and other sources are correlated
-4. The combined intelligence provides context for incident response decisions
-5. Findings can be used to update Wazuh rules or trigger additional monitoring
+2. The AI assistant queries the MISP MCP Server to check if the IOC is known in threat intelligence
+3. If unknown, the Cortex MCP Server analyzes the artifact using multiple analyzers
+4. Results from VirusTotal, hybrid analysis, domain reputation, and other sources are correlated
+5. A case is created in TheHive via the TheHive MCP Server to track the investigation
+6. The combined intelligence provides context for incident response decisions
+7. Findings can be used to update Wazuh rules or trigger additional monitoring
 
 ## Requirements
 
