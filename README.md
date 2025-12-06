@@ -105,7 +105,12 @@ For enhanced threat intelligence capabilities, the Wazuh MCP Server can be combi
     ```bash
     git clone https://github.com/gbrigandi/mcp-server-wazuh.git
     cd mcp-server-wazuh
+
+    # Build with stdio transport only (default)
     cargo build --release
+
+    # Build with HTTP transport support
+    cargo build --release --features http
     ```
     The binary will be available at `target/release/mcp-server-wazuh`.
 
@@ -218,18 +223,72 @@ The "Required: Yes" indicates that these variables are essential for the server 
     -   Edit the `.env` file with your specific Wazuh API details (e.g. `WAZUH_API_HOST`, `WAZUH_API_PORT`).
 3.  **Build:**
     ```bash
+    # Build with default features (stdio transport only)
     cargo build
+
+    # Build with HTTP transport support
+    cargo build --features http
     ```
 4.  **Run:**
     ```bash
+    # Run with stdio transport (default)
     cargo run
+
+    # Run with HTTP transport (requires --features http during build)
+    cargo run --features http -- --transport http
+
     # Or use the run script (which might set up stdio mode):
     # ./run.sh
     ```
 
+## Transport Modes
+
+The Wazuh MCP Server supports two transport modes for communication with MCP clients:
+
+### stdio Transport (Default)
+
+The stdio transport is the default mode, ideal for local integrations where the MCP client launches the server as a child process. Communication occurs via stdin/stdout using JSON-RPC 2.0 messages.
+
+```bash
+# Run with stdio transport (default)
+mcp-server-wazuh
+
+# Explicit stdio transport
+mcp-server-wazuh --transport stdio
+```
+
+### Streamable HTTP Transport
+
+The HTTP transport enables remote server deployment, allowing MCP clients to connect over the network. This mode implements the MCP Streamable HTTP specification with Server-Sent Events (SSE) support.
+
+```bash
+# Run with HTTP transport on default address (127.0.0.1:8080)
+mcp-server-wazuh --transport http
+
+# Run with custom host and port
+mcp-server-wazuh --transport http --host 0.0.0.0 --port 3000
+```
+
+**HTTP Transport Features:**
+- Single `/mcp` endpoint for all MCP communication
+- POST requests with JSON-RPC messages
+- Server-Sent Events (SSE) for streaming responses
+- Session management with `MCP-Session-Id` header
+- Protocol version: `2025-06-18` (MCP spec supported by rmcp 0.10)
+
+**Security Note:** By default, HTTP transport binds to `127.0.0.1` (localhost only). When binding to `0.0.0.0` for remote access, ensure proper network security measures (firewall rules, reverse proxy with TLS, etc.) are in place.
+
+### CLI Arguments
+
+| Argument | Description | Default |
+|----------|-------------|---------|
+| `--transport` | Transport mode: `stdio` or `http` | `stdio` |
+| `--host` | HTTP server bind address (only for http transport) | `127.0.0.1` |
+| `--port` | HTTP server port (only for http transport) | `8080` |
+
 ## Architecture
 
-The server is built using the [rmcp](https://crates.io/crates/rmcp) framework and facilitates communication between MCP clients (e.g., Claude Desktop, IDE extensions) and the Wazuh MCP Server via stdio transport. The server interacts with the Wazuh Indexer and Wazuh Manager APIs to fetch security alerts and other data.
+The server is built using the [rmcp](https://crates.io/crates/rmcp) framework (v0.10+) and facilitates communication between MCP clients (e.g., Claude Desktop, IDE extensions) and the Wazuh MCP Server. The server supports both stdio and Streamable HTTP transports and interacts with the Wazuh Indexer and Wazuh Manager APIs to fetch security alerts and other data.
 
 ```mermaid
 sequenceDiagram
@@ -284,7 +343,7 @@ Example interaction flow:
       "id": 0,
       "method": "initialize",
       "params": {
-        "protocolVersion": "2024-11-05",
+        "protocolVersion": "2025-06-18",
         "capabilities": {
           "sampling": {},
           "roots": { "listChanged": true }
@@ -303,7 +362,7 @@ Example interaction flow:
       "jsonrpc": "2.0",
       "id": 1,
       "result": {
-        "protocolVersion": "2024-11-05",
+        "protocolVersion": "2025-06-18",
         "capabilities": {
           "prompts": {},
           "resources": {},
@@ -311,7 +370,7 @@ Example interaction flow:
         },
         "serverInfo": {
           "name": "mcp-server-wazuh",
-          "version": "0.2.5"
+          "version": "0.3.0"
         },
         "instructions": "This server provides tools to interact with a Wazuh SIEM instance for security monitoring and analysis.\nAvailable tools:\n- 'get_wazuh_alert_summary': Retrieves a summary of Wazuh security alerts. Optionally takes 'limit' parameter to control the number of alerts returned (defaults to 100)."
       }

@@ -4,7 +4,7 @@
 //! from the Wazuh Manager.
 
 use rmcp::{
-    Error as McpError,
+    ErrorData as McpError,
     model::{CallToolResult, Content},
     schemars,
 };

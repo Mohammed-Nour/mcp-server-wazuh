@@ -1,6 +1,6 @@
 [package]
 name = "mcp-server-wazuh"
-version = "0.2.5"
+version = "0.3.0"
 edition = "2021"
 description = "Wazuh SIEM MCP Server"
 authors = ["Gianluca Brigandi <gbrigand@gmail.com>"]
@@ -10,7 +10,7 @@ readme = "README.md"
 
 [dependencies]
 wazuh-client = "0.1.8"
-rmcp = { version = "0.1.5", features = ["server", "transport-io"] }
+rmcp = { version = "0.10", features = ["server", "transport-io"] }
 tokio = { version = "1", features = ["full"] }
 reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
 serde = { version = "1.0", features = ["derive"] }
@@ -18,8 +18,9 @@ serde_json = "1.0"
 anyhow = "1.0"
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
-schemars = "0.8"
+schemars = "1.0"
 clap = { version = "4.5", features = ["derive"] }
+axum = { version = "0.8", optional = true }
 dotenv = "0.15"
 thiserror = "2.0"
 chrono = "0.4.41"
@@ -36,4 +37,9 @@ regex = "1.11"
 tokio-test = "0.4"
 serde_json = "1.0"
 tempfile = "3.0"
+reqwest = { version = "0.12", features = ["json"] }
+
+[features]
+default = []
+http = ["dep:axum", "rmcp/transport-streamable-http-server"]
 

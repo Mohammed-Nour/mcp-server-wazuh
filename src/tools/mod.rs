@@ -10,7 +10,7 @@ pub mod stats;
 pub mod vulnerabilities;
 
 use rmcp::model::{CallToolResult, Content};
-use rmcp::Error as McpError;
+use rmcp::ErrorData as McpError;
 
 pub trait ToolModule {
     fn format_error(component: &str, operation: &str, error: &dyn std::fmt::Display) -> String {

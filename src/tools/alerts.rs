@@ -4,7 +4,7 @@
 //! from the Wazuh Indexer.
 
 use rmcp::{
-    Error as McpError,
+    ErrorData as McpError,
     model::{CallToolResult, Content},
     tool,
 };
@@ -36,7 +36,7 @@ impl AlertTools {
     )]
     pub async fn get_wazuh_alert_summary(
         &self,
-        #[tool(aggr)] params: GetAlertSummaryParams,
+        params: GetAlertSummaryParams,
     ) -> Result<CallToolResult, McpError> {
         let limit = params.limit.unwrap_or(300);
         

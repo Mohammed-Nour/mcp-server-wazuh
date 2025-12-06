@@ -4,7 +4,7 @@
 //! from the Wazuh Manager.
 
 use rmcp::{
-    Error as McpError,
+    ErrorData as McpError,
     model::{CallToolResult, Content},
     tool,
 };
@@ -41,7 +41,7 @@ impl RuleTools {
     )]
     pub async fn get_wazuh_rules_summary(
         &self,
-        #[tool(aggr)] params: GetRulesSummaryParams,
+        params: GetRulesSummaryParams,
     ) -> Result<CallToolResult, McpError> {
         let limit = params.limit.unwrap_or(300);
         

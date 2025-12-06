@@ -241,7 +241,7 @@ async fn test_invalid_json_rpc_request() -> Result<(), Box<dyn std::error::Error
 #[tokio::test]
 async fn test_unsupported_method() -> Result<(), Box<dyn std::error::Error>> {
     let mut client = McpStdioClient::start()?;
-    
+
     sleep(Duration::from_millis(500)).await;
 
     // Initialize first
@@ -264,41 +264,30 @@ async fn test_unsupported_method() -> Result<(), Box<dyn std::error::Error>> {
     });
     client.send_message(&initialized_notification)?;
 
-    let unsupported_request = json!({
+    // In rmcp 0.10, unsupported methods are treated as custom notifications
+    // (no response expected). Send as a notification (no id).
+    let unsupported_notification = json!({
         "jsonrpc": "2.0",
-        "id": 2,
-
         "method": "unsupported/method"
-        // Omitting "params": {} as it might be causing deserialization issues
-        // in rmcp for unknown methods. The JSON-RPC spec allows params to be omitted.
     });
+    client.send_message(&unsupported_notification)?;
 
-    // Send the unsupported request. We don't expect a valid JSON-RPC response.
-    // Instead, the server is likely to close the connection due to deserialization issues
-    // in rmcp when encountering an unknown method, as it cannot match it to a known JsonRpcMessage variant.
-    client.send_message(&unsupported_request)?;
+    // Brief pause to let the server process the notification
+    sleep(Duration::from_millis(100)).await;
 
-    // Attempt to send a subsequent valid request to confirm the connection was dropped.
+    // Verify the server is still responsive after receiving the unsupported method
     let list_tools_request = json!({
         "jsonrpc": "2.0",
-        "id": 3, // Use a new ID
+        "id": 2,
         "method": "tools/list",
         "params": {}
     });
 
-    let result = client.send_and_receive(&list_tools_request);
-    
-    // Assert that the operation failed, indicating the connection was likely closed.
-    assert!(result.is_err(), "Server should have closed the connection after the unsupported method request, leading to an error here.");
-    
-    // Optionally, check the error type more specifically if needed, e.g., for EOF.
-    if let Err(e) = result {
-        let error_message = e.to_string().to_lowercase();
-        assert!(
-            error_message.contains("eof") || error_message.contains("broken pipe") || error_message.contains("connection reset"),
-            "Expected EOF, broken pipe, or connection reset error, but got: {}", e
-        );
-    }
+    let tools_response = client.send_and_receive(&list_tools_request)?;
+    assert!(
+        tools_response.get("result").is_some(),
+        "Server should remain responsive after receiving unsupported method notification"
+    );
 
     Ok(())
 }

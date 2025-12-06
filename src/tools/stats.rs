@@ -6,7 +6,7 @@
 use super::{ToolModule, ToolUtils};
 use reqwest::StatusCode;
 use rmcp::model::{CallToolResult, Content};
-use rmcp::Error as McpError;
+use rmcp::ErrorData as McpError;
 use std::sync::Arc;
 use tokio::sync::Mutex;
 use wazuh_client::{ClusterClient, LogsClient};

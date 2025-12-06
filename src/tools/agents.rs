@@ -8,7 +8,7 @@
 use super::{ToolModule, ToolUtils};
 use reqwest::StatusCode;
 use rmcp::model::{CallToolResult, Content};
-use rmcp::Error as McpError;
+use rmcp::ErrorData as McpError;
 use std::sync::Arc;
 use tokio::sync::Mutex;
 use wazuh_client::{AgentsClient, Port as WazuhPort, VulnerabilityClient};
@@ -33,7 +33,7 @@ pub struct GetAgentsParams {
     pub version: Option<String>,
 }
 
-#[derive(Debug, serde::Deserialize, schemars::JsonSchema)]
+#[derive(Debug, serde::Deserialize, rmcp::schemars::JsonSchema)]
 pub struct GetAgentProcessesParams {
     #[schemars(
         description = "Agent ID to get processes for (required, e.g., \"0\", \"1\", \"001\")"
@@ -45,7 +45,7 @@ pub struct GetAgentProcessesParams {
     pub search: Option<String>,
 }
 
-#[derive(Debug, serde::Deserialize, schemars::JsonSchema)]
+#[derive(Debug, serde::Deserialize, rmcp::schemars::JsonSchema)]
 pub struct GetAgentPortsParams {
     #[schemars(
         description = "Agent ID to get network ports for (required, e.g., \"001\", \"002\", \"003\")"
