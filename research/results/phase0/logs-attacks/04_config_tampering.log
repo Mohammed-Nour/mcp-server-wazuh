@@ -1,0 +1,40 @@
+===============================================================================
+[1;33mATTACK #04: Configuration File Tampering[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Mode: ssh
+Category: File Integrity
+
+[0;31mNOTE: This attack must be executed ON the target agent[0m
+
+[0;32m[*] Attack started at: 2026-01-05T18:52:07+03:00[0m
+
+[*] Running attack via SSH to ubuntu@ec2-54-204-182-4.compute-1.amazonaws.com
+[*] Tampering with SSH configuration...
+[*] Tampering with PAM configuration...
+[*] Tampering with sudoers...
+[*] Tampering with sysctl configuration...
+[*] Tampering with Apache configuration...
+[*] Creating malicious systemd service...
+[*] Sleeping for detection
+[*] Cleanup complete
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+Start Time: 2026-01-05T18:52:07+03:00
+End Time: 2026-01-05T18:52:09+03:00
+Duration: 2 seconds
+
+Expected Wazuh alerts:
+  - Rule 550 (lvl7): File modification in /etc
+  - Rule 553 (lvl7): File deletion (backup/restores)
+  - Rule 554 (lvl5): File added (syscheck)
+  - Rule 592 (lvl8): System file modification
+
+Data for CSV:
+  attack_id: 04
+  attack_name: Configuration File Tampering
+  category: File Integrity
+  attack_start_time: 2026-01-05T18:52:07+03:00
+  attack_end_time: 2026-01-05T18:52:09+03:00

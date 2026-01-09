@@ -1,0 +1,41 @@
+===============================================================================
+[1;33mATTACK #17: Log Tampering[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Log File: /var/log/auth.log
+Mode: truncate
+Category: Log Tampering
+
+[0;32m[*] Attack started at: 2026-01-05T18:55:58+03:00[0m
+[*] Attempting to truncate and delete log file...
+
+[*] Running attack via SSH to ubuntu@ec2-54-204-182-4.compute-1.amazonaws.com
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[*] Backing up /var/log/auth.log to /var/log/auth.log.bak.1767628501
+[*] Truncating /var/log/auth.log
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-05T18:56:01+03:00
+Duration: 3 seconds
+
+Expected Wazuh alerts:
+  - Log deletion or truncation events
+  - FIM alerts for critical log files
+
+Data for CSV:
+  attack_id: 17
+  attack_name: Log Tampering
+  category: Log Tampering
+  attack_start_time: 2026-01-05T18:55:58+03:00
+  attack_end_time: 2026-01-05T18:56:01+03:00

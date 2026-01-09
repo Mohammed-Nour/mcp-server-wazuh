@@ -1,0 +1,45 @@
+===============================================================================
+[1;33mATTACK #09: Network Port Scan[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Port Range: 1-1000
+Scan Type: -sS
+Mode: basic
+Logging: off (iptables LOG on agent INPUT)
+Category: Network
+Note: run this from the attacker machine, targeting the Wazuh agent's IP
+
+[0;32m[*] Attack started at: 2026-01-05T18:53:44+03:00[0m
+[*] Running nmap port scan...
+
+[*] Performing port scan from mohamad-HP-ProBook-430-G7...
+Starting Nmap 7.80 ( https://nmap.org ) at 2026-01-05 18:54 MSK
+Nmap scan report for ec2-54-204-182-4.compute-1.amazonaws.com (54.204.182.4)
+Host is up (0.16s latency).
+Not shown: 994 closed ports
+PORT    STATE    SERVICE
+21/tcp  open     ftp
+22/tcp  open     ssh
+25/tcp  filtered smtp
+80/tcp  open     http
+465/tcp filtered smtps
+587/tcp filtered submission
+
+Nmap done: 1 IP address (1 host up) scanned in 5.14 seconds
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-05T18:54:06+03:00
+Duration: 22 seconds
+
+Expected Wazuh alerts:
+  - Port scan detection (rules 40008/40012/40013) if firewall/IDS logging enabled
+  - iptables LOG lines with prefix 'wazuh-portscan ' on agent (if LOGGING=on)
+
+Data for CSV:
+  attack_id: 09
+  attack_name: Network Port Scan
+  category: Network
+  attack_start_time: 2026-01-05T18:53:44+03:00
+  attack_end_time: 2026-01-05T18:54:06+03:00

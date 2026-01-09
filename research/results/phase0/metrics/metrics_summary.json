@@ -1,0 +1,21 @@
+{
+  "sample_size": 18,
+  "detection_rate_pct": 77.77777777777779,
+  "false_negative_rate_pct": 22.22222222222222,
+  "false_positive_rate_pct": 0.0,
+  "precision_pct": 100.0,
+  "mttd_sec": 1.2759999999999998,
+  "analysis_time_min": 13.001851851851853,
+  "remediation_time_min": 4.446296296296296,
+  "mtta_sec": 63825.224,
+  "mttc_sec": 64796.58114285715,
+  "mttr_sec": 65121.224,
+  "total_response_sec": 65121.224,
+  "dwell_time_sec": 64652.5,
+  "classifications": {
+    "true-positive": 14,
+    "false-negative": 4
+  },
+  "alerts": 14,
+  "no_alerts": 4
+}

@@ -1,0 +1,37 @@
+===============================================================================
+[1;33mATTACK #16: Failed Authentication Attempts[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Attempts: 6
+Category: Authentication
+
+[0;32m[*] Attack started at: 2026-01-05T18:54:56+03:00[0m
+[*] Generating multiple failed logins...
+
+[*] Running attack via SSH...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[*] Attempt 1 with invalid credentials
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-05T18:54:57+03:00
+Duration: 1 seconds
+
+Expected Wazuh alerts:
+  - Multiple failed login attempts (SSH, sudo)
+  - Brute-force authentication patterns
+
+Data for CSV:
+  attack_id: 16
+  attack_name: Failed Authentication Attempts
+  category: Authentication
+  attack_start_time: 2026-01-05T18:54:56+03:00
+  attack_end_time: 2026-01-05T18:54:57+03:00

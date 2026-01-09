@@ -1,0 +1,32 @@
+===============================================================================
+[1;33mATTACK #12: XSS Injection Attempts[0m
+===============================================================================
+Target: http://ec2-54-204-182-4.compute-1.amazonaws.com:80/search
+Mode: basic
+Category: Web Attack
+
+[0;32m[*] Attack started at: 2026-01-05T18:54:25+03:00[0m
+[*] Sending XSS payloads...
+
+[*] Target URL: http://ec2-54-204-182-4.compute-1.amazonaws.com:80/search
+[*] Sending payload: <script>alert('xss1')</script>
+[*] Sending payload: "/><script>alert('xss2')</script>
+[*] Sending payload: <img src=x onerror=alert('xss3')>
+[*] Sending payload: <svg/onload=alert('xss4')>
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-05T18:54:36+03:00
+Duration: 11 seconds
+
+Expected Wazuh alerts:
+  - XSS attempt detections (rules 31120/31121)
+  - Suspicious web input patterns
+
+Data for CSV:
+  attack_id: 12
+  attack_name: XSS Injection Attempts
+  category: Web Attack
+  attack_start_time: 2026-01-05T18:54:25+03:00
+  attack_end_time: 2026-01-05T18:54:36+03:00

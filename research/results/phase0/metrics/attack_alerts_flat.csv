@@ -1,0 +1,500 @@
+attack_id,attack_name,alert_time,rule_id,rule_level,rule_description,location,agent_id
+01,SSH Brute Force,2026-01-05T15:51:28.986000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:29.002000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:29.003000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:29.018000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:22.998000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:24.985000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:24.994000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:24.998000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:25.002000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:25.007000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:27.006000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:15.013000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:19.021000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:20.981000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:20.994000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:21.002000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:22.985000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:22.994000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:24.984000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:26.991000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:26.993000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:26.997000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:27.002000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:20.979000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:20.998000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:22.990000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:14.973000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:16.975000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:16.978000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:16.983000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:19.021000+00:00,5712,10,sshd: brute force trying to get access to the system. Non existent user.,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:20.985000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:20.989000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:22.982000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:29.060000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:30.990000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:30.993000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:23.002000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:24.989000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:26.985000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:26.987000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:26.988000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+01,SSH Brute Force,2026-01-05T15:51:27.014000+00:00,5710,5,sshd: Attempt to login using a non-existent user,/var/log/auth.log,002
+02,Web Login Brute Force,2026-01-05T15:51:39.018000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:39.019000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:39.035000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:39.035000+00:00,30310,10,Apache: Multiple authentication failures with invalid user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.009000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.020000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.026000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.030000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.032000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:34.993000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:34.997000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.001000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.005000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.008000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.012000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.014000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.018000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.032000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.015000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.019000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.026000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.034000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.040000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.042000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.051000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:43.012000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:39.018000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:39.034000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:39.076000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.006000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.011000+00:00,31151,10,Multiple web server 400 error codes from same source ip.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.017000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.024000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.028000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.035000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.039000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.043000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:43.007000+00:00,30310,10,Apache: Multiple authentication failures with invalid user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:33.010000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:33.012000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:33.015000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:34.995000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:34.999000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.010000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.016000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.023000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.025000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.029000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.017000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.021000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.027000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.031000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.037000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.044000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.047000+00:00,30310,10,Apache: Multiple authentication failures with invalid user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.053000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:32.991000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:32.992000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:32.993000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:32.995000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:32.998000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:33.004000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:43.009000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:32.999000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:33.002000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:33.006000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:33.007000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:33.017000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.003000+00:00,31151,10,Multiple web server 400 error codes from same source ip.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.021000+00:00,30310,10,Apache: Multiple authentication failures with invalid user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:35.027000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.013000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.023000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.029000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.038000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:37.049000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:39.003000+00:00,31151,10,Multiple web server 400 error codes from same source ip.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:39.076000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.007000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.008000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.014000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.015000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.022000+00:00,31101,5,Web server 400 error code.,/var/log/apache2/vulnapp_access.log,002
+02,Web Login Brute Force,2026-01-05T15:51:41.042000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+02,Web Login Brute Force,2026-01-05T15:51:43.007000+00:00,30309,5,Apache: Attempt to login using a non-existent user.,/var/log/apache2/vulnapp_error.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:58.834000+00:00,550,7,Integrity checksum changed.,syscheck,002
+03,Unauthorized File Modification,2026-01-05T15:51:58.866000+00:00,550,7,Integrity checksum changed.,syscheck,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.027000+00:00,40112,12,Multiple authentication failures followed by a success.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.034000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.063000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.065000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.073000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.078000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.079000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.083000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:52:03.893000+00:00,553,7,File deleted.,syscheck,002
+03,Unauthorized File Modification,2026-01-05T15:52:03.877000+00:00,550,7,Integrity checksum changed.,syscheck,002
+03,Unauthorized File Modification,2026-01-05T15:51:58.807000+00:00,554,5,File added to the system.,syscheck,002
+03,Unauthorized File Modification,2026-01-05T15:51:58.839000+00:00,554,5,File added to the system.,syscheck,002
+03,Unauthorized File Modification,2026-01-05T15:51:58.861000+00:00,554,5,File added to the system.,syscheck,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.038000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.038000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.043000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.048000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.068000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.070000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.075000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:58.861000+00:00,550,7,Integrity checksum changed.,syscheck,002
+03,Unauthorized File Modification,2026-01-05T15:51:58.903000+00:00,554,5,File added to the system.,syscheck,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.029000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.039000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.041000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.046000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.050000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.052000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.055000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.056000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.060000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.067000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:51:59.081000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+03,Unauthorized File Modification,2026-01-05T15:52:03.887000+00:00,550,7,Integrity checksum changed.,syscheck,002
+03,Unauthorized File Modification,2026-01-05T15:52:03.900000+00:00,553,7,File deleted.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:07.270000+00:00,550,7,Integrity checksum changed.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:07.277000+00:00,550,7,Integrity checksum changed.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:07.310000+00:00,554,5,File added to the system.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:09.038000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.042000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.044000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.048000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.053000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.057000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.060000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.068000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.071000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.076000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.078000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.085000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.088000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.092000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.106000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.113000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.116000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:07.037000+00:00,40112,12,Multiple authentication failures followed by a success.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:07.039000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:07.284000+00:00,550,7,Integrity checksum changed.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:07.293000+00:00,554,5,File added to the system.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:07.304000+00:00,550,7,Integrity checksum changed.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:07.322000+00:00,554,5,File added to the system.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:07.337000+00:00,550,7,Integrity checksum changed.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:07.343000+00:00,550,7,Integrity checksum changed.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:07.352000+00:00,554,5,File added to the system.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:08.357000+00:00,550,7,Integrity checksum changed.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:09.038000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.040000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.050000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.062000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.066000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.073000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.079000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.082000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.090000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.094000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.097000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.098000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.107000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.109000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.112000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.118000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.119000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.122000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.123000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:07.259000+00:00,554,5,File added to the system.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:07.327000+00:00,554,5,File added to the system.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:08.399000+00:00,554,5,File added to the system.,syscheck,002
+04,Configuration File Tampering,2026-01-05T15:52:09.049000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.055000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.064000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.084000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.100000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+04,Configuration File Tampering,2026-01-05T15:52:09.102000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.053000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.060000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.062000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.080000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.082000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:20.266000+00:00,554,5,File added to the system.,syscheck,002
+05,EICAR Test File Download,2026-01-05T15:52:21.051000+00:00,40112,12,Multiple authentication failures followed by a success.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:38.687000+00:00,553,7,File deleted.,syscheck,002
+05,EICAR Test File Download,2026-01-05T15:52:38.695000+00:00,553,7,File deleted.,syscheck,002
+05,EICAR Test File Download,2026-01-05T15:52:38.696000+00:00,553,7,File deleted.,syscheck,002
+05,EICAR Test File Download,2026-01-05T15:52:29.060000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.047000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.052000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.064000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.067000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.073000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:28.669000+00:00,554,5,File added to the system.,syscheck,002
+05,EICAR Test File Download,2026-01-05T15:52:28.696000+00:00,554,5,File added to the system.,syscheck,002
+05,EICAR Test File Download,2026-01-05T15:52:29.057000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:38.681000+00:00,553,7,File deleted.,syscheck,002
+05,EICAR Test File Download,2026-01-05T15:52:20.307000+00:00,554,5,File added to the system.,syscheck,002
+05,EICAR Test File Download,2026-01-05T15:52:23.057000+00:00,554,5,File added to the system.,syscheck,002
+05,EICAR Test File Download,2026-01-05T15:52:17.045000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.050000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.056000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.058000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.069000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.071000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.076000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.078000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:17.088000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:28.695000+00:00,554,5,File added to the system.,syscheck,002
+05,EICAR Test File Download,2026-01-05T15:52:29.058000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+05,EICAR Test File Download,2026-01-05T15:52:21.054000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+06,Suspicious Script Execution,2026-01-05T15:53:00.741000+00:00,553,7,File deleted.,syscheck,002
+06,Suspicious Script Execution,2026-01-05T15:53:00.757000+00:00,553,7,File deleted.,syscheck,002
+06,Suspicious Script Execution,2026-01-05T15:53:00.784000+00:00,553,7,File deleted.,syscheck,002
+06,Suspicious Script Execution,2026-01-05T15:52:42.683000+00:00,554,5,File added to the system.,syscheck,002
+06,Suspicious Script Execution,2026-01-05T15:53:00.734000+00:00,553,7,File deleted.,syscheck,002
+06,Suspicious Script Execution,2026-01-05T15:53:00.745000+00:00,553,7,File deleted.,syscheck,002
+06,Suspicious Script Execution,2026-01-05T15:52:42.688000+00:00,554,5,File added to the system.,syscheck,002
+06,Suspicious Script Execution,2026-01-05T15:52:42.699000+00:00,554,5,File added to the system.,syscheck,002
+06,Suspicious Script Execution,2026-01-05T15:52:43.079000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+06,Suspicious Script Execution,2026-01-05T15:52:42.677000+00:00,554,5,File added to the system.,syscheck,002
+06,Suspicious Script Execution,2026-01-05T15:52:43.076000+00:00,40112,12,Multiple authentication failures followed by a success.,/var/log/auth.log,002
+06,Suspicious Script Execution,2026-01-05T15:52:43.691000+00:00,554,5,File added to the system.,syscheck,002
+06,Suspicious Script Execution,2026-01-05T15:53:00.768000+00:00,553,7,File deleted.,syscheck,002
+06,Suspicious Script Execution,2026-01-05T15:52:50.736000+00:00,554,5,File added to the system.,syscheck,002
+07,Sudo Abuse,2026-01-05T15:53:09.156000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:09.477000+00:00,554,5,File added to the system.,syscheck,002
+07,Sudo Abuse,2026-01-05T15:53:11.107000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.109000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.111000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.113000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.117000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.117000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.122000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.125000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.127000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.129000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.140000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.142000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.148000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.158000+00:00,5503,5,PAM: User login failed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:05.106000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:05.108000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.100000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.105000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.107000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.113000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:09.100000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:09.115000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:09.115000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:09.115000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:19.111000+00:00,5301,5,User missed the password to change UID (user id).,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:27.119000+00:00,5301,5,User missed the password to change UID (user id).,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:09.156000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.103000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.103000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.131000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.133000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.150000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.152000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.154000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:05.098000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:05.113000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.098000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.099000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.116000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.120000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:21.113000+00:00,5503,5,PAM: User login failed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:27.180000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:17.109000+00:00,5301,5,User missed the password to change UID (user id).,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:09.156000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:09.482000+00:00,553,7,File deleted.,syscheck,002
+07,Sudo Abuse,2026-01-05T15:53:11.104000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.120000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.135000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.137000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.144000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.146000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:11.157000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:05.096000+00:00,40112,12,Multiple authentication failures followed by a success.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:05.102000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:05.105000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:05.110000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.102000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.109000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.111000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:07.117000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:13.105000+00:00,5301,5,User missed the password to change UID (user id).,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:15.107000+00:00,5503,5,PAM: User login failed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:17.110000+00:00,5503,5,PAM: User login failed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:25.117000+00:00,5503,5,PAM: User login failed.,/var/log/auth.log,002
+07,Sudo Abuse,2026-01-05T15:53:23.117000+00:00,5301,5,User missed the password to change UID (user id).,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:41.754000+00:00,554,5,File added to the system.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.789000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.805000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.806000+00:00,553,7,File deleted.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.818000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.819000+00:00,553,7,File deleted.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.829000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:43.136000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:43.163000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:43.167000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:43.179000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:43.187000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:31.164000+00:00,40112,12,Multiple authentication failures followed by a success.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:31.530000+00:00,554,5,File added to the system.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:31.534000+00:00,554,5,File added to the system.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:31.551000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:31.568000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.580000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.587000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.588000+00:00,553,7,File deleted.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.600000+00:00,553,7,File deleted.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.630000+00:00,554,5,File added to the system.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:33.125000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.134000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.153000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.155000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.157000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.172000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.178000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.185000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:31.164000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:31.517000+00:00,554,5,File added to the system.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:31.540000+00:00,554,5,File added to the system.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:31.556000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:31.563000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:31.573000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.592000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.598000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.612000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.618000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.624000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.624000+00:00,553,7,File deleted.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:33.125000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.129000+00:00,5902,8,New user added to the system.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.136000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.145000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.166000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.175000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.180000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:41.755000+00:00,554,5,File added to the system.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.770000+00:00,553,7,File deleted.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.770000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.789000+00:00,553,7,File deleted.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.831000+00:00,553,7,File deleted.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.872000+00:00,553,7,File deleted.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:43.172000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:31.524000+00:00,554,5,File added to the system.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.599000+00:00,553,7,File deleted.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.606000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.613000+00:00,553,7,File deleted.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:32.636000+00:00,554,5,File added to the system.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:33.127000+00:00,40501,15,Attacks followed by the addition of an user.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.132000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.143000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.146000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.164000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.168000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.176000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.182000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.187000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.189000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:33.192000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:41.728000+00:00,554,5,File added to the system.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.754000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.770000+00:00,554,5,File added to the system.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:41.806000+00:00,550,7,Integrity checksum changed.,syscheck,002
+08,User Added to Admin Group,2026-01-05T15:53:43.136000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:43.138000+00:00,5903,3,Group (or user) deleted from the system.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:43.162000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:43.168000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:43.170000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:43.175000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:43.176000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+08,User Added to Admin Group,2026-01-05T15:53:43.180000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+12,XSS Injection Attempts,2026-01-05T15:54:33.189000+00:00,31105,6,XSS (Cross Site Scripting) attempt.,/var/log/apache2/vulnapp_access.log,002
+12,XSS Injection Attempts,2026-01-05T15:54:35.191000+00:00,31105,6,XSS (Cross Site Scripting) attempt.,/var/log/apache2/vulnapp_access.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.200000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.205000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.209000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.211000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.213000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.217000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.222000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.248000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.249000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.256000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.257000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.200000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.218000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.226000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.228000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.231000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.233000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.235000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.239000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.240000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.245000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.251000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.267000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.202000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.207000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.220000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.224000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.236000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.243000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.253000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+13,Rootkit Indicator,2026-01-05T15:54:43.260000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.206000+00:00,40112,12,Multiple authentication failures followed by a success.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.207000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.217000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.220000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.226000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.253000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.222000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.224000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.228000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.230000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.237000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.241000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.243000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.211000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.214000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.215000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.232000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.234000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.240000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.245000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+14,Service Manipulation,2026-01-05T15:54:45.247000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:48.059000+00:00,554,5,File added to the system.,syscheck,002
+15,Cron Job Modification,2026-01-05T15:54:49.224000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:49.264000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:53.080000+00:00,553,7,File deleted.,syscheck,002
+15,Cron Job Modification,2026-01-05T15:54:53.213000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:53.268000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:49.223000+00:00,40112,12,Multiple authentication failures followed by a success.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:49.224000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:49.224000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:49.265000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:53.211000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:53.211000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:49.223000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:49.223000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+15,Cron Job Modification,2026-01-05T15:54:49.264000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+16,Failed Authentication Attempts,2026-01-05T15:54:57.228000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+16,Failed Authentication Attempts,2026-01-05T15:54:57.231000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+16,Failed Authentication Attempts,2026-01-05T15:54:57.222000+00:00,5501,3,PAM: Login session opened.,/var/log/auth.log,002
+16,Failed Authentication Attempts,2026-01-05T15:54:57.226000+00:00,5402,3,Successful sudo to ROOT executed.,/var/log/auth.log,002
+16,Failed Authentication Attempts,2026-01-05T15:54:57.220000+00:00,40112,12,Multiple authentication failures followed by a success.,/var/log/auth.log,002
+17,Log Tampering,2026-01-05T15:56:01.282000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002
+17,Log Tampering,2026-01-05T15:56:00.200000+00:00,592,8,Log file size reduced.,logcollector,002
+17,Log Tampering,2026-01-05T15:56:01.286000+00:00,5502,3,PAM: Login session closed.,/var/log/auth.log,002

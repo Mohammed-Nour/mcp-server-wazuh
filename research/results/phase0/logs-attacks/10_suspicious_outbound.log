@@ -1,0 +1,37 @@
+===============================================================================
+[1;33mATTACK #10: Suspicious Outbound Connection[0m
+===============================================================================
+Destination: ec2-54-204-182-4.compute-1.amazonaws.com:4444
+Mode: ssh
+Logging: off (iptables LOG on agent OUTPUT)
+Category: Network
+
+[0;32m[*] Attack started at: 2026-01-05T18:54:07+03:00[0m
+[*] Simulating suspicious outbound beaconing...
+
+[*] Running attack via SSH to ubuntu@ec2-54-204-182-4.compute-1.amazonaws.com
+[*] Initiating repeated outbound connections...
+[*] Attempt 1 to ec2-54-204-182-4.compute-1.amazonaws.com:4444
+[*] Attempt 2 to ec2-54-204-182-4.compute-1.amazonaws.com:4444
+[*] Attempt 3 to ec2-54-204-182-4.compute-1.amazonaws.com:4444
+[*] Attempt 4 to ec2-54-204-182-4.compute-1.amazonaws.com:4444
+[*] Attempt 5 to ec2-54-204-182-4.compute-1.amazonaws.com:4444
+[*] Attempt 6 to ec2-54-204-182-4.compute-1.amazonaws.com:4444
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-05T18:54:10+03:00
+Duration: 3 seconds
+
+Expected Wazuh alerts:
+  - Suspicious outbound connection attempts
+  - Possible C2 beaconing (rules 6501/6502/6510) if netflow/iptables logging enabled
+  - iptables LOG lines with prefix 'wazuh-outbound ' (if LOGGING=on)
+
+Data for CSV:
+  attack_id: 10
+  attack_name: Suspicious Outbound Connection
+  category: Network
+  attack_start_time: 2026-01-05T18:54:07+03:00
+  attack_end_time: 2026-01-05T18:54:10+03:00

@@ -1,0 +1,45 @@
+===============================================================================
+[1;33mATTACK #03: Unauthorized File Modification[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Mode: ssh
+Category: File Integrity
+
+[0;31mNOTE: This attack must run on the target agent (FIM)[0m
+
+[0;32m[*] Attack started at: 2026-01-05T18:51:58+03:00[0m
+
+[*] Running attack via SSH to ubuntu@ec2-54-204-182-4.compute-1.amazonaws.com
+[*] Creating test files in monitored directories...
+[*] Modifying /etc/hosts
+[*] Attempting to modify /etc/passwd
+[*] Creating suspicious files in /tmp
+[*] Modifying web directory
+[*] Attempting to create file in /root
+backdoor
+[*] Creating file in cron directory
+# Malicious cron job
+
+[*] Modifications complete. Wazuh FIM should detect these changes.
+[*] Cleaning up test files (restoring originals)...
+[*] Cleanup complete
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-05T18:52:04+03:00
+Duration: 6 seconds
+
+Expected Wazuh alerts (observed):
+  - Rule 550 (lvl7): File modified
+  - Rule 553 (lvl7): File deleted
+  - Rule 554 (lvl5): File added
+  - FIM on /etc/hosts, /etc/passwd, /var/www/html, cron
+
+Data for CSV:
+  attack_id: 03
+  attack_name: Unauthorized File Modification
+  category: File Integrity
+  attack_start_time: 2026-01-05T18:51:58+03:00
+  attack_end_time: 2026-01-05T18:52:04+03:00
+  duration_seconds: 6

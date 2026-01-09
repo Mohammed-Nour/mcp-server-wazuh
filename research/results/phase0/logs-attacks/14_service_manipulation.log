@@ -1,0 +1,139 @@
+===============================================================================
+[1;33mATTACK #14: Service Manipulation[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Service: rsyslog
+Category: System
+
+[0;32m[*] Attack started at: 2026-01-05T18:54:45+03:00[0m
+[*] Attempting to stop and disable a service...
+
+[*] Running attack via SSH...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[*] Checking service  status
+[*] Stopping 
+[*] Disabling 
+[*] Restarting  to restore state
+[*] Final status:
+● ip-172-31-28-229
+    State: degraded
+     Jobs: 0 queued
+   Failed: 1 units
+    Since: Mon 2026-01-05 13:39:15 UTC; 2h 15min ago
+   CGroup: /
+           ├─user.slice 
+           │ └─user-1000.slice 
+           │   ├─user@1000.service …
+           │   │ └─init.scope 
+           │   │   ├─1789 /lib/systemd/systemd --user
+           │   │   └─1791 (sd-pam)
+           │   ├─session-24.scope 
+           │   │ ├─4549 sshd: ubuntu [priv]
+           │   │ ├─4623 sshd: ubuntu@notty
+           │   │ ├─4624 bash -c 
+#!/bin/bash
+echo "[*] Checking service $SERVICE_NAME status"
+sudo systemctl status $SERVICE_NAME >/dev/null 2>&1 || echo "[!] Service $SERVICE_NAME may not exist"
+
+echo "[*] Stopping $SERVICE_NAME"
+sudo systemctl stop $SERVICE_NAME 2>/dev/null || true
+
+echo "[*] Disabling $SERVICE_NAME"
+sudo systemctl disable $SERVICE_NAME 2>/dev/null || true
+
+echo "[*] Restarting $SERVICE_NAME to restore state"
+sudo systemctl enable $SERVICE_NAME 2>/dev/null || true
+sudo systemctl start $SERVICE_NAME 2>/dev/null || true
+
+echo "[*] Final status:"
+sudo systemctl status $SERVICE_NAME 2>/dev/null || true
+           │   │ ├─4635 sudo systemctl status
+           │   │ └─4636 systemctl status
+           │   └─session-1.scope 
+           │     ├─1758 sshd: ubuntu [priv]
+           │     ├─1873 sshd: ubuntu@pts/0
+           │     └─1874 -bash
+           ├─init.scope 
+           │ └─1 /sbin/init
+           └─system.slice 
+             ├─irqbalance.service 
+             │ └─398 /usr/sbin/irqbalance --foreground
+             ├─apache2.service 
+             │ ├─ 517 /usr/sbin/apache2 -k start
+             │ ├─ 584 /usr/sbin/apache2 -k start
+             │ ├─ 589 /usr/sbin/apache2 -k start
+             │ ├─ 590 /usr/sbin/apache2 -k start
+             │ ├─ 594 /usr/sbin/apache2 -k start
+             │ ├─ 602 /usr/sbin/apache2 -k start
+             │ ├─1884 /usr/sbin/apache2 -k start
+             │ ├─1885 /usr/sbin/apache2 -k start
+             │ ├─2054 /usr/sbin/apache2 -k start
+             │ ├─2055 /usr/sbin/apache2 -k start
+             │ └─2056 /usr/sbin/apache2 -k start
+             ├─systemd-networkd.service 
+             │ └─344 /lib/systemd/systemd-networkd
+             ├─systemd-udevd.service 
+             │ └─176 /lib/systemd/systemd-udevd
+             ├─cron.service 
+             │ └─385 /usr/sbin/cron -f -P
+             ├─system-serial\x2dgetty.slice 
+             │ └─serial-getty@ttyS0.service 
+             │   └─420 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 ttyS0 vt220
+             ├─wazuh-agent.service 
+             │ ├─554 /var/ossec/bin/wazuh-execd
+             │ ├─678 /var/ossec/bin/wazuh-agentd
+             │ ├─722 /var/ossec/bin/wazuh-syscheckd
+             │ ├─822 /var/ossec/bin/wazuh-logcollector
+             │ └─833 /var/ossec/bin/wazuh-modulesd
+             ├─polkit.service 
+             │ └─509 /usr/libexec/polkitd --no-debug
+             ├─networkd-dispatcher.service 
+             │ └─399 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+             ├─multipathd.service 
+             │ └─173 /sbin/multipathd -d -s
+             ├─snap.amazon-ssm-agent.amazon-ssm-agent.service 
+             │ └─402 /snap/amazon-ssm-agent/12322/amazon-ssm-agent
+             ├─systemd-journald.service 
+             │ └─133 /lib/systemd/systemd-journald
+             ├─unattended-upgrades.service 
+             │ └─500 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+             ├─ssh.service 
+             │ └─665 sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups
+             ├─snapd.service 
+             │ └─406 /snap/snapd/current/usr/lib/snapd/snapd
+             ├─vsftpd.service 
+             │ └─415 /usr/sbin/vsftpd /etc/vsftpd.conf
+             ├─rsyslog.service 
+             │ └─401 /usr/sbin/rsyslogd -n -iNONE
+             ├─chrony.service 
+             │ ├─474 /usr/sbin/chronyd -F 1
+             │ └─478 /usr/sbin/chronyd -F 1
+             ├─systemd-resolved.service 
+             │ └─346 /lib/systemd/systemd-resolved
+             ├─acpid.service 
+             │ └─379 /usr/sbin/acpid
+             ├─dbus.service 
+             │ └─386 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+             ├─system-getty.slice 
+             │ └─getty@tty1.service 
+             │   └─430 /sbin/agetty -o -p -- \u --noclear tty1 linux
+             └─systemd-logind.service 
+               └─409 /lib/systemd/systemd-logind
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-05T18:54:46+03:00
+Duration: 1 seconds
+
+Expected Wazuh alerts:
+  - Service stop/disable events
+  - Potential availability impact (rules 5502/5503/5504)
+
+Data for CSV:
+  attack_id: 14
+  attack_name: Service Manipulation
+  category: System
+  attack_start_time: 2026-01-05T18:54:45+03:00
+  attack_end_time: 2026-01-05T18:54:46+03:00

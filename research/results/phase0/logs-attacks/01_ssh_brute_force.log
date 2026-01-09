@@ -1,0 +1,81 @@
+===============================================================================
+[1;33mATTACK #01: SSH Brute Force[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: Brute Force
+Expected Rules: 5710, 5711, 5712, 5720, 5758, 5763
+
+[0;32m[*] Attack started at: 2026-01-05T18:51:14+03:00[0m
+[*] Simulating SSH brute force attack...
+
+[*] Method 1: Failed SSH login attempts with wrong passwords
+    Trying admin:password
+    Trying admin:123456
+    Trying admin:admin
+    Trying admin:root
+    Trying admin:test123
+    Trying admin:password123
+    Trying root:password
+    Trying root:123456
+    Trying root:admin
+    Trying root:root
+    Trying root:test123
+    Trying root:password123
+    Trying test:password
+    Trying test:123456
+    Trying test:admin
+    Trying test:root
+    Trying test:test123
+    Trying test:password123
+    Trying user:password
+    Trying user:123456
+    Trying user:admin
+    Trying user:root
+    Trying user:test123
+    Trying user:password123
+    Trying administrator:password
+    Trying administrator:123456
+    Trying administrator:admin
+    Trying administrator:root
+    Trying administrator:test123
+    Trying administrator:password123
+    Trying guest:password
+    Trying guest:123456
+    Trying guest:admin
+    Trying guest:root
+    Trying guest:test123
+    Trying guest:password123
+
+[*] Method 2: Rapid connection attempts
+
+[*] Method 3: Using Hydra for brute force simulation
+Hydra v9.2 (c) 2021 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-01-05 18:51:28
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 48 login tries (l:6/p:8), ~12 tries per task
+[DATA] attacking ssh://ec2-54-204-182-4.compute-1.amazonaws.com:22/
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-05T18:51:30+03:00
+Duration: 16 seconds
+
+Expected Wazuh alerts:
+  - Rule 5710: Attempt to login using a non-existent user
+  - Rule 5711: Excessive authentication failures
+  - Rule 5712: Multiple authentication failures
+  - Rule 5758: Maximum authentication attempts exceeded
+
+Next steps:
+  1. Check Wazuh dashboard for alerts
+  2. Record alert timestamp for MTTD calculation
+  3. Document analysis and remediation times
+
+Data for CSV:
+  attack_id: 01
+  attack_name: SSH Brute Force
+  category: Brute Force
+  attack_start_time: 2026-01-05T18:51:14+03:00
+  attack_end_time: 2026-01-05T18:51:30+03:00
+  duration_seconds: 16
