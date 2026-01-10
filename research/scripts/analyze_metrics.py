@@ -74,7 +74,8 @@ def summarize(rows):
             remediation_times.append(rm_min)
         cls_raw = r.get("classification", "").strip().lower() or "unknown"
         classifications[cls_raw] += 1
-        if "false positive" in cls_raw:
+        # accept hyphenated or spaced variants
+        if "false-positive" in cls_raw:
             fp += 1
         elif "true" in cls_raw:
             tp += 1

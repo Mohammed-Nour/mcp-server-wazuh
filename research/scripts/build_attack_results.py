@@ -79,8 +79,9 @@ def parse_log(log_path: Path) -> Tuple[Optional[str], Optional[str], Optional[da
     category = None
     start = None
     end = None
-    if not log_path.exists():
+    if not log_path or not log_path.exists():
         return name, category, start, end
+
     ansi_re = re.compile(r"\x1b\[[0-9;]*m")
     with log_path.open() as f:
         for line in f:
@@ -91,9 +92,12 @@ def parse_log(log_path: Path) -> Tuple[Optional[str], Optional[str], Optional[da
             m_cat = re.search(r"^Category:\s*(.+)$", line_clean)
             if m_cat:
                 category = m_cat.group(1).strip()
-            m_start = re.search(r"Attack started at:\s*(.+)$", line_clean)
+
+            # Accept any "... started at:" phrasing (attack, benign, cron, system update, etc.)
+            m_start = re.search(r"started at:\s*(.+)$", line_clean, re.IGNORECASE)
             if m_start:
                 start = normalize_ts(m_start.group(1).strip())
+
             m_end = re.search(r"^End Time:\s*(.+)$", line_clean)
             if m_end:
                 end = normalize_ts(m_end.group(1).strip())
