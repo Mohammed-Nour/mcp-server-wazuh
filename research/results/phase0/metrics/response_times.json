@@ -160,5 +160,59 @@
         "remediation_end_time": "2026-01-06T21:15:58+03:00",
         "classification": "false-negative",
         "notes": "Add Suricata IDS with the firewall to detect and block this attack at the network level"
+    },
+    {
+        "attack_id": "19",
+        "analysis_start_time": "2026-01-10T16:53:26+03:00",
+        "analysis_end_time": "2026-01-10T16:53:30+03:00",
+        "remediation_start_time": "2026-01-10T16:53:36+03:00",
+        "remediation_end_time": "2026-01-10T16:53:50+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
+    },
+    {
+        "attack_id": "20",
+        "analysis_start_time": "2026-01-10T14:47:44+03:00",
+        "analysis_end_time": "2026-01-10T14:52:25+03:00",
+        "remediation_start_time": "2026-01-10T14:52:40+03:00",
+        "remediation_end_time": "2026-01-10T14:52:58+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
+    },
+    {
+        "attack_id": "21",
+        "analysis_start_time": "2026-01-10T15:03:29+03:00",
+        "analysis_end_time": "2026-01-10T15:03:50+03:00",
+        "remediation_start_time": "2026-01-10T15:03:52+03:00",
+        "remediation_end_time": "2026-01-10T15:03:58+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
+    },
+    {
+        "attack_id": "22",
+        "analysis_start_time": "2026-01-10T15:37:21+03:00",
+        "analysis_end_time": "2026-01-10T15:38:29+03:00",
+        "remediation_start_time": "2026-01-10T15:38:50+03:00",
+        "remediation_end_time": "2026-01-10TT15:39:04+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
+    },
+    {
+        "attack_id": "23",
+        "analysis_start_time": "2026-01-10T16:17:32+03:00",
+        "analysis_end_time": "2026-01-10T16:17:39+03:00",
+        "remediation_start_time": "2026-01-10T16:17:43+03:00",
+        "remediation_end_time": "2026-01-10T16:17:58+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
+    },
+    {
+        "attack_id": "24",
+        "analysis_start_time": "2026-01-10T16:21:01+03:00",
+        "analysis_end_time": "2026-01-10T16:21:30+03:00",
+        "remediation_start_time": "2026-01-10T16:21:35+03:00",
+        "remediation_end_time": "2026-01-10T16:21:50+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
     }
 ]

@@ -1,0 +1,187 @@
+===============================================================================
+ATTACK FP-6: Legitimate Sudo Package Install
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: FalsePositive
+Executor: local (this machine)
+Package: nginx
+
+[*] Sudo install started at: 2026-01-10T16:19:10+03:00
+[*] Executing on target host via SSH
+[*] Installing package with sudo (benign developer action)...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libdeflate0 libgd3 libjbig0 libnginx-mod-http-geoip2
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libnginx-mod-stream-geoip2 libtiff5
+  libwebp7 libxpm4 nginx-common nginx-core
+Suggested packages:
+  libgd-tools fcgiwrap nginx-doc
+The following NEW packages will be installed:
+  libdeflate0 libgd3 libjbig0 libnginx-mod-http-geoip2
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libnginx-mod-stream-geoip2 libtiff5
+  libwebp7 libxpm4 nginx nginx-common nginx-core
+0 upgraded, 15 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1355 kB of archives.
+After this operation, 4240 kB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libdeflate0 amd64 1.10-2 [70.9 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libjbig0 amd64 2.1-3.1ubuntu0.22.04.1 [29.2 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libwebp7 amd64 1.2.2-2ubuntu0.22.04.2 [206 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtiff5 amd64 4.3.0-6ubuntu0.12 [185 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libxpm4 amd64 1:3.5.12-1ubuntu0.22.04.2 [36.7 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgd3 amd64 2.3.0-2ubuntu2.3 [129 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-common all 1.18.0-6ubuntu14.7 [40.1 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-geoip2 amd64 1.18.0-6ubuntu14.7 [12.0 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-6ubuntu14.7 [15.5 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-6ubuntu14.7 [13.8 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-mail amd64 1.18.0-6ubuntu14.7 [45.8 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream amd64 1.18.0-6ubuntu14.7 [73.0 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream-geoip2 amd64 1.18.0-6ubuntu14.7 [10.1 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-core amd64 1.18.0-6ubuntu14.7 [483 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx amd64 1.18.0-6ubuntu14.7 [3878 B]
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = (unset),
+        LC_ALL = (unset),
+        LC_TIME = "en_GB.UTF-8",
+        LC_MONETARY = "en_GB.UTF-8",
+        LC_ADDRESS = "en_GB.UTF-8",
+        LC_TELEPHONE = "en_GB.UTF-8",
+        LC_NAME = "en_GB.UTF-8",
+        LC_MEASUREMENT = "en_GB.UTF-8",
+        LC_IDENTIFICATION = "en_GB.UTF-8",
+        LC_NUMERIC = "en_GB.UTF-8",
+        LC_PAPER = "en_GB.UTF-8",
+        LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Preconfiguring packages ...
+Fetched 1355 kB in 0s (22.6 MB/s)
+Selecting previously unselected package libdeflate0:amd64.
+(Reading database ... 99626 files and directories currently installed.)
+Preparing to unpack .../00-libdeflate0_1.10-2_amd64.deb ...
+Unpacking libdeflate0:amd64 (1.10-2) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../01-libjbig0_2.1-3.1ubuntu0.22.04.1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Selecting previously unselected package libwebp7:amd64.
+Preparing to unpack .../02-libwebp7_1.2.2-2ubuntu0.22.04.2_amd64.deb ...
+Unpacking libwebp7:amd64 (1.2.2-2ubuntu0.22.04.2) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../03-libtiff5_4.3.0-6ubuntu0.12_amd64.deb ...
+Unpacking libtiff5:amd64 (4.3.0-6ubuntu0.12) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../04-libxpm4_1%3a3.5.12-1ubuntu0.22.04.2_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.2) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../05-libgd3_2.3.0-2ubuntu2.3_amd64.deb ...
+Unpacking libgd3:amd64 (2.3.0-2ubuntu2.3) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../06-nginx-common_1.18.0-6ubuntu14.7_all.deb ...
+Unpacking nginx-common (1.18.0-6ubuntu14.7) ...
+Selecting previously unselected package libnginx-mod-http-geoip2.
+Preparing to unpack .../07-libnginx-mod-http-geoip2_1.18.0-6ubuntu14.7_amd64.deb ...
+Unpacking libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.7) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../08-libnginx-mod-http-image-filter_1.18.0-6ubuntu14.7_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-6ubuntu14.7) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../09-libnginx-mod-http-xslt-filter_1.18.0-6ubuntu14.7_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.7) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../10-libnginx-mod-mail_1.18.0-6ubuntu14.7_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-6ubuntu14.7) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../11-libnginx-mod-stream_1.18.0-6ubuntu14.7_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-6ubuntu14.7) ...
+Selecting previously unselected package libnginx-mod-stream-geoip2.
+Preparing to unpack .../12-libnginx-mod-stream-geoip2_1.18.0-6ubuntu14.7_amd64.deb ...
+Unpacking libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.7) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../13-nginx-core_1.18.0-6ubuntu14.7_amd64.deb ...
+Unpacking nginx-core (1.18.0-6ubuntu14.7) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../14-nginx_1.18.0-6ubuntu14.7_amd64.deb ...
+Unpacking nginx (1.18.0-6ubuntu14.7) ...
+Setting up libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.2) ...
+Setting up libdeflate0:amd64 (1.10-2) ...
+Setting up nginx-common (1.18.0-6ubuntu14.7) ...
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 142.
+Setting up libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Setting up libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.7) ...
+Setting up libwebp7:amd64 (1.2.2-2ubuntu0.22.04.2) ...
+Setting up libtiff5:amd64 (4.3.0-6ubuntu0.12) ...
+Setting up libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.7) ...
+Setting up libnginx-mod-mail (1.18.0-6ubuntu14.7) ...
+Setting up libnginx-mod-stream (1.18.0-6ubuntu14.7) ...
+Setting up libgd3:amd64 (2.3.0-2ubuntu2.3) ...
+Setting up libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.7) ...
+Setting up libnginx-mod-http-image-filter (1.18.0-6ubuntu14.7) ...
+Setting up nginx-core (1.18.0-6ubuntu14.7) ...
+Not attempting to start NGINX, port 80 is already in use.
+Setting up nginx (1.18.0-6ubuntu14.7) ...
+Processing triggers for ufw (0.36.1-4ubuntu0.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.11) ...
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = (unset),
+        LC_ALL = (unset),
+        LC_TIME = "en_GB.UTF-8",
+        LC_MONETARY = "en_GB.UTF-8",
+        LC_ADDRESS = "en_GB.UTF-8",
+        LC_TELEPHONE = "en_GB.UTF-8",
+        LC_NAME = "en_GB.UTF-8",
+        LC_MEASUREMENT = "en_GB.UTF-8",
+        LC_IDENTIFICATION = "en_GB.UTF-8",
+        LC_NUMERIC = "en_GB.UTF-8",
+        LC_PAPER = "en_GB.UTF-8",
+        LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+
+Running kernel seems to be up-to-date.
+
+Services to be restarted:
+ systemctl restart apache2.service
+ systemctl restart irqbalance.service
+ systemctl restart packagekit.service
+ systemctl restart polkit.service
+ /etc/needrestart/restart.d/systemd-manager
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart networkd-dispatcher.service
+ systemctl restart unattended-upgrades.service
+ systemctl restart user@1000.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+
+===============================================================================
+[✓] Sudo install completed
+===============================================================================
+End Time: 2026-01-10T16:19:23+03:00
+Duration: 13.567192727 seconds
+
+Expected Wazuh alerts: sudo usage + package install (benign)
+Mitigation guidance: correlate with developer change/approval logs
+
+Data for CSV:
+  attack_id: FP-6
+  attack_name: Legitimate Sudo Package Install
+  category: FalsePositive
+  attack_start_time: 2026-01-10T16:19:10+03:00
+  attack_end_time: 2026-01-10T16:19:23+03:00

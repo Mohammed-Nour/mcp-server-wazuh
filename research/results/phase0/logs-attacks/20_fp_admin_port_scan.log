@@ -1,0 +1,57 @@
+===============================================================================
+ATTACK FP-2: Admin Legitimate Port Scan
+===============================================================================
+Target Subnet: 192.168.1.0/24
+Scan Type: -sV --reason
+Origin: ec2-54-157-35-39.compute-1.amazonaws.com
+Category: FalsePositive
+Note: This simulates authorized admin scanning
+
+[*] Benign admin scan started at: 2026-01-10T14:38:32+03:00
+[*] Running from admin host via SSH: ec2-54-157-35-39.compute-1.amazonaws.com
+Starting Nmap 7.80 ( https://nmap.org ) at 2026-01-10 11:38 UTC
+^[[A^C./20_fp_admin_port_scan.sh: line 57: syntax error near unexpected token `)'
+./20_fp_admin_port_scan.sh: line 57: `%s.%N)'
+mohamad@mohamad-HP-ProBook-430-G7:~/Desktop/university/forked/mcp-server-wazuh/research/attacks$ ./20_fp_admin_port_scan.sh
+===============================================================================
+ATTACK FP-2: Admin Legitimate Port Scan
+===============================================================================
+Target Subnet: ec2-54-204-182-4.compute-1.amazonaws.com
+Scan Type: -sV --reason
+Origin: ec2-54-157-35-39.compute-1.amazonaws.com
+Category: FalsePositive
+Note: This simulates authorized admin scanning
+
+[*] Benign admin scan started at: 2026-01-10T14:40:58+03:00
+[*] Running from admin host via SSH: ec2-54-157-35-39.compute-1.amazonaws.com
+Starting Nmap 7.80 ( https://nmap.org ) at 2026-01-10 11:41 UTC
+Nmap scan report for ec2-54-204-182-4.compute-1.amazonaws.com (172.31.28.229)
+Host is up, received arp-response (0.00039s latency).
+rDNS record for 172.31.28.229: ip-172-31-28-229.ec2.internal
+Not shown: 997 closed ports
+Reason: 997 resets
+PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 64 vsftpd 3.0.5
+22/tcp open  ssh     syn-ack ttl 64 OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.4.52 ((Ubuntu))
+MAC Address: 0A:FF:FD:E7:D6:5F (Unknown)
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 6.46 seconds
+
+===============================================================================
+[✓] Admin scan completed
+===============================================================================
+End Time: 2026-01-10T14:41:07+03:00
+Duration: 8.971282153 seconds
+
+Expected Wazuh alerts: Port scan detections (benign admin activity)
+Mitigation guidance: check source IP is whitelisted admin host and business hours
+
+Data for CSV:
+  attack_id: FP-2
+  attack_name: Admin Legitimate Port Scan
+  category: FalsePositive
+  attack_start_time: 2026-01-10T14:40:58+03:00
+  attack_end_time: 2026-01-10T14:41:07+03:00

@@ -1,0 +1,1211 @@
+{
+    "took": 16,
+    "timed_out": false,
+    "_shards": {
+        "total": 24,
+        "successful": 24,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 13,
+            "relation": "eq"
+        },
+        "max_score": 1.0,
+        "hits": [
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "sVa1p5sBuUkBeeb-25oh",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-30-117",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 11:41:07"
+                    },
+                    "agent": {
+                        "name": "ip-172-31-30-117",
+                        "id": "000"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "ubuntu"
+                    },
+                    "rule": {
+                        "firedtimes": 3,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session closed.",
+                        "groups": [
+                            "pam",
+                            "syslog"
+                        ],
+                        "id": "5502",
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 11:41:07 ip-172-31-30-117 sshd[2976]: pam_unix(sshd:session): session closed for user ubuntu",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:07.424Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768045267.157300",
+                    "timestamp": "2026-01-10T11:41:07.424+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "q1a1p5sBuUkBeeb-v5rC",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "ip_v": "4",
+                        "in_iface": "eth0",
+                        "src_ip": "172.31.30.117",
+                        "src_port": "36130",
+                        "event_type": "alert",
+                        "alert": {
+                            "severity": "2",
+                            "signature_id": "2010937",
+                            "rev": "3",
+                            "metadata": {
+                                "updated_at": [
+                                    "2019_07_26"
+                                ],
+                                "confidence": [
+                                    "Medium"
+                                ],
+                                "created_at": [
+                                    "2010_07_30"
+                                ],
+                                "signature_severity": [
+                                    "Informational"
+                                ]
+                            },
+                            "gid": "1",
+                            "signature": "ET SCAN Suspicious inbound to mySQL port 3306",
+                            "action": "allowed",
+                            "category": "Potentially Bad Traffic"
+                        },
+                        "flow_id": "1355580294355424.000000",
+                        "dest_ip": "172.31.28.229",
+                        "proto": "TCP",
+                        "dest_port": "3306",
+                        "pkt_src": "wire/pcap",
+                        "flow": {
+                            "src_ip": "172.31.30.117",
+                            "src_port": "36130",
+                            "pkts_toserver": "1",
+                            "dest_ip": "172.31.28.229",
+                            "start": "2026-01-10T11:41:00.970980+0000",
+                            "bytes_toclient": "0",
+                            "bytes_toserver": "58",
+                            "pkts_toclient": "0",
+                            "dest_port": "3306"
+                        },
+                        "timestamp": "2026-01-10T11:41:00.970980+0000",
+                        "direction": "to_server"
+                    },
+                    "rule": {
+                        "firedtimes": 56,
+                        "mail": false,
+                        "level": 3,
+                        "description": "Suricata: Alert - ET SCAN Suspicious inbound to mySQL port 3306",
+                        "groups": [
+                            "ids",
+                            "suricata"
+                        ],
+                        "id": "86601"
+                    },
+                    "decoder": {
+                        "name": "json"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:02.610Z",
+                    "location": "/var/log/suricata/eve.json",
+                    "id": "1768045262.147697",
+                    "timestamp": "2026-01-10T11:41:02.610+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "rFa1p5sBuUkBeeb-v5rC",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "ip_v": "4",
+                        "in_iface": "eth0",
+                        "src_ip": "172.31.30.117",
+                        "src_port": "36130",
+                        "event_type": "alert",
+                        "alert": {
+                            "severity": "2",
+                            "signature_id": "2010935",
+                            "rev": "3",
+                            "metadata": {
+                                "updated_at": [
+                                    "2019_07_26"
+                                ],
+                                "confidence": [
+                                    "Medium"
+                                ],
+                                "created_at": [
+                                    "2010_07_30"
+                                ],
+                                "signature_severity": [
+                                    "Informational"
+                                ]
+                            },
+                            "gid": "1",
+                            "signature": "ET SCAN Suspicious inbound to MSSQL port 1433",
+                            "action": "allowed",
+                            "category": "Potentially Bad Traffic"
+                        },
+                        "flow_id": "1195751231621415.000000",
+                        "dest_ip": "172.31.28.229",
+                        "proto": "TCP",
+                        "dest_port": "1433",
+                        "pkt_src": "wire/pcap",
+                        "flow": {
+                            "src_ip": "172.31.30.117",
+                            "src_port": "36130",
+                            "pkts_toserver": "1",
+                            "dest_ip": "172.31.28.229",
+                            "start": "2026-01-10T11:41:00.999303+0000",
+                            "bytes_toclient": "0",
+                            "bytes_toserver": "58",
+                            "pkts_toclient": "0",
+                            "dest_port": "1433"
+                        },
+                        "timestamp": "2026-01-10T11:41:00.999303+0000",
+                        "direction": "to_server"
+                    },
+                    "rule": {
+                        "firedtimes": 57,
+                        "mail": false,
+                        "level": 3,
+                        "description": "Suricata: Alert - ET SCAN Suspicious inbound to MSSQL port 1433",
+                        "groups": [
+                            "ids",
+                            "suricata"
+                        ],
+                        "id": "86601"
+                    },
+                    "decoder": {
+                        "name": "json"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:02.612Z",
+                    "location": "/var/log/suricata/eve.json",
+                    "id": "1768045262.149538",
+                    "timestamp": "2026-01-10T11:41:02.612+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "rla1p5sBuUkBeeb-v5rC",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "ip_v": "4",
+                        "in_iface": "eth0",
+                        "src_ip": "172.31.30.117",
+                        "src_port": "36130",
+                        "event_type": "alert",
+                        "alert": {
+                            "severity": "2",
+                            "signature_id": "2010939",
+                            "rev": "3",
+                            "metadata": {
+                                "updated_at": [
+                                    "2019_07_26"
+                                ],
+                                "confidence": [
+                                    "Medium"
+                                ],
+                                "created_at": [
+                                    "2010_07_30"
+                                ],
+                                "signature_severity": [
+                                    "Informational"
+                                ]
+                            },
+                            "gid": "1",
+                            "signature": "ET SCAN Suspicious inbound to PostgreSQL port 5432",
+                            "action": "allowed",
+                            "category": "Potentially Bad Traffic"
+                        },
+                        "flow_id": "1448064348802931.000000",
+                        "dest_ip": "172.31.28.229",
+                        "proto": "TCP",
+                        "dest_port": "5432",
+                        "pkt_src": "wire/pcap",
+                        "flow": {
+                            "src_ip": "172.31.30.117",
+                            "src_port": "36130",
+                            "pkts_toserver": "1",
+                            "dest_ip": "172.31.28.229",
+                            "start": "2026-01-10T11:41:01.009473+0000",
+                            "bytes_toclient": "0",
+                            "bytes_toserver": "58",
+                            "pkts_toclient": "0",
+                            "dest_port": "5432"
+                        },
+                        "timestamp": "2026-01-10T11:41:01.009473+0000",
+                        "direction": "to_server"
+                    },
+                    "rule": {
+                        "firedtimes": 59,
+                        "mail": false,
+                        "level": 3,
+                        "description": "Suricata: Alert - ET SCAN Suspicious inbound to PostgreSQL port 5432",
+                        "groups": [
+                            "ids",
+                            "suricata"
+                        ],
+                        "id": "86601"
+                    },
+                    "decoder": {
+                        "name": "json"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:02.617Z",
+                    "location": "/var/log/suricata/eve.json",
+                    "id": "1768045262.153239",
+                    "timestamp": "2026-01-10T11:41:02.617+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "p1a1p5sBuUkBeeb-v5rC",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-30-117",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 11:41:00"
+                    },
+                    "agent": {
+                        "name": "ip-172-31-30-117",
+                        "id": "000"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "1000",
+                        "dstuser": "root(uid=0)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 7,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 11:41:00 ip-172-31-30-117 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:01.417Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768045261.139588",
+                    "timestamp": "2026-01-10T11:41:01.417+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "qVa1p5sBuUkBeeb-v5rC",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "name": "ip-172-31-30-117",
+                        "id": "000"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "root",
+                        "origin": {
+                            "module": "wazuh-execd",
+                            "name": "node01"
+                        },
+                        "version": "1",
+                        "parameters": {
+                            "alert": {
+                                "predecoder": {
+                                    "hostname": "ip-172-31-30-117",
+                                    "program_name": "sudo",
+                                    "timestamp": "Jan 10 11:41:00"
+                                },
+                                "agent": {
+                                    "name": "ip-172-31-30-117",
+                                    "id": "000"
+                                },
+                                "manager": {
+                                    "name": "ip-172-31-30-117"
+                                },
+                                "data": {
+                                    "srcuser": "ubuntu",
+                                    "dstuser": "root",
+                                    "pwd": "/home/ubuntu",
+                                    "command": "/usr/bin/nmap -sV --reason ec2-54-204-182-4.compute-1.amazonaws.com"
+                                },
+                                "rule": {
+                                    "mail": "false",
+                                    "level": "3",
+                                    "pci_dss": [
+                                        "10.2.5",
+                                        "10.2.2"
+                                    ],
+                                    "hipaa": [
+                                        "164.312.b"
+                                    ],
+                                    "tsc": [
+                                        "CC6.8",
+                                        "CC7.2",
+                                        "CC7.3"
+                                    ],
+                                    "description": "Successful sudo to ROOT executed.",
+                                    "groups": [
+                                        "syslog",
+                                        "sudo"
+                                    ],
+                                    "nist_800_53": [
+                                        "AU.14",
+                                        "AC.7",
+                                        "AC.6"
+                                    ],
+                                    "gdpr": [
+                                        "IV_32.2"
+                                    ],
+                                    "firedtimes": "2",
+                                    "mitre": {
+                                        "technique": [
+                                            "Sudo and Sudo Caching"
+                                        ],
+                                        "id": [
+                                            "T1548.003"
+                                        ],
+                                        "tactic": [
+                                            "Privilege Escalation",
+                                            "Defense Evasion"
+                                        ]
+                                    },
+                                    "id": "5402",
+                                    "gpg13": [
+                                        "7.6",
+                                        "7.8",
+                                        "7.13"
+                                    ]
+                                },
+                                "location": "/var/log/auth.log",
+                                "id": "1768045261.140034",
+                                "decoder": {
+                                    "parent": "sudo",
+                                    "name": "sudo",
+                                    "ftscomment": "First time user executed the sudo command"
+                                },
+                                "timestamp": "2026-01-10T11:41:01.417+0000",
+                                "full_log": "Jan 10 11:41:00 ip-172-31-30-117 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/nmap -sV --reason ec2-54-204-182-4.compute-1.amazonaws.com"
+                            },
+                            "extra_args": [],
+                            "program": "active-response/bin/disable-account"
+                        },
+                        "command": "add"
+                    },
+                    "rule": {
+                        "firedtimes": 3,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "11.4"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3",
+                            "CC7.4"
+                        ],
+                        "description": "Active response: active-response/bin/disable-account - add",
+                        "groups": [
+                            "ossec",
+                            "active_response"
+                        ],
+                        "id": "657",
+                        "nist_800_53": [
+                            "SI.4"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "ar_log_json",
+                        "name": "ar_log_json"
+                    },
+                    "full_log": "2026/01/10 11:41:01 active-response/bin/disable-account: {\"version\":1,\"origin\":{\"name\":\"node01\",\"module\":\"wazuh-execd\"},\"command\":\"add\",\"parameters\":{\"extra_args\":[],\"alert\":{\"timestamp\":\"2026-01-10T11:41:01.417+0000\",\"rule\":{\"level\":3,\"description\":\"Successful sudo to ROOT executed.\",\"id\":\"5402\",\"mitre\":{\"id\":[\"T1548.003\"],\"tactic\":[\"Privilege Escalation\",\"Defense Evasion\"],\"technique\":[\"Sudo and Sudo Caching\"]},\"firedtimes\":2,\"mail\":false,\"groups\":[\"syslog\",\"sudo\"],\"pci_dss\":[\"10.2.5\",\"10.2.2\"],\"gpg13\":[\"7.6\",\"7.8\",\"7.13\"],\"gdpr\":[\"IV_32.2\"],\"hipaa\":[\"164.312.b\"],\"nist_800_53\":[\"AU.14\",\"AC.7\",\"AC.6\"],\"tsc\":[\"CC6.8\",\"CC7.2\",\"CC7.3\"]},\"agent\":{\"id\":\"000\",\"name\":\"ip-172-31-30-117\"},\"manager\":{\"name\":\"ip-172-31-30-117\"},\"id\":\"1768045261.140034\",\"full_log\":\"Jan 10 11:41:00 ip-172-31-30-117 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/nmap -sV --reason ec2-54-204-182-4.compute-1.amazonaws.com\",\"predecoder\":{\"program_name\":\"sudo\",\"timestamp\":\"Jan 10 11:41:00\",\"hostname\":\"ip-172-31-30-117\"},\"decoder\":{\"parent\":\"sudo\",\"name\":\"sudo\",\"ftscomment\":\"First time user executed the sudo command\"},\"data\":{\"srcuser\":\"ubuntu\",\"dstuser\":\"root\",\"pwd\":\"/home/ubuntu\",\"command\":\"/usr/bin/nmap -sV --reason ec2-54-204-182-4.compute-1.amazonaws.com\"},\"location\":\"/var/log/auth.log\"},\"program\":\"active-response/bin/disable-account\"}}",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:01.423Z",
+                    "location": "/var/ossec/logs/active-responses.log",
+                    "id": "1768045261.140630",
+                    "timestamp": "2026-01-10T11:41:01.423+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "qla1p5sBuUkBeeb-v5rC",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "root",
+                        "origin": {
+                            "module": "wazuh-execd",
+                            "name": "node01"
+                        },
+                        "version": "1",
+                        "parameters": {
+                            "alert": {
+                                "predecoder": {
+                                    "hostname": "ip-172-31-30-117",
+                                    "program_name": "sudo",
+                                    "timestamp": "Jan 10 11:41:00"
+                                },
+                                "agent": {
+                                    "name": "ip-172-31-30-117",
+                                    "id": "000"
+                                },
+                                "manager": {
+                                    "name": "ip-172-31-30-117"
+                                },
+                                "data": {
+                                    "srcuser": "ubuntu",
+                                    "dstuser": "root",
+                                    "pwd": "/home/ubuntu",
+                                    "command": "/usr/bin/nmap -sV --reason ec2-54-204-182-4.compute-1.amazonaws.com"
+                                },
+                                "rule": {
+                                    "mail": "false",
+                                    "level": "3",
+                                    "pci_dss": [
+                                        "10.2.5",
+                                        "10.2.2"
+                                    ],
+                                    "hipaa": [
+                                        "164.312.b"
+                                    ],
+                                    "tsc": [
+                                        "CC6.8",
+                                        "CC7.2",
+                                        "CC7.3"
+                                    ],
+                                    "description": "Successful sudo to ROOT executed.",
+                                    "groups": [
+                                        "syslog",
+                                        "sudo"
+                                    ],
+                                    "nist_800_53": [
+                                        "AU.14",
+                                        "AC.7",
+                                        "AC.6"
+                                    ],
+                                    "gdpr": [
+                                        "IV_32.2"
+                                    ],
+                                    "firedtimes": "2",
+                                    "mitre": {
+                                        "technique": [
+                                            "Sudo and Sudo Caching"
+                                        ],
+                                        "id": [
+                                            "T1548.003"
+                                        ],
+                                        "tactic": [
+                                            "Privilege Escalation",
+                                            "Defense Evasion"
+                                        ]
+                                    },
+                                    "id": "5402",
+                                    "gpg13": [
+                                        "7.6",
+                                        "7.8",
+                                        "7.13"
+                                    ]
+                                },
+                                "location": "/var/log/auth.log",
+                                "id": "1768045261.140034",
+                                "decoder": {
+                                    "parent": "sudo",
+                                    "name": "sudo",
+                                    "ftscomment": "First time user executed the sudo command"
+                                },
+                                "timestamp": "2026-01-10T11:41:01.417+0000",
+                                "full_log": "Jan 10 11:41:00 ip-172-31-30-117 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/nmap -sV --reason ec2-54-204-182-4.compute-1.amazonaws.com"
+                            },
+                            "extra_args": [],
+                            "program": "active-response/bin/firewall-drop"
+                        },
+                        "command": "add"
+                    },
+                    "rule": {
+                        "firedtimes": 2,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "11.4"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3",
+                            "CC7.4"
+                        ],
+                        "description": "Host Blocked by firewall-drop Active Response",
+                        "groups": [
+                            "ossec",
+                            "active_response"
+                        ],
+                        "id": "651",
+                        "nist_800_53": [
+                            "SI.4"
+                        ],
+                        "gpg13": [
+                            "4.13"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "ar_log_json",
+                        "name": "ar_log_json"
+                    },
+                    "full_log": "2026/01/10 11:41:01 active-response/bin/firewall-drop: {\"version\":1,\"origin\":{\"name\":\"node01\",\"module\":\"wazuh-execd\"},\"command\":\"add\",\"parameters\":{\"extra_args\":[],\"alert\":{\"timestamp\":\"2026-01-10T11:41:01.417+0000\",\"rule\":{\"level\":3,\"description\":\"Successful sudo to ROOT executed.\",\"id\":\"5402\",\"mitre\":{\"id\":[\"T1548.003\"],\"tactic\":[\"Privilege Escalation\",\"Defense Evasion\"],\"technique\":[\"Sudo and Sudo Caching\"]},\"firedtimes\":2,\"mail\":false,\"groups\":[\"syslog\",\"sudo\"],\"pci_dss\":[\"10.2.5\",\"10.2.2\"],\"gpg13\":[\"7.6\",\"7.8\",\"7.13\"],\"gdpr\":[\"IV_32.2\"],\"hipaa\":[\"164.312.b\"],\"nist_800_53\":[\"AU.14\",\"AC.7\",\"AC.6\"],\"tsc\":[\"CC6.8\",\"CC7.2\",\"CC7.3\"]},\"agent\":{\"id\":\"000\",\"name\":\"ip-172-31-30-117\"},\"manager\":{\"name\":\"ip-172-31-30-117\"},\"id\":\"1768045261.140034\",\"full_log\":\"Jan 10 11:41:00 ip-172-31-30-117 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/nmap -sV --reason ec2-54-204-182-4.compute-1.amazonaws.com\",\"predecoder\":{\"program_name\":\"sudo\",\"timestamp\":\"Jan 10 11:41:00\",\"hostname\":\"ip-172-31-30-117\"},\"decoder\":{\"parent\":\"sudo\",\"name\":\"sudo\",\"ftscomment\":\"First time user executed the sudo command\"},\"data\":{\"srcuser\":\"ubuntu\",\"dstuser\":\"root\",\"pwd\":\"/home/ubuntu\",\"command\":\"/usr/bin/nmap -sV --reason ec2-54-204-182-4.compute-1.amazonaws.com\"},\"location\":\"/var/log/auth.log\"},\"program\":\"active-response/bin/firewall-drop\"}}",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:02.600Z",
+                    "location": "/var/ossec/logs/active-responses.log",
+                    "id": "1768045262.144167",
+                    "timestamp": "2026-01-10T11:41:02.600+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "rVa1p5sBuUkBeeb-v5rC",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "ip_v": "4",
+                        "in_iface": "eth0",
+                        "src_ip": "172.31.30.117",
+                        "src_port": "36130",
+                        "event_type": "alert",
+                        "alert": {
+                            "severity": "2",
+                            "signature_id": "2010936",
+                            "rev": "3",
+                            "metadata": {
+                                "updated_at": [
+                                    "2019_07_26"
+                                ],
+                                "confidence": [
+                                    "Medium"
+                                ],
+                                "created_at": [
+                                    "2010_07_30"
+                                ],
+                                "signature_severity": [
+                                    "Informational"
+                                ]
+                            },
+                            "gid": "1",
+                            "signature": "ET SCAN Suspicious inbound to Oracle SQL port 1521",
+                            "action": "allowed",
+                            "category": "Potentially Bad Traffic"
+                        },
+                        "flow_id": "1438465456161990.000000",
+                        "dest_ip": "172.31.28.229",
+                        "proto": "TCP",
+                        "dest_port": "1521",
+                        "pkt_src": "wire/pcap",
+                        "flow": {
+                            "src_ip": "172.31.30.117",
+                            "src_port": "36130",
+                            "pkts_toserver": "1",
+                            "dest_ip": "172.31.28.229",
+                            "start": "2026-01-10T11:41:01.007238+0000",
+                            "bytes_toclient": "0",
+                            "bytes_toserver": "58",
+                            "pkts_toclient": "0",
+                            "dest_port": "1521"
+                        },
+                        "timestamp": "2026-01-10T11:41:01.007238+0000",
+                        "direction": "to_server"
+                    },
+                    "rule": {
+                        "firedtimes": 58,
+                        "mail": false,
+                        "level": 3,
+                        "description": "Suricata: Alert - ET SCAN Suspicious inbound to Oracle SQL port 1521",
+                        "groups": [
+                            "ids",
+                            "suricata"
+                        ],
+                        "id": "86601"
+                    },
+                    "decoder": {
+                        "name": "json"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:02.614Z",
+                    "location": "/var/log/suricata/eve.json",
+                    "id": "1768045262.151379",
+                    "timestamp": "2026-01-10T11:41:02.614+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "sFa1p5sBuUkBeeb-25oh",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-30-117",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 11:41:07"
+                    },
+                    "agent": {
+                        "name": "ip-172-31-30-117",
+                        "id": "000"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "root"
+                    },
+                    "rule": {
+                        "firedtimes": 2,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session closed.",
+                        "groups": [
+                            "pam",
+                            "syslog"
+                        ],
+                        "id": "5502",
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 11:41:07 ip-172-31-30-117 sudo: pam_unix(sudo:session): session closed for user root",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:07.424Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768045267.156915",
+                    "timestamp": "2026-01-10T11:41:07.424+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "pVa1p5sBuUkBeeb-v5rC",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "name": "ip-172-31-30-117",
+                        "id": "000"
+                    },
+                    "data": {
+                        "srcip": "139.162.182.178",
+                        "dstuser": "ubuntu",
+                        "srcport": "60204"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: authentication success.",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 3,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts",
+                                "Remote Services"
+                            ],
+                            "id": [
+                                "T1078",
+                                "T1021"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5715",
+                        "gpg13": [
+                            "7.1",
+                            "7.2"
+                        ]
+                    },
+                    "full_log": "Jan 10 11:41:00 ip-172-31-30-117 sshd[2976]: Accepted publickey for ubuntu from 139.162.182.178 port 60204 ssh2: RSA SHA256:0aGdEkkvxb/8Lby3Wjqsl8C+DXbve0UirXCQWVLmFZ0",
+                    "id": "1768045261.138602",
+                    "timestamp": "2026-01-10T11:41:01.417+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-30-117",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 11:41:00"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:01.417Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "pla1p5sBuUkBeeb-v5rC",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-30-117",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 11:41:00"
+                    },
+                    "agent": {
+                        "name": "ip-172-31-30-117",
+                        "id": "000"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "0",
+                        "dstuser": "ubuntu(uid=1000)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 6,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 11:41:00 ip-172-31-30-117 sshd[2976]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by (uid=0)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:01.417Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768045261.139132",
+                    "timestamp": "2026-01-10T11:41:01.417+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "qFa1p5sBuUkBeeb-v5rC",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-30-117",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 11:41:00"
+                    },
+                    "agent": {
+                        "name": "ip-172-31-30-117",
+                        "id": "000"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "srcuser": "ubuntu",
+                        "dstuser": "root",
+                        "pwd": "/home/ubuntu",
+                        "command": "/usr/bin/nmap -sV --reason ec2-54-204-182-4.compute-1.amazonaws.com"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5",
+                            "10.2.2"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Successful sudo to ROOT executed.",
+                        "groups": [
+                            "syslog",
+                            "sudo"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AC.6"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 2,
+                        "mitre": {
+                            "technique": [
+                                "Sudo and Sudo Caching"
+                            ],
+                            "id": [
+                                "T1548.003"
+                            ],
+                            "tactic": [
+                                "Privilege Escalation",
+                                "Defense Evasion"
+                            ]
+                        },
+                        "id": "5402",
+                        "gpg13": [
+                            "7.6",
+                            "7.8",
+                            "7.13"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "sudo",
+                        "name": "sudo",
+                        "ftscomment": "First time user executed the sudo command"
+                    },
+                    "full_log": "Jan 10 11:41:00 ip-172-31-30-117 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/nmap -sV --reason ec2-54-204-182-4.compute-1.amazonaws.com",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:01.417Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768045261.140034",
+                    "timestamp": "2026-01-10T11:41:01.417+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "r1a1p5sBuUkBeeb-v5rC",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "ip_v": "4",
+                        "in_iface": "eth0",
+                        "src_ip": "172.31.30.117",
+                        "src_port": "36130",
+                        "event_type": "alert",
+                        "alert": {
+                            "severity": "2",
+                            "signature_id": "2002910",
+                            "rev": "6",
+                            "metadata": {
+                                "updated_at": [
+                                    "2019_07_26"
+                                ],
+                                "confidence": [
+                                    "Medium"
+                                ],
+                                "created_at": [
+                                    "2010_07_30"
+                                ],
+                                "signature_severity": [
+                                    "Informational"
+                                ]
+                            },
+                            "gid": "1",
+                            "signature": "ET SCAN Potential VNC Scan 5800-5820",
+                            "action": "allowed",
+                            "category": "Attempted Information Leak"
+                        },
+                        "flow_id": "1460146449570468.000000",
+                        "dest_ip": "172.31.28.229",
+                        "proto": "TCP",
+                        "dest_port": "5810",
+                        "pkt_src": "wire/pcap",
+                        "flow": {
+                            "src_ip": "172.31.30.117",
+                            "src_port": "36130",
+                            "pkts_toserver": "1",
+                            "dest_ip": "172.31.28.229",
+                            "start": "2026-01-10T11:41:01.012286+0000",
+                            "bytes_toclient": "0",
+                            "bytes_toserver": "58",
+                            "pkts_toclient": "0",
+                            "dest_port": "5810"
+                        },
+                        "timestamp": "2026-01-10T11:41:01.012286+0000",
+                        "direction": "to_server"
+                    },
+                    "rule": {
+                        "firedtimes": 60,
+                        "mail": false,
+                        "level": 3,
+                        "description": "Suricata: Alert - ET SCAN Potential VNC Scan 5800-5820",
+                        "groups": [
+                            "ids",
+                            "suricata"
+                        ],
+                        "id": "86601"
+                    },
+                    "decoder": {
+                        "name": "json"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T11:41:02.619Z",
+                    "location": "/var/log/suricata/eve.json",
+                    "id": "1768045262.155095",
+                    "timestamp": "2026-01-10T11:41:02.619+0000"
+                }
+            }
+        ]
+    }
+}

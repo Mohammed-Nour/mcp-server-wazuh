@@ -1,0 +1,27 @@
+===============================================================================
+ATTACK FP-1: Legitimate Failed SSH Login
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: FalsePositive
+Attempts: 6
+Delay: 1s
+Executor: admin over SSH → ec2-54-157-35-39.compute-1.amazonaws.com+
+
+[*] Benign login noise started at: 2026-01-10T16:48:36+03:00
+[*] Running from admin host via SSH: ec2-54-157-35-39.compute-1.amazonaws.com
+
+===============================================================================
+[✓] Benign failed logins completed
+===============================================================================
+End Time: 2026-01-10T16:48:45+03:00
+Duration: 9.061933599 seconds
+
+Expected Wazuh alerts: failed SSH authentication (benign user errors)
+Mitigation guidance: verify recent successful login and user context; avoid lockout
+
+Data for CSV:
+  attack_id: FP-1
+  attack_name: Legitimate Failed SSH Login
+  category: FalsePositive
+  attack_start_time: 2026-01-10T16:48:36+03:00
+  attack_end_time: 2026-01-10T16:48:45+03:00

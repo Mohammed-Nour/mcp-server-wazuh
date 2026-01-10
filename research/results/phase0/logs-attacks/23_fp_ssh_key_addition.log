@@ -1,0 +1,29 @@
+===============================================================================
+ATTACK FP-5: Legitimate SSH Key Addition
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: FalsePositive
+Executor: local (this machine)
+Authorized keys file: /home/ubuntu/.ssh/authorized_keys
+Cleanup after? true
+
+[*] SSH key addition started at: 2026-01-10T16:15:26+03:00
+[*] Executing on target host via SSH
+[*] Adding SSH key to /home/ubuntu/.ssh/authorized_keys
+[*] Cleanup enabled; removing key after 5 seconds
+
+===============================================================================
+[✓] SSH key addition simulation completed
+===============================================================================
+End Time: 2026-01-10T16:15:34+03:00
+Duration: 7.566575463 seconds
+
+Expected Wazuh alerts: authorized_keys modified (benign user action)
+Mitigation guidance: confirm user request/approval; allow if expected
+
+Data for CSV:
+  attack_id: FP-5
+  attack_name: Legitimate SSH Key Addition
+  category: FalsePositive
+  attack_start_time: 2026-01-10T16:15:26+03:00
+  attack_end_time: 2026-01-10T16:15:34+03:00
