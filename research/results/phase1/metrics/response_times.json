@@ -1,0 +1,218 @@
+[
+    {
+        "attack_id": "01",
+        "analysis_start_time": "2026-01-10T22:39:15+03:00",
+        "analysis_end_time": "2026-01-10T22:39:23+03:00",
+        "remediation_start_time": "2026-01-10T22:39:50+03:00",
+        "remediation_end_time": "2026-01-10T22:40:02+03:00",
+        "classification": "true-positive",
+        "notes": "Block the IP address via active response with firewall drop"
+    },
+    {
+        "attack_id": "02",
+        "analysis_start_time": "2026-01-10T22:46:19+03:00",
+        "analysis_end_time": "2026-01-10T22:48:38+03:00",
+        "remediation_start_time": "2026-01-10T22:48:50+03:00",
+        "remediation_end_time": "2026-01-10T22:49:02+03:00",
+        "classification": "true-positive",
+        "notes": "Block the IP address via active response with firewall drop"
+    },
+    {
+        "attack_id": "03",
+        "analysis_start_time": "2026-01-10T22:53:45+03:00",
+        "analysis_end_time": "2026-01-10T22:53:53+03:00",
+        "remediation_start_time": "2026-01-10T22:54:05+03:00",
+        "remediation_end_time": "2026-01-10T22:57:17+03:00",
+        "classification": "true-positive",
+        "notes": "Integrate VirusTotal and block the IP via active response with rules 550 and 554 Syscheck handled created and deleted and modified files Disable the user when rules 550 or 554 trigger"
+    },
+    {
+        "attack_id": "04",
+        "analysis_start_time": "2026-01-10T22:57:30+03:00",
+        "analysis_end_time": "2026-01-10T11:22:58:00:00",
+        "remediation_start_time": "2026-01-10T22:58:05+03:00",
+        "remediation_end_time": "2026-01-10T22:59:24+03:00",
+        "classification": "true-positive",
+        "notes": "Block the IP via active response with rules 550 and 554 Syscheck restored the tampered files"
+    },
+    {
+        "attack_id": "05",
+        "analysis_start_time": "2026-01-10T23:01:30+03:00",
+        "analysis_end_time": "2026-01-10T23:02:38+03:00",
+        "remediation_start_time": "2026-01-10T23:02:50+03:00",
+        "remediation_end_time": "2026-01-10T23:05:02+03:00",
+        "classification": "true-positive",
+        "notes": "Add VirusTotal and block the IP via active response with rules 550 and 554 Syscheck handled created and deleted and modified files Disable the user when rules 550 or 554 trigger"
+    },
+    {
+        "attack_id": "06",
+        "analysis_start_time": "2026-01-10T23:10:30+03:00",
+        "analysis_end_time": "2026-01-10T23:07:38+03:00",
+        "remediation_start_time": "2026-01-10T23:07:50+03:00",
+        "remediation_end_time": "2026-01-10T23:08:02+03:00",
+        "classification": "true-positive",
+        "notes": "Add VirusTotal and block the IP via active response with rules 550 and 554 Syscheck handled created and deleted and modified files Disable the user when rules 550 or 554 trigger"
+    },
+    {
+        "attack_id": "07",
+        "analysis_start_time": "2026-01-10T23:10:14+03:00",
+        "analysis_end_time": "2026-01-10T23:11:22+03:00",
+        "remediation_start_time": "2026-01-10T23:11:34+03:00",
+        "remediation_end_time": "2026-01-10T23:13:46+03:00",
+        "classification": "true-positive",
+        "notes": "Disable the user used in the attack and block the IP via active response with rules 5710 5712 5716 and 100100"
+    },
+    {
+        "attack_id": "08",
+        "analysis_start_time": "2026-01-10T23:14:46+03:00",
+        "analysis_end_time": "2026-01-10T23:16:54+03:00",
+        "remediation_start_time": "2026-01-10T23:17:06+03:00",
+        "remediation_end_time": "2026-01-10T23:20:18+03:00",
+        "classification": "true-positive",
+        "notes": "Block the IP via active response with rules 5902 and 40501 and disable the user used in the attack"
+    },
+    {
+        "attack_id": "09",
+        "analysis_start_time": "2026-01-10T23:20:50+03:00",
+        "analysis_end_time": "2026-01-10T23:21:58+03:00",
+        "remediation_start_time": "2026-01-10T23:22:10+03:00",
+        "remediation_end_time": "2026-01-10T23:26:01+03:00",
+        "classification": "false-negative",
+        "notes": "No alerts were generated Add firewall rules or integrate Suricata with the firewall to block the attack at the network level"
+    },
+    {
+        "attack_id": "10",
+        "analysis_start_time": "2026-01-10T23:20:50+03:00",
+        "analysis_end_time": "2026-01-10T23:21:58+03:00",
+        "remediation_start_time": "2026-01-10T23:22:10+03:00",
+        "remediation_end_time": "2026-01-10T23:27:47+03:00",
+        "classification": "false-negative",
+        "notes": "No alerts were generated Add firewall rules or integrate Suricata with the firewall to block the attack at the network level"
+    },
+    {
+        "attack_id": "11",
+        "analysis_start_time": "2026-01-10T23:20:50+03:00",
+        "analysis_end_time": "2026-01-10T23:21:58+03:00",
+        "remediation_start_time": "2026-01-10T23:22:10+03:00",
+        "remediation_end_time": "2026-01-10T23:28:52+03:00",
+        "classification": "false-negative",
+        "notes": "No alerts were generated Add firewall rules or integrate Suricata with the firewall to block the attack at the network level"
+    },
+    {
+        "attack_id": "12",
+        "analysis_start_time": "2026-01-10T23:29:54+03:00",
+        "analysis_end_time": "2026-01-10T23:31:39+03:00",
+        "remediation_start_time": "2026-01-10T23:31:51+03:00",
+        "remediation_end_time": "2026-01-10T23:35:03+03:00",
+        "classification": "true-positive",
+        "notes": "Use the firewall to block the attack at the network level"
+    },
+    {
+        "attack_id": "13",
+        "analysis_start_time": "2026-01-10T23:36:31+03:00",
+        "analysis_end_time": "2026-01-10T23:39:31+03:00",
+        "remediation_start_time": "2026-01-10T23:39:50+03:00",
+        "remediation_end_time": "2026-01-10T23:44:23+03+03:00",
+        "classification": "true-positive",
+        "notes": "Syscheck restored the modified files Block the IP by adding firewall rules with rule ID 5402"
+    },
+    {
+        "attack_id": "14",
+        "analysis_start_time": "2026-01-10T23:50:02+03:00",
+        "analysis_end_time": "2026-01-10T23:52:02+03:00",
+        "remediation_start_time": "2026-01-10T23:52:25+03:00",
+        "remediation_end_time": "2026-01-10T23:54:02+03:00",
+        "classification": "true-positive",
+        "notes": "Syscheck restored the modified files Block the IP by adding firewall rules with rule ID 5402"
+    },
+    {
+        "attack_id": "15",
+        "analysis_start_time": "2026-01-10T23:54:50+03:00",
+        "analysis_end_time": "2026-01-10T23:59:46+03:00",
+        "remediation_start_time": "2026-01-10T23:59:58+03:00",
+        "remediation_end_time": "2026-01-11T00:07:32+03:00",
+        "classification": "true-positive",
+        "notes": "Syscheck restored the modified files Block the IP by adding firewall rules with rule ID 5402"
+    },
+    {
+        "attack_id": "16",
+        "analysis_start_time": "2026-01-11T00:12:06+03:00",
+        "analysis_end_time": "2026-01-11T00:16:30+03:00",
+        "remediation_start_time": "2026-01-11T00:16:42+03:00",
+        "remediation_end_time": "2026-01-11T00:22:46+03:00",
+        "classification": "true-positive",
+        "notes": "Block the IP by adding firewall rules"
+    },
+    {
+        "attack_id": "17",
+        "analysis_start_time": "2026-01-11T00:24:50+03:00",
+        "analysis_end_time": "2026-01-11T00:26:37+03:00",
+        "remediation_start_time": "2026-01-11T00:27:00+03:00",
+        "remediation_end_time": "2026-01-11T00:33:57+03:00",
+        "classification": "true-positive",
+        "notes": "Block the IP by adding firewall rules and disable the user used in the attack"
+    },
+    {
+        "attack_id": "18",
+        "analysis_start_time": "2026-01-11T00:35:57+03:00",
+        "analysis_end_time": "2026-01-11T00:36:35+03:00",
+        "remediation_start_time": "2026-01-11T00:36:50+03:00",
+        "remediation_end_time": "2026-01-11T00:37:02+03:00",
+        "classification": "false-negative",
+        "notes": "Add Suricata IDS with the firewall to detect and block this attack at the network level"
+    },
+    {
+        "attack_id": "19",
+        "analysis_start_time": "2026-01-11T00:41:59+03:00",
+        "analysis_end_time": "2026-01-11T00:42:07+03:00",
+        "remediation_start_time": "2026-01-11T00:42:19+03:00",
+        "remediation_end_time": "2026-01-11T00:43:31+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
+    },
+    {
+        "attack_id": "20",
+        "analysis_start_time": "2026-01-11T00:44:22+03:00",
+        "analysis_end_time": "2026-01-11T00:44:30+03:00",
+        "remediation_start_time": "2026-01-11T00:44:42+03:00",
+        "remediation_end_time": "2026-01-11T00:45:00+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
+    },
+    {
+        "attack_id": "21",
+        "analysis_start_time": "2026-01-11T00:45:29+03:00",
+        "analysis_end_time": "2026-01-11T00:45:50+03:00",
+        "remediation_start_time": "2026-01-11T00:46:02+03:00",
+        "remediation_end_time": "2026-01-11T00:46:14+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
+    },
+    {
+        "attack_id": "22",
+        "analysis_start_time": "2026-01-11T00:47:21+03:00",
+        "analysis_end_time": "2026-01-11T00:48:29+03:00",
+        "remediation_start_time": "2026-01-11T00:48:50+03:00",
+        "remediation_end_time": "2026-01-11T00:49:04+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
+    },
+    {
+        "attack_id": "23",
+        "analysis_start_time": "2026-01-11T00:49:21+03:00",
+        "analysis_end_time": "2026-01-11T00:49:39+03:00",
+        "remediation_start_time": "2026-01-11T00:49:50+03:00",
+        "remediation_end_time": "2026-01-11T00:50:04+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
+    },
+    {
+        "attack_id": "24",
+        "analysis_start_time": "2026-01-11T00:50:21+03:00",
+        "analysis_end_time": "2026-01-11T00:50:30+03:00",
+        "remediation_start_time": "2026-01-11T00:50:50+03:00",
+        "remediation_end_time": "2026-01-11T00:51:04+03:00",
+        "classification": "false-positive",
+        "notes": "false positive detected not an actual attack"
+    }
+]
