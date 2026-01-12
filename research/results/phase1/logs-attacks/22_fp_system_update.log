@@ -1,0 +1,54 @@
+===============================================================================
+[1;33mATTACK FP-4: Legitimate System Update[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: FalsePositive
+Executor: local (this machine)
+Command: sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
+Note: This is expected maintenance, not malicious
+
+[0;32m[*] System update started at: 2026-01-10T20:10:38+03:00[0m
+[*] Executing on admin host via SSH
+[*] Running package update/upgrade...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3163 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1246 kB]
+Hit:7 https://ppa.launchpadcontent.net/oisf/suricata-stable/ubuntu jammy InRelease
+Fetched 4664 kB in 1s (4415 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+All packages are up to date.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libsvn1 libbson-1.0-0 libmongoc-1.0-0
+Learn more about Ubuntu Pro on AWS at https://ubuntu.com/aws/pro
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+===============================================================================
+[0;32m[✓] System update completed[0m
+===============================================================================
+End Time: 2026-01-10T20:10:42+03:00
+Duration: 4 seconds
+
+Expected Wazuh alerts: FIM changes, package manager activity (benign)
+Mitigation guidance: correlate with maintenance window/release notes
+
+Data for CSV:
+  attack_id: FP-4
+  attack_name: Legitimate System Update
+  category: FalsePositive
+  attack_start_time: 2026-01-10T20:10:38+03:00
+  attack_end_time: 2026-01-10T20:10:42+03:00

@@ -1,0 +1,2527 @@
+{
+    "took": 8,
+    "timed_out": false,
+    "_shards": {
+        "total": 24,
+        "successful": 24,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 30,
+            "relation": "eq"
+        },
+        "max_score": 1.0,
+        "hits": [
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "vHbgqJsBpsB0GyOkdxoz",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "root",
+                        "mtime_after": "2026-01-10T17:07:20",
+                        "size_after": "221",
+                        "gid_after": "0",
+                        "mode": "realtime",
+                        "path": "/tmp/fim_backup_1768064840/hosts",
+                        "sha1_after": "a777be51c79c607edd61c8e12cd9b775ddc8a6c6",
+                        "gname_after": "root",
+                        "uid_after": "0",
+                        "perm_after": "rw-r--r--",
+                        "event": "added",
+                        "md5_after": "1463508f28edb4d6d5ae349b20e00409",
+                        "sha256_after": "aa4ea922e4f2a1277b5aac898f5af3dc4a2f301213c37290506e6add79d89c11",
+                        "inode_after": 545628
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 1,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_integrity_changed"
+                    },
+                    "full_log": "File '/tmp/fim_backup_1768064840/hosts' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:20.402Z",
+                    "location": "syscheck",
+                    "id": "1768064840.6501735",
+                    "timestamp": "2026-01-10T17:07:20.402+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "v3bgqJsBpsB0GyOkdxoz",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "root",
+                        "mtime_after": "2026-01-10T17:07:20",
+                        "size_after": "2089",
+                        "gid_after": "0",
+                        "mode": "realtime",
+                        "path": "/tmp/fim_backup_1768064840/passwd",
+                        "sha1_after": "5aee249354223d4fad7c919750799e356d9667de",
+                        "gname_after": "root",
+                        "uid_after": "0",
+                        "perm_after": "rw-r--r--",
+                        "event": "added",
+                        "md5_after": "38f9bc414a42eca094a0c3ab3a138668",
+                        "sha256_after": "501c5041492d82a440506d50bff06a9356d45644b1f131b463df54f70ecde458",
+                        "inode_after": 545635
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 2,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/fim_backup_1768064840/passwd' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:20.425Z",
+                    "location": "syscheck",
+                    "id": "1768064840.6504813",
+                    "timestamp": "2026-01-10T17:07:20.425+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "wHbgqJsBpsB0GyOkdxoz",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "size_before": "2089",
+                        "uname_after": "root",
+                        "mtime_after": "2026-01-10T17:07:20",
+                        "size_after": "2122",
+                        "gid_after": "0",
+                        "md5_before": "38f9bc414a42eca094a0c3ab3a138668",
+                        "sha256_before": "501c5041492d82a440506d50bff06a9356d45644b1f131b463df54f70ecde458",
+                        "mtime_before": "2026-01-06T11:37:14",
+                        "mode": "realtime",
+                        "path": "/etc/passwd",
+                        "sha1_after": "b7998de81edb9870ff575c23a35291df7f0235a6",
+                        "changed_attributes": [
+                            "size",
+                            "mtime",
+                            "md5",
+                            "sha1",
+                            "sha256"
+                        ],
+                        "gname_after": "root",
+                        "uid_after": "0",
+                        "perm_after": "rw-r--r--",
+                        "event": "modified",
+                        "md5_after": "89d3d935782c8e302d4494a62873c61e",
+                        "sha1_before": "5aee249354223d4fad7c919750799e356d9667de",
+                        "sha256_after": "f14ca83be8b5f76f0715b46c95d42ae26229c5892ca2aaa32ce4dca3c2280a8b",
+                        "inode_after": 41571
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Integrity checksum changed.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_modified",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 3,
+                        "mitre": {
+                            "technique": [
+                                "Stored Data Manipulation"
+                            ],
+                            "id": [
+                                "T1565.001"
+                            ],
+                            "tactic": [
+                                "Impact"
+                            ]
+                        },
+                        "id": "550",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_integrity_changed"
+                    },
+                    "full_log": "File '/etc/passwd' modified\nMode: realtime\nChanged attributes: size,mtime,md5,sha1,sha256\nSize changed from '2089' to '2122'\nOld modification time was: '1767699434', now it is '1768064840'\nOld md5sum was: '38f9bc414a42eca094a0c3ab3a138668'\nNew md5sum is : '89d3d935782c8e302d4494a62873c61e'\nOld sha1sum was: '5aee249354223d4fad7c919750799e356d9667de'\nNew sha1sum is : 'b7998de81edb9870ff575c23a35291df7f0235a6'\nOld sha256sum was: '501c5041492d82a440506d50bff06a9356d45644b1f131b463df54f70ecde458'\nNew sha256sum is : 'f14ca83be8b5f76f0715b46c95d42ae26229c5892ca2aaa32ce4dca3c2280a8b'\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:20.436Z",
+                    "location": "syscheck",
+                    "id": "1768064840.6505517",
+                    "timestamp": "2026-01-10T17:07:20.436+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "w3bgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "size_before": "11280",
+                        "uname_after": "root",
+                        "mtime_after": "2026-01-10T17:07:20",
+                        "size_after": "11309",
+                        "gid_after": "0",
+                        "md5_before": "195fe77164f5daadf6d67ab5cf7f4259",
+                        "sha256_before": "023a7670d4abdd9aa3e30cab4fd62b8f0ea8c3f8569c7ebef156c3950044a49f",
+                        "mtime_before": "2026-01-05T21:03:35",
+                        "mode": "realtime",
+                        "path": "/var/www/html/index.html",
+                        "sha1_after": "943b8a8ea1cae688a383e781c2ec0115d903dd20",
+                        "changed_attributes": [
+                            "size",
+                            "mtime",
+                            "md5",
+                            "sha1",
+                            "sha256"
+                        ],
+                        "gname_after": "root",
+                        "uid_after": "0",
+                        "perm_after": "rw-r--r--",
+                        "event": "modified",
+                        "md5_after": "ce7b9e25ee85f1213f7f896941fda2d1",
+                        "sha1_before": "8a7977d86d37812d12dcb36b4d7552d63143ef8e",
+                        "sha256_after": "8ef1078605fb942f5564d4e651638866fb2f55214b4cae3d929cbd623e7c1b16",
+                        "inode_after": 261640
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Integrity checksum changed.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_modified",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 4,
+                        "mitre": {
+                            "technique": [
+                                "Stored Data Manipulation"
+                            ],
+                            "id": [
+                                "T1565.001"
+                            ],
+                            "tactic": [
+                                "Impact"
+                            ]
+                        },
+                        "id": "550",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_integrity_changed"
+                    },
+                    "full_log": "File '/var/www/html/index.html' modified\nMode: realtime\nChanged attributes: size,mtime,md5,sha1,sha256\nSize changed from '11280' to '11309'\nOld modification time was: '1767647015', now it is '1768064840'\nOld md5sum was: '195fe77164f5daadf6d67ab5cf7f4259'\nNew md5sum is : 'ce7b9e25ee85f1213f7f896941fda2d1'\nOld sha1sum was: '8a7977d86d37812d12dcb36b4d7552d63143ef8e'\nNew sha1sum is : '943b8a8ea1cae688a383e781c2ec0115d903dd20'\nOld sha256sum was: '023a7670d4abdd9aa3e30cab4fd62b8f0ea8c3f8569c7ebef156c3950044a49f'\nNew sha256sum is : '8ef1078605fb942f5564d4e651638866fb2f55214b4cae3d929cbd623e7c1b16'\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:20.454Z",
+                    "location": "syscheck",
+                    "id": "1768064840.6508140",
+                    "timestamp": "2026-01-10T17:07:20.454+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "xHbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "root",
+                        "mtime_after": "2026-01-10T17:07:20",
+                        "size_after": "21",
+                        "gid_after": "0",
+                        "mode": "realtime",
+                        "path": "/etc/cron.d/malicious_job",
+                        "sha1_after": "33e9dad5978a63d6e4f340405d40a857714a2a82",
+                        "gname_after": "root",
+                        "uid_after": "0",
+                        "perm_after": "rw-r--r--",
+                        "event": "added",
+                        "md5_after": "a0097b4248e4a76dbcf9955ae307d343",
+                        "sha256_after": "dc964c3c4c352cafecc427f7cb0283a2fac1c1f25b0a4c1cb2ab9acb3c8558c6",
+                        "inode_after": 1115
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 5,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/etc/cron.d/malicious_job' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:20.464Z",
+                    "location": "syscheck",
+                    "id": "1768064840.6509386",
+                    "timestamp": "2026-01-10T17:07:20.464+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "y3bgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "1000",
+                        "dstuser": "root(uid=0)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 3,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.415Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6513162",
+                    "timestamp": "2026-01-10T17:07:21.415+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "znbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "1000",
+                        "dstuser": "root(uid=0)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 4,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.421Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6514513",
+                    "timestamp": "2026-01-10T17:07:21.421+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "2XbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "srcuser": "ubuntu",
+                        "dstuser": "root",
+                        "pwd": "/home/ubuntu",
+                        "command": "/usr/bin/tee /root/.backdoor"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5",
+                            "10.2.2"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Successful sudo to ROOT executed.",
+                        "groups": [
+                            "syslog",
+                            "sudo"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AC.6"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 7,
+                        "mitre": {
+                            "technique": [
+                                "Sudo and Sudo Caching"
+                            ],
+                            "id": [
+                                "T1548.003"
+                            ],
+                            "tactic": [
+                                "Privilege Escalation",
+                                "Defense Evasion"
+                            ]
+                        },
+                        "id": "5402",
+                        "gpg13": [
+                            "7.6",
+                            "7.8",
+                            "7.13"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "sudo",
+                        "name": "sudo",
+                        "ftscomment": "First time user executed the sudo command"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/tee /root/.backdoor",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.445Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6519481",
+                    "timestamp": "2026-01-10T17:07:21.445+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "vXbgqJsBpsB0GyOkdxoz",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "size_before": "221",
+                        "uname_after": "root",
+                        "mtime_after": "2026-01-10T17:07:20",
+                        "size_after": "257",
+                        "gid_after": "0",
+                        "md5_before": "1463508f28edb4d6d5ae349b20e00409",
+                        "sha256_before": "aa4ea922e4f2a1277b5aac898f5af3dc4a2f301213c37290506e6add79d89c11",
+                        "mtime_before": "2026-01-05T21:03:40",
+                        "mode": "realtime",
+                        "path": "/etc/hosts",
+                        "sha1_after": "18e7d796c212ee29973d6254321ac853411ff505",
+                        "changed_attributes": [
+                            "size",
+                            "mtime",
+                            "md5",
+                            "sha1",
+                            "sha256"
+                        ],
+                        "gname_after": "root",
+                        "uid_after": "0",
+                        "perm_after": "rw-r--r--",
+                        "event": "modified",
+                        "md5_after": "a6adb3bf1fd5764e75d752321055b18c",
+                        "sha1_before": "a777be51c79c607edd61c8e12cd9b775ddc8a6c6",
+                        "sha256_after": "e283b4c9c0c2c188fb914b7963c8d362b8571afe75d780aff7dbc1d6c9d31104",
+                        "inode_after": 105
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Integrity checksum changed.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_modified",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 1,
+                        "mitre": {
+                            "technique": [
+                                "Stored Data Manipulation"
+                            ],
+                            "id": [
+                                "T1565.001"
+                            ],
+                            "tactic": [
+                                "Impact"
+                            ]
+                        },
+                        "id": "550",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/etc/hosts' modified\nMode: realtime\nChanged attributes: size,mtime,md5,sha1,sha256\nSize changed from '221' to '257'\nOld modification time was: '1767647020', now it is '1768064840'\nOld md5sum was: '1463508f28edb4d6d5ae349b20e00409'\nNew md5sum is : 'a6adb3bf1fd5764e75d752321055b18c'\nOld sha1sum was: 'a777be51c79c607edd61c8e12cd9b775ddc8a6c6'\nNew sha1sum is : '18e7d796c212ee29973d6254321ac853411ff505'\nOld sha256sum was: 'aa4ea922e4f2a1277b5aac898f5af3dc4a2f301213c37290506e6add79d89c11'\nNew sha256sum is : 'e283b4c9c0c2c188fb914b7963c8d362b8571afe75d780aff7dbc1d6c9d31104'\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:20.410Z",
+                    "location": "syscheck",
+                    "id": "1768064840.6502437",
+                    "timestamp": "2026-01-10T17:07:20.410+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "yXbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "root"
+                    },
+                    "rule": {
+                        "firedtimes": 1,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session closed.",
+                        "groups": [
+                            "pam",
+                            "syslog"
+                        ],
+                        "id": "5502",
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session closed for user root",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.411Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6512259",
+                    "timestamp": "2026-01-10T17:07:21.411+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "0HbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "srcuser": "ubuntu",
+                        "dstuser": "root",
+                        "pwd": "/home/ubuntu",
+                        "command": "/usr/bin/cp /etc/passwd /tmp/fim_backup_1768064840/"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5",
+                            "10.2.2"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Successful sudo to ROOT executed.",
+                        "groups": [
+                            "syslog",
+                            "sudo"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AC.6"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 4,
+                        "mitre": {
+                            "technique": [
+                                "Sudo and Sudo Caching"
+                            ],
+                            "id": [
+                                "T1548.003"
+                            ],
+                            "tactic": [
+                                "Privilege Escalation",
+                                "Defense Evasion"
+                            ]
+                        },
+                        "id": "5402",
+                        "gpg13": [
+                            "7.6",
+                            "7.8",
+                            "7.13"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "sudo",
+                        "name": "sudo",
+                        "ftscomment": "First time user executed the sudo command"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/cp /etc/passwd /tmp/fim_backup_1768064840/",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.425Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6515348",
+                    "timestamp": "2026-01-10T17:07:21.425+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "13bgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "1000",
+                        "dstuser": "root(uid=0)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 7,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.440Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6518646",
+                    "timestamp": "2026-01-10T17:07:21.440+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "vnbgqJsBpsB0GyOkdxoz",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "size_before": "257",
+                        "uname_after": "root",
+                        "mtime_after": "2026-01-10T17:07:20",
+                        "size_after": "289",
+                        "gid_after": "0",
+                        "md5_before": "a6adb3bf1fd5764e75d752321055b18c",
+                        "sha256_before": "e283b4c9c0c2c188fb914b7963c8d362b8571afe75d780aff7dbc1d6c9d31104",
+                        "mode": "realtime",
+                        "path": "/etc/hosts",
+                        "sha1_after": "c109d03e530225dac63a2dd0d84263fa9122baed",
+                        "changed_attributes": [
+                            "size",
+                            "md5",
+                            "sha1",
+                            "sha256"
+                        ],
+                        "gname_after": "root",
+                        "uid_after": "0",
+                        "perm_after": "rw-r--r--",
+                        "event": "modified",
+                        "md5_after": "f1f2cd3acb6360cbaef510698e6c5f3a",
+                        "sha1_before": "18e7d796c212ee29973d6254321ac853411ff505",
+                        "sha256_after": "cb478b8f12beb847ac720575de6a071f21507bede63a5d3af0bb39513d5e4e82",
+                        "inode_after": 105
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Integrity checksum changed.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_modified",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 2,
+                        "mitre": {
+                            "technique": [
+                                "Stored Data Manipulation"
+                            ],
+                            "id": [
+                                "T1565.001"
+                            ],
+                            "tactic": [
+                                "Impact"
+                            ]
+                        },
+                        "id": "550",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_integrity_changed"
+                    },
+                    "full_log": "File '/etc/hosts' modified\nMode: realtime\nChanged attributes: size,md5,sha1,sha256\nSize changed from '257' to '289'\nOld md5sum was: 'a6adb3bf1fd5764e75d752321055b18c'\nNew md5sum is : 'f1f2cd3acb6360cbaef510698e6c5f3a'\nOld sha1sum was: '18e7d796c212ee29973d6254321ac853411ff505'\nNew sha1sum is : 'c109d03e530225dac63a2dd0d84263fa9122baed'\nOld sha256sum was: 'e283b4c9c0c2c188fb914b7963c8d362b8571afe75d780aff7dbc1d6c9d31104'\nNew sha256sum is : 'cb478b8f12beb847ac720575de6a071f21507bede63a5d3af0bb39513d5e4e82'\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:20.421Z",
+                    "location": "syscheck",
+                    "id": "1768064840.6503660",
+                    "timestamp": "2026-01-10T17:07:20.421+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "wXbgqJsBpsB0GyOkdxoz",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:20",
+                        "size_after": "46",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/backdoor.sh",
+                        "sha1_after": "ab0f1ed24da33a769f3f0fe88f654c485c634182",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rwxrwxr-x",
+                        "event": "added",
+                        "md5_after": "37c5b71e03c3ae814bd9393ebae0cd58",
+                        "sha256_after": "22eb899fdb51f46e009d2e78be10c2c845e5e0da89f3aa4854fd3edd4aee44ca",
+                        "inode_after": 1078
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 3,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/backdoor.sh' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:20.442Z",
+                    "location": "syscheck",
+                    "id": "1768064840.6506746",
+                    "timestamp": "2026-01-10T17:07:20.442+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "wnbgqJsBpsB0GyOkdxoz",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:20",
+                        "size_after": "18",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/suspicious_file.txt",
+                        "sha1_after": "7f83828a2b0f418c5d45cab1e7d9ca57610186bd",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rw-rw-r--",
+                        "event": "added",
+                        "md5_after": "d1de00dbd4a91124b4a19e4cc2378417",
+                        "sha256_after": "cdc374304c02d2967debf17c099ed50100fc5485f0abd991d0c7377561db14cf",
+                        "inode_after": 1031
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 4,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/suspicious_file.txt' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:20.448Z",
+                    "location": "syscheck",
+                    "id": "1768064840.6507439",
+                    "timestamp": "2026-01-10T17:07:20.448+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "xXbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcip": "139.162.182.178",
+                        "dstuser": "ubuntu",
+                        "srcport": "44156"
+                    },
+                    "rule": {
+                        "mail": true,
+                        "level": 12,
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "11.4"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Multiple authentication failures followed by a success.",
+                        "groups": [
+                            "syslog",
+                            "attacks"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "SI.4"
+                        ],
+                        "frequency": 2,
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 1,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts",
+                                "Brute Force"
+                            ],
+                            "id": [
+                                "T1078",
+                                "T1110"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access",
+                                "Credential Access"
+                            ]
+                        },
+                        "id": "40112",
+                        "gpg13": [
+                            "7.1",
+                            "7.8"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:07:19 ip-172-31-28-229 sshd[2916]: Accepted publickey for ubuntu from 139.162.182.178 port 44156 ssh2: RSA SHA256:EWo3z7dLf0p3DJSslfUG2mlrYIuxEJfcggAJXhRqFhU",
+                    "id": "1768064841.6510078",
+                    "timestamp": "2026-01-10T17:07:21.400+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:07:19"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.400Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "xnbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:07:19"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "0",
+                        "dstuser": "ubuntu(uid=1000)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 1,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:19 ip-172-31-28-229 sshd[2916]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by (uid=0)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.402Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6510789",
+                    "timestamp": "2026-01-10T17:07:21.402+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "x3bgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "srcuser": "ubuntu",
+                        "dstuser": "root",
+                        "pwd": "/home/ubuntu",
+                        "command": "/usr/bin/cp /etc/hosts /tmp/fim_backup_1768064840/"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5",
+                            "10.2.2"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Successful sudo to ROOT executed.",
+                        "groups": [
+                            "syslog",
+                            "sudo"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AC.6"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 1,
+                        "mitre": {
+                            "technique": [
+                                "Sudo and Sudo Caching"
+                            ],
+                            "id": [
+                                "T1548.003"
+                            ],
+                            "tactic": [
+                                "Privilege Escalation",
+                                "Defense Evasion"
+                            ]
+                        },
+                        "id": "5402",
+                        "gpg13": [
+                            "7.6",
+                            "7.8",
+                            "7.13"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "sudo",
+                        "name": "sudo",
+                        "ftscomment": "First time user executed the sudo command"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/cp /etc/hosts /tmp/fim_backup_1768064840/",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.406Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6511247",
+                    "timestamp": "2026-01-10T17:07:21.406+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "yHbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "1000",
+                        "dstuser": "root(uid=0)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 2,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.408Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6511811",
+                    "timestamp": "2026-01-10T17:07:21.408+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "ynbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "srcuser": "ubuntu",
+                        "dstuser": "root",
+                        "pwd": "/home/ubuntu",
+                        "command": "/usr/bin/tee -a /etc/hosts"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5",
+                            "10.2.2"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Successful sudo to ROOT executed.",
+                        "groups": [
+                            "syslog",
+                            "sudo"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AC.6"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 2,
+                        "mitre": {
+                            "technique": [
+                                "Sudo and Sudo Caching"
+                            ],
+                            "id": [
+                                "T1548.003"
+                            ],
+                            "tactic": [
+                                "Privilege Escalation",
+                                "Defense Evasion"
+                            ]
+                        },
+                        "id": "5402",
+                        "gpg13": [
+                            "7.6",
+                            "7.8",
+                            "7.13"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "sudo",
+                        "name": "sudo",
+                        "ftscomment": "First time user executed the sudo command"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/tee -a /etc/hosts",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.413Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6512646",
+                    "timestamp": "2026-01-10T17:07:21.413+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "zHbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "root"
+                    },
+                    "rule": {
+                        "firedtimes": 2,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session closed.",
+                        "groups": [
+                            "pam",
+                            "syslog"
+                        ],
+                        "id": "5502",
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session closed for user root",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.417Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6513610",
+                    "timestamp": "2026-01-10T17:07:21.417+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "zXbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "srcuser": "ubuntu",
+                        "dstuser": "root",
+                        "pwd": "/home/ubuntu",
+                        "command": "/usr/bin/tee -a /etc/hosts"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5",
+                            "10.2.2"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Successful sudo to ROOT executed.",
+                        "groups": [
+                            "syslog",
+                            "sudo"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AC.6"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 3,
+                        "mitre": {
+                            "technique": [
+                                "Sudo and Sudo Caching"
+                            ],
+                            "id": [
+                                "T1548.003"
+                            ],
+                            "tactic": [
+                                "Privilege Escalation",
+                                "Defense Evasion"
+                            ]
+                        },
+                        "id": "5402",
+                        "gpg13": [
+                            "7.6",
+                            "7.8",
+                            "7.13"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "sudo",
+                        "name": "sudo",
+                        "ftscomment": "First time user executed the sudo command"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/tee -a /etc/hosts",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.419Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6513997",
+                    "timestamp": "2026-01-10T17:07:21.419+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "z3bgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "root"
+                    },
+                    "rule": {
+                        "firedtimes": 3,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session closed.",
+                        "groups": [
+                            "pam",
+                            "syslog"
+                        ],
+                        "id": "5502",
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session closed for user root",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.423Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6514961",
+                    "timestamp": "2026-01-10T17:07:21.423+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "0XbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "1000",
+                        "dstuser": "root(uid=0)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 5,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.427Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6515914",
+                    "timestamp": "2026-01-10T17:07:21.427+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "0nbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "root"
+                    },
+                    "rule": {
+                        "firedtimes": 4,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session closed.",
+                        "groups": [
+                            "pam",
+                            "syslog"
+                        ],
+                        "id": "5502",
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session closed for user root",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.430Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6516362",
+                    "timestamp": "2026-01-10T17:07:21.430+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "03bgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "srcuser": "ubuntu",
+                        "dstuser": "root",
+                        "pwd": "/home/ubuntu",
+                        "command": "/usr/bin/tee -a /etc/passwd"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5",
+                            "10.2.2"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Successful sudo to ROOT executed.",
+                        "groups": [
+                            "syslog",
+                            "sudo"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AC.6"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 5,
+                        "mitre": {
+                            "technique": [
+                                "Sudo and Sudo Caching"
+                            ],
+                            "id": [
+                                "T1548.003"
+                            ],
+                            "tactic": [
+                                "Privilege Escalation",
+                                "Defense Evasion"
+                            ]
+                        },
+                        "id": "5402",
+                        "gpg13": [
+                            "7.6",
+                            "7.8",
+                            "7.13"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "sudo",
+                        "name": "sudo",
+                        "ftscomment": "First time user executed the sudo command"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/tee -a /etc/passwd",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.431Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6516749",
+                    "timestamp": "2026-01-10T17:07:21.431+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "1HbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "1000",
+                        "dstuser": "root(uid=0)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 6,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.433Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6517267",
+                    "timestamp": "2026-01-10T17:07:21.433+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "1XbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "root"
+                    },
+                    "rule": {
+                        "firedtimes": 5,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session closed.",
+                        "groups": [
+                            "pam",
+                            "syslog"
+                        ],
+                        "id": "5502",
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session closed for user root",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.435Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6517715",
+                    "timestamp": "2026-01-10T17:07:21.435+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "1nbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "srcuser": "ubuntu",
+                        "dstuser": "root",
+                        "pwd": "/home/ubuntu",
+                        "command": "/usr/bin/tee -a /var/www/html/index.html"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5",
+                            "10.2.2"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Successful sudo to ROOT executed.",
+                        "groups": [
+                            "syslog",
+                            "sudo"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AC.6"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 6,
+                        "mitre": {
+                            "technique": [
+                                "Sudo and Sudo Caching"
+                            ],
+                            "id": [
+                                "T1548.003"
+                            ],
+                            "tactic": [
+                                "Privilege Escalation",
+                                "Defense Evasion"
+                            ]
+                        },
+                        "id": "5402",
+                        "gpg13": [
+                            "7.6",
+                            "7.8",
+                            "7.13"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "sudo",
+                        "name": "sudo",
+                        "ftscomment": "First time user executed the sudo command"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/tee -a /var/www/html/index.html",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.438Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6518102",
+                    "timestamp": "2026-01-10T17:07:21.438+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "2HbgqJsBpsB0GyOkexok",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:20"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "root"
+                    },
+                    "rule": {
+                        "firedtimes": 6,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session closed.",
+                        "groups": [
+                            "pam",
+                            "syslog"
+                        ],
+                        "id": "5502",
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:20 ip-172-31-28-229 sudo: pam_unix(sudo:session): session closed for user root",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:21.442Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064841.6519094",
+                    "timestamp": "2026-01-10T17:07:21.442+0000"
+                }
+            }
+        ]
+    }
+}

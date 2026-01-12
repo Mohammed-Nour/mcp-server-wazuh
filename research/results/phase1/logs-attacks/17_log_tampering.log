@@ -1,0 +1,31 @@
+===============================================================================
+[1;33mATTACK #17: Log Tampering[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Log File: /var/log/auth.log
+Mode: truncate
+Category: Log Tampering
+
+[0;32m[*] Attack started at: 2026-01-10T20:10:07+03:00[0m
+[*] Attempting to truncate and delete log file...
+
+[*] Running attack via SSH to ubuntu@ec2-54-204-182-4.compute-1.amazonaws.com
+[*] Backing up /var/log/auth.log to /var/log/auth.log.bak.1768065008
+[*] Truncating /var/log/auth.log
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-10T20:10:25+03:00
+Duration: 18 seconds
+
+Expected Wazuh alerts:
+  - Log deletion or truncation events
+  - FIM alerts for critical log files
+
+Data for CSV:
+  attack_id: 17
+  attack_name: Log Tampering
+  category: Log Tampering
+  attack_start_time: 2026-01-10T20:10:07+03:00
+  attack_end_time: 2026-01-10T20:10:25+03:00

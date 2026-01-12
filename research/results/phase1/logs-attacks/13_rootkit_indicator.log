@@ -1,0 +1,43 @@
+===============================================================================
+[1;33mATTACK #13: Rootkit Indicator[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: Rootkit
+
+[0;32m[*] Attack started at: 2026-01-10T20:09:47+03:00[0m
+[*] Dropping files and entries that mimic rootkit artifacts...
+
+[*] Running attack via SSH...
+[*] Creating suspicious hidden files and modules...
+[+] Fake rootkit artifacts created
+[*] Creating suspicious kernel module entry (fake)
+[*] Creating persistence via rc.local
+tee: /proc/modules: Invalid argument
+[*] Listing artifacts for verification
+total 12
+drwxr-xr-x  2 root root 4096 Jan 10 17:09 .
+drwxrwxrwt 14 root root 4096 Jan 10 17:09 ..
+-rw-r--r--  1 root root   16 Jan 10 17:09 .rkpayload
+# malicious preload
+libcrc32c 12288 2 nf_tables,nf_conntrack, Live 0xffffffffc03da000
+efi_pstore 12288 0 - Live 0xffffffffc03d4000
+ip_tables 32768 0 - Live 0xffffffffc03b9000
+x_tables 65536 1 ip_tables, Live 0xffffffffc03c0000
+autofs4 57344 2 - Live 0xffffffffc03a7000
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-10T20:09:49+03:00
+Duration: 2 seconds
+
+Expected Wazuh alerts:
+  - Rootkit detection triggers
+  - FIM alerts on /etc/ld.so.preload and rc.local
+
+Data for CSV:
+  attack_id: 13
+  attack_name: Rootkit Indicator
+  category: Rootkit
+  attack_start_time: 2026-01-10T20:09:47+03:00
+  attack_end_time: 2026-01-10T20:09:49+03:00

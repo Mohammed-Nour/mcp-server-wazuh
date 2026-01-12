@@ -1,0 +1,4667 @@
+{
+    "took": 12,
+    "timed_out": false,
+    "_shards": {
+        "total": 24,
+        "successful": 24,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 47,
+            "relation": "eq"
+        },
+        "max_score": 1.0,
+        "hits": [
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "i3bfqJsBpsB0GyOk5hqu",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "admin",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41150"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 2,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:38 ip-172-31-28-229 sshd[2808]: Invalid user admin from 139.162.182.178 port 41150",
+                    "id": "1768064799.6474414",
+                    "timestamp": "2026-01-10T17:06:39.373+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:38"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:39.373Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "jnbfqJsBpsB0GyOk5hqu",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "admin",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41162"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 5,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:38 ip-172-31-28-229 sshd[2814]: Invalid user admin from 139.162.182.178 port 41162",
+                    "id": "1768064799.6476037",
+                    "timestamp": "2026-01-10T17:06:39.374+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:38"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:39.374Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "j3bfqJsBpsB0GyOk5hqu",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "admin",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41172"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 6,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:39 ip-172-31-28-229 sshd[2816]: Invalid user admin from 139.162.182.178 port 41172",
+                    "id": "1768064799.6476578",
+                    "timestamp": "2026-01-10T17:06:39.415+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:39"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:39.415Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "k3bfqJsBpsB0GyOk5hqu",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "test",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41120"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 9,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:42 ip-172-31-28-229 sshd[2836]: Invalid user test from 139.162.182.178 port 41120",
+                    "id": "1768064803.6479411",
+                    "timestamp": "2026-01-10T17:06:43.378+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:42"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:43.378Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "lHbfqJsBpsB0GyOk6hqK",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "test",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41128"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 10,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:42 ip-172-31-28-229 sshd[2838]: Invalid user test from 139.162.182.178 port 41128",
+                    "id": "1768064803.6479951",
+                    "timestamp": "2026-01-10T17:06:43.378+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:42"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:43.378Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "o3bfqJsBpsB0GyOk-hou",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "guest",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41250"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 23,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:47 ip-172-31-28-229 sshd[2868]: Invalid user guest from 139.162.182.178 port 41250",
+                    "id": "1768064807.6488106",
+                    "timestamp": "2026-01-10T17:06:47.387+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:47"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:47.387Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "pHbfqJsBpsB0GyOk-hou",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "guest",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41258"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 24,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:47 ip-172-31-28-229 sshd[2870]: Invalid user guest from 139.162.182.178 port 41258",
+                    "id": "1768064807.6488647",
+                    "timestamp": "2026-01-10T17:06:47.391+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:47"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:47.391Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "qHbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser1",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41302"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 28,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:49 ip-172-31-28-229 sshd[2878]: Invalid user fakeuser1 from 139.162.182.178 port 41302",
+                    "id": "1768064811.6490811",
+                    "timestamp": "2026-01-10T17:06:51.369+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:49"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.369Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "qXbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser2",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41310"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 29,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:49 ip-172-31-28-229 sshd[2880]: Invalid user fakeuser2 from 139.162.182.178 port 41310",
+                    "id": "1768064811.6491356",
+                    "timestamp": "2026-01-10T17:06:51.369+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:49"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.369Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "qnbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser3",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41326"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 4,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:49 ip-172-31-28-229 sshd[2882]: Invalid user fakeuser3 from 139.162.182.178 port 41326",
+                    "id": "1768064811.6491901",
+                    "timestamp": "2026-01-10T17:06:51.371+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:49"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.371Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "q3bgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser4",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41340"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 30,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:49 ip-172-31-28-229 sshd[2884]: Invalid user fakeuser4 from 139.162.182.178 port 41340",
+                    "id": "1768064811.6492446",
+                    "timestamp": "2026-01-10T17:06:51.373+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:49"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.373Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "r3bgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser8",
+                        "srcip": "139.162.182.178",
+                        "srcport": "52124"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 34,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:50 ip-172-31-28-229 sshd[2892]: Invalid user fakeuser8 from 139.162.182.178 port 52124",
+                    "id": "1768064811.6494626",
+                    "timestamp": "2026-01-10T17:06:51.392+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:50"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.392Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "sHbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser9",
+                        "srcip": "139.162.182.178",
+                        "srcport": "52138"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 35,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:50 ip-172-31-28-229 sshd[2894]: Invalid user fakeuser9 from 139.162.182.178 port 52138",
+                    "id": "1768064811.6495171",
+                    "timestamp": "2026-01-10T17:06:51.397+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:50"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.397Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "snbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser11",
+                        "srcip": "139.162.182.178",
+                        "srcport": "52156"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 5,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:50 ip-172-31-28-229 sshd[2898]: Invalid user fakeuser11 from 139.162.182.178 port 52156",
+                    "id": "1768064811.6496262",
+                    "timestamp": "2026-01-10T17:06:51.405+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:50"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.405Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "t3bgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser17",
+                        "srcip": "139.162.182.178",
+                        "srcport": "52212"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 41,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:51 ip-172-31-28-229 sshd[2908]: Invalid user fakeuser17 from 139.162.182.178 port 52212",
+                    "id": "1768064811.6498992",
+                    "timestamp": "2026-01-10T17:06:51.429+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:51"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.429Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "inbfqJsBpsB0GyOk5hqu",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "admin",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41146"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 1,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:37 ip-172-31-28-229 sshd[2806]: Invalid user admin from 139.162.182.178 port 41146",
+                    "id": "1768064799.6473873",
+                    "timestamp": "2026-01-10T17:06:39.357+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:37"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:39.357Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "jHbfqJsBpsB0GyOk5hqu",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "admin",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41154"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 3,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:38 ip-172-31-28-229 sshd[2810]: Invalid user admin from 139.162.182.178 port 41154",
+                    "id": "1768064799.6474955",
+                    "timestamp": "2026-01-10T17:06:39.373+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:38"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:39.373Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "jXbfqJsBpsB0GyOk5hqu",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "admin",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41156"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 4,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:38 ip-172-31-28-229 sshd[2812]: Invalid user admin from 139.162.182.178 port 41156",
+                    "id": "1768064799.6475496",
+                    "timestamp": "2026-01-10T17:06:39.373+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:38"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:39.373Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "kHbfqJsBpsB0GyOk5hqu",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "test",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41080"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 7,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:41 ip-172-31-28-229 sshd[2830]: Invalid user test from 139.162.182.178 port 41080",
+                    "id": "1768064801.6477119",
+                    "timestamp": "2026-01-10T17:06:41.370+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:41"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:41.370Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "kXbfqJsBpsB0GyOk5hqu",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "test",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41094"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 10,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "11.4",
+                            "10.2.4",
+                            "10.2.5"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: brute force trying to get access to the system. Non existent user.",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failures"
+                        ],
+                        "nist_800_53": [
+                            "SI.4",
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "frequency": 8,
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 1,
+                        "mitre": {
+                            "technique": [
+                                "Brute Force"
+                            ],
+                            "id": [
+                                "T1110"
+                            ],
+                            "tactic": [
+                                "Credential Access"
+                            ]
+                        },
+                        "id": "5712"
+                    },
+                    "full_log": "Jan 10 17:06:41 ip-172-31-28-229 sshd[2832]: Invalid user test from 139.162.182.178 port 41094",
+                    "id": "1768064803.6477659",
+                    "timestamp": "2026-01-10T17:06:43.361+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:41"
+                    },
+                    "previous_output": "Jan 10 17:06:41 ip-172-31-28-229 sshd[2830]: Invalid user test from 139.162.182.178 port 41080\nJan 10 17:06:39 ip-172-31-28-229 sshd[2816]: Invalid user admin from 139.162.182.178 port 41172\nJan 10 17:06:38 ip-172-31-28-229 sshd[2814]: Invalid user admin from 139.162.182.178 port 41162\nJan 10 17:06:38 ip-172-31-28-229 sshd[2812]: Invalid user admin from 139.162.182.178 port 41156\nJan 10 17:06:38 ip-172-31-28-229 sshd[2810]: Invalid user admin from 139.162.182.178 port 41154\nJan 10 17:06:38 ip-172-31-28-229 sshd[2808]: Invalid user admin from 139.162.182.178 port 41150\nJan 10 17:06:37 ip-172-31-28-229 sshd[2806]: Invalid user admin from 139.162.182.178 port 41146",
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:43.361Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "knbfqJsBpsB0GyOk5hqu",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "test",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41106"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 8,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:41 ip-172-31-28-229 sshd[2834]: Invalid user test from 139.162.182.178 port 41106",
+                    "id": "1768064803.6478871",
+                    "timestamp": "2026-01-10T17:06:43.378+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:41"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:43.378Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "nHbfqJsBpsB0GyOk8hpa",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "administrator",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41192"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 17,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:44 ip-172-31-28-229 sshd[2854]: Invalid user administrator from 139.162.182.178 port 41192",
+                    "id": "1768064805.6484271",
+                    "timestamp": "2026-01-10T17:06:45.383+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:44"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:45.383Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "nnbfqJsBpsB0GyOk9hpB",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "administrator",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41200"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 19,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:45 ip-172-31-28-229 sshd[2858]: Invalid user administrator from 139.162.182.178 port 41200",
+                    "id": "1768064807.6485369",
+                    "timestamp": "2026-01-10T17:06:47.367+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:45"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:47.367Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "n3bfqJsBpsB0GyOk9hpB",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "administrator",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41212"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 20,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:45 ip-172-31-28-229 sshd[2860]: Invalid user administrator from 139.162.182.178 port 41212",
+                    "id": "1768064807.6485918",
+                    "timestamp": "2026-01-10T17:06:47.369+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:45"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:47.369Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "oXbfqJsBpsB0GyOk-hou",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "administrator",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41232"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 3,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:46 ip-172-31-28-229 sshd[2864]: Invalid user administrator from 139.162.182.178 port 41232",
+                    "id": "1768064807.6487016",
+                    "timestamp": "2026-01-10T17:06:47.378+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:46"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:47.378Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "onbfqJsBpsB0GyOk-hou",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "guest",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41248"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 22,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:46 ip-172-31-28-229 sshd[2866]: Invalid user guest from 139.162.182.178 port 41248",
+                    "id": "1768064807.6487565",
+                    "timestamp": "2026-01-10T17:06:47.383+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:46"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:47.383Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "pXbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "guest",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41268"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 25,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:47 ip-172-31-28-229 sshd[2872]: Invalid user guest from 139.162.182.178 port 41268",
+                    "id": "1768064809.6489188",
+                    "timestamp": "2026-01-10T17:06:49.368+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:47"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:49.368Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "p3bgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "guest",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41294"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 27,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:48 ip-172-31-28-229 sshd[2876]: Invalid user guest from 139.162.182.178 port 41294",
+                    "id": "1768064809.6490270",
+                    "timestamp": "2026-01-10T17:06:49.377+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:48"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:49.377Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "rHbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser5",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41352"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 31,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:49 ip-172-31-28-229 sshd[2886]: Invalid user fakeuser5 from 139.162.182.178 port 41352",
+                    "id": "1768064811.6492991",
+                    "timestamp": "2026-01-10T17:06:51.376+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:49"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.376Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "rnbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser7",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41382"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 33,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:50 ip-172-31-28-229 sshd[2890]: Invalid user fakeuser7 from 139.162.182.178 port 41382",
+                    "id": "1768064811.6494081",
+                    "timestamp": "2026-01-10T17:06:51.388+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:50"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.388Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "sXbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser10",
+                        "srcip": "139.162.182.178",
+                        "srcport": "52152"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 36,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:50 ip-172-31-28-229 sshd[2896]: Invalid user fakeuser10 from 139.162.182.178 port 52152",
+                    "id": "1768064811.6495716",
+                    "timestamp": "2026-01-10T17:06:51.401+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:50"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.401Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "s3bgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser12",
+                        "srcip": "139.162.182.178",
+                        "srcport": "52162"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 37,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:50 ip-172-31-28-229 sshd[2900]: Invalid user fakeuser12 from 139.162.182.178 port 52162",
+                    "id": "1768064811.6496808",
+                    "timestamp": "2026-01-10T17:06:51.410+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:50"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.410Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "tXbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser15",
+                        "srcip": "139.162.182.178",
+                        "srcport": "52190"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 39,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:50 ip-172-31-28-229 sshd[2904]: Invalid user fakeuser15 from 139.162.182.178 port 52190",
+                    "id": "1768064811.6497900",
+                    "timestamp": "2026-01-10T17:06:51.421+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:50"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.421Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "lXbfqJsBpsB0GyOk6hqK",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "test",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41132"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 11,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:42 ip-172-31-28-229 sshd[2840]: Invalid user test from 139.162.182.178 port 41132",
+                    "id": "1768064803.6480491",
+                    "timestamp": "2026-01-10T17:06:43.379+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:42"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:43.379Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "lnbfqJsBpsB0GyOk6hqK",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "user",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41136"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 12,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:43 ip-172-31-28-229 sshd[2842]: Invalid user user from 139.162.182.178 port 41136",
+                    "id": "1768064803.6481031",
+                    "timestamp": "2026-01-10T17:06:43.420+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:43"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:43.420Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "l3bfqJsBpsB0GyOk7hpx",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "user",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41152"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 13,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:43 ip-172-31-28-229 sshd[2844]: Invalid user user from 139.162.182.178 port 41152",
+                    "id": "1768064805.6481571",
+                    "timestamp": "2026-01-10T17:06:45.364+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:43"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:45.364Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "mHbfqJsBpsB0GyOk7hpx",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "user",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41164"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 14,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:43 ip-172-31-28-229 sshd[2846]: Invalid user user from 139.162.182.178 port 41164",
+                    "id": "1768064805.6482111",
+                    "timestamp": "2026-01-10T17:06:45.365+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:43"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:45.365Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "mXbfqJsBpsB0GyOk7hpx",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "user",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41166"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 2,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:44 ip-172-31-28-229 sshd[2848]: Invalid user user from 139.162.182.178 port 41166",
+                    "id": "1768064805.6482651",
+                    "timestamp": "2026-01-10T17:06:45.370+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:44"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:45.370Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "mnbfqJsBpsB0GyOk8hpa",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "user",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41174"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 15,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:44 ip-172-31-28-229 sshd[2850]: Invalid user user from 139.162.182.178 port 41174",
+                    "id": "1768064805.6483191",
+                    "timestamp": "2026-01-10T17:06:45.374+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:44"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:45.374Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "m3bfqJsBpsB0GyOk8hpa",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "user",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41178"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 16,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:44 ip-172-31-28-229 sshd[2852]: Invalid user user from 139.162.182.178 port 41178",
+                    "id": "1768064805.6483731",
+                    "timestamp": "2026-01-10T17:06:45.378+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:44"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:45.378Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "nXbfqJsBpsB0GyOk8hpa",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "administrator",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41198"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 18,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:45 ip-172-31-28-229 sshd[2856]: Invalid user administrator from 139.162.182.178 port 41198",
+                    "id": "1768064805.6484820",
+                    "timestamp": "2026-01-10T17:06:45.387+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:45"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:45.387Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "oHbfqJsBpsB0GyOk9hpB",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "administrator",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41220"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 21,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:46 ip-172-31-28-229 sshd[2862]: Invalid user administrator from 139.162.182.178 port 41220",
+                    "id": "1768064807.6486467",
+                    "timestamp": "2026-01-10T17:06:47.374+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:46"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:47.374Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "pnbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "guest",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41278"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 26,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:47 ip-172-31-28-229 sshd[2874]: Invalid user guest from 139.162.182.178 port 41278",
+                    "id": "1768064809.6489729",
+                    "timestamp": "2026-01-10T17:06:49.372+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:47"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:49.372Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "rXbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser6",
+                        "srcip": "139.162.182.178",
+                        "srcport": "41366"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 32,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:50 ip-172-31-28-229 sshd[2888]: Invalid user fakeuser6 from 139.162.182.178 port 41366",
+                    "id": "1768064811.6493536",
+                    "timestamp": "2026-01-10T17:06:51.384+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:50"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.384Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "tHbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser13",
+                        "srcip": "139.162.182.178",
+                        "srcport": "52170"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 38,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:50 ip-172-31-28-229 sshd[2902]: Invalid user fakeuser13 from 139.162.182.178 port 52170",
+                    "id": "1768064811.6497354",
+                    "timestamp": "2026-01-10T17:06:51.414+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:50"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.414Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "tnbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser16",
+                        "srcip": "139.162.182.178",
+                        "srcport": "52196"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 40,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:50 ip-172-31-28-229 sshd[2906]: Invalid user fakeuser16 from 139.162.182.178 port 52196",
+                    "id": "1768064811.6498446",
+                    "timestamp": "2026-01-10T17:06:51.426+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:50"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.426Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "uHbgqJsBpsB0GyOkBRrt",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcuser": "fakeuser18",
+                        "srcip": "139.162.182.178",
+                        "srcport": "52216"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 5,
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "10.6.1"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "sshd: Attempt to login using a non-existent user",
+                        "groups": [
+                            "syslog",
+                            "sshd",
+                            "authentication_failed",
+                            "invalid_login"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AU.6"
+                        ],
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 42,
+                        "mitre": {
+                            "technique": [
+                                "Password Guessing",
+                                "SSH"
+                            ],
+                            "id": [
+                                "T1110.001",
+                                "T1021.004"
+                            ],
+                            "tactic": [
+                                "Credential Access",
+                                "Lateral Movement"
+                            ]
+                        },
+                        "id": "5710",
+                        "gpg13": [
+                            "7.1"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:06:51 ip-172-31-28-229 sshd[2910]: Invalid user fakeuser18 from 139.162.182.178 port 52216",
+                    "id": "1768064811.6499538",
+                    "timestamp": "2026-01-10T17:06:51.433+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:06:51"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:06:51.433Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

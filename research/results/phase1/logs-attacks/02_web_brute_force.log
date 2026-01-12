@@ -1,0 +1,93 @@
+===============================================================================
+[1;33mATTACK #02: Web Login Brute Force[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com:80
+Login path: /login
+XSS/search path: /search
+Basic-auth path: /protected
+Category: Brute Force
+
+[0;32m[*] Attack started at: 2026-01-10T20:06:53+03:00[0m
+[*] Simulating web login brute force attack...
+
+[*] Method 1: HTTP Basic Authentication attempts
+    Trying admin:password
+    Trying admin:123456
+404    Trying admin:admin
+404    Trying admin:root
+404    Trying admin:test
+404    Trying admin:password123
+404    Trying admin:admin123
+404    Trying administrator:password
+404    Trying administrator:123456
+404    Trying administrator:admin
+404    Trying administrator:root
+404    Trying administrator:test
+404    Trying administrator:password123
+404    Trying administrator:admin123
+404    Trying root:password
+404    Trying root:123456
+404    Trying root:admin
+    Trying root:root
+404404    Trying root:test
+404    Trying root:password123
+404    Trying root:admin123
+404    Trying user:password
+404    Trying user:123456
+404    Trying user:admin
+404    Trying user:root
+404    Trying user:test
+404    Trying user:password123
+404    Trying user:admin123
+404    Trying test:password
+404    Trying test:123456
+404    Trying test:admin
+404    Trying test:root
+404    Trying test:test
+404    Trying test:password123
+404    Trying test:admin123
+404    Trying guest:password
+404    Trying guest:123456
+404    Trying guest:admin
+404    Trying guest:root
+404    Trying guest:test
+404    Trying guest:password123
+404    Trying guest:admin123
+404    Trying webadmin:password
+404    Trying webadmin:123456
+404    Trying webadmin:admin
+404    Trying webadmin:root
+404    Trying webadmin:test
+404    Trying webadmin:password123
+404    Trying webadmin:admin123
+404404
+[*] Method 2: POST-based login form brute force
+
+[*] Method 3: WordPress login brute force simulation
+
+[*] Method 4: Using Hydra for HTTP POST form
+Hydra v9.2 (c) 2021 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-01-10 20:07:10
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 20 login tries (l:4/p:5), ~5 tries per task
+[DATA] attacking http-post-form://ec2-54-204-182-4.compute-1.amazonaws.com:80/login:username=^USER^&password=^PASS^:F=incorrect
+1 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-01-10 20:07:15
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-10T20:07:15+03:00
+Duration: 21.881600927 seconds
+
+Expected Wazuh alerts:
+  - Rule 31151: Multiple web authentication failures
+  - Rule 31152: Web authentication brute force attempt
+  - Apache/Nginx 401 error patterns
+
+Data for CSV:
+  attack_id: 02
+  attack_name: Web Login Brute Force
+  category: Brute Force
+  attack_start_time: 2026-01-10T20:06:53+03:00
+  attack_end_time: 2026-01-10T20:07:15+03:00

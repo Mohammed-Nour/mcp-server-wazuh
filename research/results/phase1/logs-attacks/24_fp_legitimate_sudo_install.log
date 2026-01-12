@@ -1,0 +1,35 @@
+===============================================================================
+[1;33mATTACK FP-6: Legitimate Sudo Package Install[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: FalsePositive
+Executor: local (this machine)
+Package: nginx
+
+[0;32m[*] Sudo install started at: 2026-01-10T20:10:57+03:00[0m
+[*] Executing on target host via SSH
+[*] Installing package with sudo (benign developer action)...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.18.0-6ubuntu14.7).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+===============================================================================
+[0;32m[✓] Sudo install completed[0m
+===============================================================================
+End Time: 2026-01-10T20:11:01+03:00
+Duration: 4 seconds
+
+Expected Wazuh alerts: sudo usage + package install (benign)
+Mitigation guidance: correlate with developer change/approval logs
+
+Data for CSV:
+  attack_id: FP-6
+  attack_name: Legitimate Sudo Package Install
+  category: FalsePositive
+  attack_start_time: 2026-01-10T20:10:57+03:00
+  attack_end_time: 2026-01-10T20:11:01+03:00

@@ -1,0 +1,26 @@
+===============================================================================
+[1;33mATTACK FP-3: Legitimate Cron Job (logrotate)[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: FalsePositive
+Note: benign scheduled maintenance activity
+
+[0;32m[*] Cron simulation started at: 2026-01-10T20:10:37+03:00[0m
+[*] Executing on admin host via SSH -> target
+[*] Running logrotate manually to mimic scheduled cron...
+
+===============================================================================
+[0;32m[✓] Cron simulation completed[0m
+===============================================================================
+End Time: 2026-01-10T20:10:38+03:00
+Duration: 1 seconds
+
+Expected Wazuh alerts: logrotate execution; potential FIM touches on rotated logs
+Mitigation guidance: whitelist scheduled logrotate cron
+
+Data for CSV:
+  attack_id: FP-3
+  attack_name: Legitimate Cron Job (logrotate)
+  category: FalsePositive
+  attack_start_time: 2026-01-10T20:10:37+03:00
+  attack_end_time: 2026-01-10T20:10:38+03:00

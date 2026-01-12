@@ -1,0 +1,205 @@
+{
+    "took": 4,
+    "timed_out": false,
+    "_shards": {
+        "total": 27,
+        "successful": 27,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 2,
+            "relation": "eq"
+        },
+        "max_score": 1.0,
+        "hits": [
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "pXbjqJsBpsB0GyOkhByU",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "127166",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.data.1Yu1FO",
+                        "sha1_after": "3fbcf3b3a15892f38f0eee74f0385568b9993089",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "deleted",
+                        "md5_after": "672714d85608b1ff78e9a625c3f5d944",
+                        "sha256_after": "507dde970621df52cf6e53b64e2f5548ae2efed2604d4c22393ca9e988bef260",
+                        "inode_after": 1941
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 42,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/apt.data.1Yu1FO' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:38.673Z",
+                    "location": "syscheck",
+                    "id": "1768065038.6792894",
+                    "timestamp": "2026-01-10T17:10:38.673+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "pHbjqJsBpsB0GyOkhByU",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "11089",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.conf.Zm6E0P",
+                        "sha1_after": "60efe9e2fdfffb428222481a304ed9fca13168a1",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "deleted",
+                        "md5_after": "8afc11d26f321a464e393333cd84afda",
+                        "sha256_after": "c5f43b49a2d38a734dde284694ccf68fc2e91c7cd23692b15e37cd36f3d25573",
+                        "inode_after": 1750
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 41,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/apt.conf.Zm6E0P' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:38.672Z",
+                    "location": "syscheck",
+                    "id": "1768065038.6792203",
+                    "timestamp": "2026-01-10T17:10:38.672+0000"
+                }
+            }
+        ]
+    }
+}

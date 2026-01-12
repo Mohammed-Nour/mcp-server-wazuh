@@ -1,0 +1,1637 @@
+{
+    "took": 9,
+    "timed_out": false,
+    "_shards": {
+        "total": 24,
+        "successful": 24,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 19,
+            "relation": "eq"
+        },
+        "max_score": 1.0,
+        "hits": [
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "YHbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:42",
+                        "size_after": "2516",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/eicar_download.com",
+                        "sha1_after": "4942fd8e9c0d073d9393edd12b222e3869c19c9a",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rw-rw-r--",
+                        "event": "deleted",
+                        "md5_after": "cb57834dce584366e4c76bf169faf7e4",
+                        "sha256_after": "63506b30cfcaa33d75e9074624e5130160ccf983550abdf9261391a28a9a1f57",
+                        "inode_after": 1115
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 8,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/eicar_download.com' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:54.578Z",
+                    "location": "syscheck",
+                    "id": "1768064874.6599612",
+                    "timestamp": "2026-01-10T17:07:54.578+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "ZnbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "root",
+                        "mtime_after": "2026-01-10T17:07:43",
+                        "size_after": "69",
+                        "gid_after": "0",
+                        "mode": "realtime",
+                        "path": "/var/www/html/eicar.com",
+                        "sha1_after": "cf8bd9dfddff007f75adf4c2be48005cea317c62",
+                        "gname_after": "root",
+                        "uid_after": "0",
+                        "perm_after": "rw-r--r--",
+                        "event": "deleted",
+                        "md5_after": "69630e4574ec6798239b091cda43dca0",
+                        "sha256_after": "131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267",
+                        "inode_after": 261711
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 14,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/var/www/html/eicar.com' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:54.588Z",
+                    "location": "syscheck",
+                    "id": "1768064874.6603743",
+                    "timestamp": "2026-01-10T17:07:54.588+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "bnbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:57",
+                        "size_after": "213",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/exfil.sh",
+                        "sha1_after": "2a29a5ed16b4e1e8b1c74e24f71e4e2433ae863d",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rwxrwxr-x",
+                        "event": "added",
+                        "md5_after": "3d0eeb80bd791f8d08a8974e85aeeb33",
+                        "sha256_after": "c077c816356a1f93f4003f67552c2a131753035c828b5d971b80159787f96c7a",
+                        "inode_after": 1078
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 24,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/exfil.sh' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:57.604Z",
+                    "location": "syscheck",
+                    "id": "1768064877.6608051",
+                    "timestamp": "2026-01-10T17:07:57.604+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "cXbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:58",
+                        "size_after": "2089",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/stolen_data.txt",
+                        "sha1_after": "5aee249354223d4fad7c919750799e356d9667de",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rw-rw-r--",
+                        "event": "added",
+                        "md5_after": "38f9bc414a42eca094a0c3ab3a138668",
+                        "sha256_after": "501c5041492d82a440506d50bff06a9356d45644b1f131b463df54f70ecde458",
+                        "inode_after": 1170
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 27,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/stolen_data.txt' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:58.613Z",
+                    "location": "syscheck",
+                    "id": "1768064878.6610128",
+                    "timestamp": "2026-01-10T17:07:58.613+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "cnbhqJsBpsB0GyOkMhu4",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:08:05",
+                        "size_after": "126",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/persistence.sh",
+                        "sha1_after": "58205d9a710653e57643e725380a7913db726672",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rwxrwxr-x",
+                        "event": "added",
+                        "md5_after": "827fc3b91f8f6e8c02de78d8c72c9d3e",
+                        "sha256_after": "1dea5eb38a261a4ff59f1126026806cf6baa05965ad87fd084566ce978fe2662",
+                        "inode_after": 1185
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 28,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/persistence.sh' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:08:05.657Z",
+                    "location": "syscheck",
+                    "id": "1768064885.6610827",
+                    "timestamp": "2026-01-10T17:08:05.657+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "YXbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:43",
+                        "size_after": "68",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/eicar_download.txt",
+                        "sha1_after": "3395856ce81f2b7382dee72602f798b642f14140",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rw-rw-r--",
+                        "event": "deleted",
+                        "md5_after": "44d88612fea8a8f36de82e1278abb02f",
+                        "sha256_after": "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f",
+                        "inode_after": 1170
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 9,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/eicar_download.txt' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:54.579Z",
+                    "location": "syscheck",
+                    "id": "1768064874.6600306",
+                    "timestamp": "2026-01-10T17:07:54.579+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "Y3bhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:43",
+                        "size_after": "69",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/ransomware.dll",
+                        "sha1_after": "cf8bd9dfddff007f75adf4c2be48005cea317c62",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rw-rw-r--",
+                        "event": "deleted",
+                        "md5_after": "69630e4574ec6798239b091cda43dca0",
+                        "sha256_after": "131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267",
+                        "inode_after": 1204
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 11,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/ransomware.dll' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:54.583Z",
+                    "location": "syscheck",
+                    "id": "1768064874.6601688",
+                    "timestamp": "2026-01-10T17:07:54.583+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "ZHbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:43",
+                        "size_after": "69",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/trojan.exe",
+                        "sha1_after": "cf8bd9dfddff007f75adf4c2be48005cea317c62",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rw-rw-r--",
+                        "event": "deleted",
+                        "md5_after": "69630e4574ec6798239b091cda43dca0",
+                        "sha256_after": "131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267",
+                        "inode_after": 1179
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 12,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/trojan.exe' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:54.585Z",
+                    "location": "syscheck",
+                    "id": "1768064874.6602376",
+                    "timestamp": "2026-01-10T17:07:54.585+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "aHbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:53"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "1000",
+                        "dstuser": "root(uid=0)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 40,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:53 ip-172-31-28-229 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:55.434Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064875.6604951",
+                    "timestamp": "2026-01-10T17:07:55.434+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "aXbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:53"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "root"
+                    },
+                    "rule": {
+                        "firedtimes": 39,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session closed.",
+                        "groups": [
+                            "pam",
+                            "syslog"
+                        ],
+                        "id": "5502",
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:53 ip-172-31-28-229 sudo: pam_unix(sudo:session): session closed for user root",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:55.436Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064875.6605399",
+                    "timestamp": "2026-01-10T17:07:55.436+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "a3bhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcip": "139.162.182.178",
+                        "dstuser": "ubuntu",
+                        "srcport": "59858"
+                    },
+                    "rule": {
+                        "mail": true,
+                        "level": 12,
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "11.4"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Multiple authentication failures followed by a success.",
+                        "groups": [
+                            "syslog",
+                            "attacks"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "SI.4"
+                        ],
+                        "frequency": 2,
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 4,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts",
+                                "Brute Force"
+                            ],
+                            "id": [
+                                "T1078",
+                                "T1110"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access",
+                                "Credential Access"
+                            ]
+                        },
+                        "id": "40112",
+                        "gpg13": [
+                            "7.1",
+                            "7.8"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:07:56 ip-172-31-28-229 sshd[3260]: Accepted publickey for ubuntu from 139.162.182.178 port 59858 ssh2: RSA SHA256:EWo3z7dLf0p3DJSslfUG2mlrYIuxEJfcggAJXhRqFhU",
+                    "id": "1768064877.6606183",
+                    "timestamp": "2026-01-10T17:07:57.439+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:07:56"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:57.439Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "bHbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:07:56"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "0",
+                        "dstuser": "ubuntu(uid=1000)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 41,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:56 ip-172-31-28-229 sshd[3260]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by (uid=0)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:57.440Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064877.6606894",
+                    "timestamp": "2026-01-10T17:07:57.440+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "cHbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:57",
+                        "size_after": "174",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/keylogger.py",
+                        "sha1_after": "c5695287fad29580d62b95572129a466489b7c12",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rwxrwxr-x",
+                        "event": "added",
+                        "md5_after": "f29ef87eb99badb9ec3acebf20ca1d7e",
+                        "sha256_after": "1a4b76c90924e6b63866b96a04e82e4720dfeb1a44e37872038f9cd26692daaa",
+                        "inode_after": 1115
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 26,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/keylogger.py' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:57.621Z",
+                    "location": "syscheck",
+                    "id": "1768064877.6609433",
+                    "timestamp": "2026-01-10T17:07:57.621+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "YnbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:41",
+                        "size_after": "69",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/malware_test.exe",
+                        "sha1_after": "cf8bd9dfddff007f75adf4c2be48005cea317c62",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rw-rw-r--",
+                        "event": "deleted",
+                        "md5_after": "69630e4574ec6798239b091cda43dca0",
+                        "sha256_after": "131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267",
+                        "inode_after": 1114
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 10,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/malware_test.exe' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:54.581Z",
+                    "location": "syscheck",
+                    "id": "1768064874.6600998",
+                    "timestamp": "2026-01-10T17:07:54.581+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "ZXbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:43",
+                        "size_after": "69",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/virus.bat",
+                        "sha1_after": "cf8bd9dfddff007f75adf4c2be48005cea317c62",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rw-rw-r--",
+                        "event": "deleted",
+                        "md5_after": "69630e4574ec6798239b091cda43dca0",
+                        "sha256_after": "131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267",
+                        "inode_after": 1185
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 13,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/virus.bat' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:54.586Z",
+                    "location": "syscheck",
+                    "id": "1768064874.6603060",
+                    "timestamp": "2026-01-10T17:07:54.586+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "Z3bhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:07:53"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "srcuser": "ubuntu",
+                        "dstuser": "root",
+                        "pwd": "/tmp",
+                        "command": "/usr/bin/rm -f /var/www/html/eicar.com"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5",
+                            "10.2.2"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Successful sudo to ROOT executed.",
+                        "groups": [
+                            "syslog",
+                            "sudo"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AC.6"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 37,
+                        "mitre": {
+                            "technique": [
+                                "Sudo and Sudo Caching"
+                            ],
+                            "id": [
+                                "T1548.003"
+                            ],
+                            "tactic": [
+                                "Privilege Escalation",
+                                "Defense Evasion"
+                            ]
+                        },
+                        "id": "5402",
+                        "gpg13": [
+                            "7.6",
+                            "7.8",
+                            "7.13"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "sudo",
+                        "name": "sudo",
+                        "ftscomment": "First time user executed the sudo command"
+                    },
+                    "full_log": "Jan 10 17:07:53 ip-172-31-28-229 sudo:   ubuntu : PWD=/tmp ; USER=root ; COMMAND=/usr/bin/rm -f /var/www/html/eicar.com",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:55.434Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064875.6604427",
+                    "timestamp": "2026-01-10T17:07:55.434+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "anbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:07:53"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "dstuser": "ubuntu"
+                    },
+                    "rule": {
+                        "firedtimes": 40,
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session closed.",
+                        "groups": [
+                            "pam",
+                            "syslog"
+                        ],
+                        "id": "5502",
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:07:53 ip-172-31-28-229 sshd[3172]: pam_unix(sshd:session): session closed for user ubuntu",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:55.445Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768064875.6605786",
+                    "timestamp": "2026-01-10T17:07:55.445+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "bXbhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:57",
+                        "size_after": "200",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/reverse_shell.sh",
+                        "sha1_after": "0124f9663f8e43009cee48738b5ad527e6a78aaf",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rwxrwxr-x",
+                        "event": "added",
+                        "md5_after": "159bb6af5e8f71e839b59ba77338fe8c",
+                        "sha256_after": "9da13ebbcdff2a34d16c2ed420b95c0732cea50e371bae9f1dff4e63ad96121d",
+                        "inode_after": 1031
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 23,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/reverse_shell.sh' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:57.600Z",
+                    "location": "syscheck",
+                    "id": "1768064877.6607352",
+                    "timestamp": "2026-01-10T17:07:57.600+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "b3bhqJsBpsB0GyOkFxto",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "ubuntu",
+                        "mtime_after": "2026-01-10T17:07:57",
+                        "size_after": "174",
+                        "gid_after": "1000",
+                        "mode": "realtime",
+                        "path": "/tmp/miner.sh",
+                        "sha1_after": "278d051e0c6857a435fba88f4d0699f73a720699",
+                        "gname_after": "ubuntu",
+                        "uid_after": "1000",
+                        "perm_after": "rwxrwxr-x",
+                        "event": "added",
+                        "md5_after": "56f68ce0ff56570af8cef88d5c54bab5",
+                        "sha256_after": "ddf105bfc666ab3a9448f4b04cb5bee24bfe7d4402ca2ec11a1a920f0b45421b",
+                        "inode_after": 1114
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 25,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/miner.sh' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:07:57.610Z",
+                    "location": "syscheck",
+                    "id": "1768064877.6608742",
+                    "timestamp": "2026-01-10T17:07:57.610+0000"
+                }
+            }
+        ]
+    }
+}

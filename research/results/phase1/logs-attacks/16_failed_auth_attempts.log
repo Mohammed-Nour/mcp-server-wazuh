@@ -1,0 +1,29 @@
+===============================================================================
+[1;33mATTACK #16: Failed Authentication Attempts[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Attempts: 6
+Category: Authentication
+
+[0;32m[*] Attack started at: 2026-01-10T20:10:01+03:00[0m
+[*] Generating multiple failed logins...
+
+[*] Running attack via SSH...
+[*] Attempt 1 with invalid credentials
+
+===============================================================================
+[0;32m[✓] Attack completed[0m
+===============================================================================
+End Time: 2026-01-10T20:10:05+03:00
+Duration: 4 seconds
+
+Expected Wazuh alerts:
+  - Multiple failed login attempts (SSH, sudo)
+  - Brute-force authentication patterns
+
+Data for CSV:
+  attack_id: 16
+  attack_name: Failed Authentication Attempts
+  category: Authentication
+  attack_start_time: 2026-01-10T20:10:01+03:00
+  attack_end_time: 2026-01-10T20:10:05+03:00

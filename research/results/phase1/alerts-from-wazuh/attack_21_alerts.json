@@ -1,0 +1,1952 @@
+{
+    "took": 8,
+    "timed_out": false,
+    "_shards": {
+        "total": 27,
+        "successful": 27,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 22,
+            "relation": "eq"
+        },
+        "max_score": 1.0,
+        "hits": [
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "kXbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "269218",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.data.MfDsyJ",
+                        "sha1_after": "38368103f4511b8ba603ab16d12943e1e0f352ab",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "added",
+                        "md5_after": "90fec01f0911e377758807bc0525cebe",
+                        "sha256_after": "269a3a900ff8b8bc9bc3c6743f9927d90c4b81ad34b35c2753f8d9aadff926da",
+                        "inode_after": 1941
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 45,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/apt.data.MfDsyJ' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.551Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6778508",
+                    "timestamp": "2026-01-10T17:10:37.551+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "k3bjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "data": {
+                        "srcip": "139.162.182.178",
+                        "dstuser": "ubuntu",
+                        "srcport": "47308"
+                    },
+                    "rule": {
+                        "mail": true,
+                        "level": 12,
+                        "pci_dss": [
+                            "10.2.4",
+                            "10.2.5",
+                            "11.4"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Multiple authentication failures followed by a success.",
+                        "groups": [
+                            "syslog",
+                            "attacks"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "SI.4"
+                        ],
+                        "frequency": 2,
+                        "gdpr": [
+                            "IV_35.7.d",
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 14,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts",
+                                "Brute Force"
+                            ],
+                            "id": [
+                                "T1078",
+                                "T1110"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access",
+                                "Credential Access"
+                            ]
+                        },
+                        "id": "40112",
+                        "gpg13": [
+                            "7.1",
+                            "7.8"
+                        ]
+                    },
+                    "full_log": "Jan 10 17:10:36 ip-172-31-28-229 sshd[4386]: Accepted publickey for ubuntu from 139.162.182.178 port 47308 ssh2: RSA SHA256:EWo3z7dLf0p3DJSslfUG2mlrYIuxEJfcggAJXhRqFhU",
+                    "id": "1768065037.6779904",
+                    "timestamp": "2026-01-10T17:10:37.612+0000",
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:10:36"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "decoder": {
+                        "parent": "sshd",
+                        "name": "sshd"
+                    },
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.612Z",
+                    "location": "/var/log/auth.log",
+                    "GeoLocation": {
+                        "city_name": "Frankfurt am Main",
+                        "country_name": "Germany",
+                        "region_name": "Hesse",
+                        "location": {
+                            "lon": 8.6843,
+                            "lat": 50.1188
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "lXbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:10:37"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "srcuser": "ubuntu",
+                        "dstuser": "root",
+                        "pwd": "/home/ubuntu",
+                        "command": "/usr/bin/apt update"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5",
+                            "10.2.2"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Successful sudo to ROOT executed.",
+                        "groups": [
+                            "syslog",
+                            "sudo"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7",
+                            "AC.6"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 92,
+                        "mitre": {
+                            "technique": [
+                                "Sudo and Sudo Caching"
+                            ],
+                            "id": [
+                                "T1548.003"
+                            ],
+                            "tactic": [
+                                "Privilege Escalation",
+                                "Defense Evasion"
+                            ]
+                        },
+                        "id": "5402",
+                        "gpg13": [
+                            "7.6",
+                            "7.8",
+                            "7.13"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "sudo",
+                        "name": "sudo",
+                        "ftscomment": "First time user executed the sudo command"
+                    },
+                    "full_log": "Jan 10 17:10:37 ip-172-31-28-229 sudo:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/apt update",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.619Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768065037.6781073",
+                    "timestamp": "2026-01-10T17:10:37.619+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "l3bjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "0",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt-key-gpghome.CEEu7a12wO/pubring.gpg",
+                        "sha1_after": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-r--r--",
+                        "event": "added",
+                        "md5_after": "d41d8cd98f00b204e9800998ecf8427e",
+                        "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                        "inode_after": 546227
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 47,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/apt-key-gpghome.CEEu7a12wO/pubring.gpg' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.626Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6782023",
+                    "timestamp": "2026-01-10T17:10:37.626+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "nHbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "82",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt-key-gpghome.CEEu7a12wO/gpg.1.sh",
+                        "sha1_after": "84918770d1144ce60bb4d22fcb619c11159b3502",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-r--r--",
+                        "event": "deleted",
+                        "md5_after": "911f903b45f9d38fc60a5b19d8388c12",
+                        "sha256_after": "9d2378dbc34a1ddbe075b19232dff129bb7b5d32fc7e81f752cc76eaa6bdad46",
+                        "inode_after": 546229
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 35,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/apt-key-gpghome.CEEu7a12wO/gpg.1.sh' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.649Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6786588",
+                    "timestamp": "2026-01-10T17:10:37.649+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "nnbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "5708",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt-key-gpghome.CEEu7a12wO/pubring.orig.gpg",
+                        "sha1_after": "46807649900c143f529e1eebfed2aff829c15254",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-r--r--",
+                        "event": "deleted",
+                        "md5_after": "5fd1f2a3e03302c7ba20bcd6d7c55f70",
+                        "sha256_after": "4c11d8cc267738a9e44c081fb74faba4b3ca2bebdd776fa9179aa9fe9e136cfe",
+                        "inode_after": 546228
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 37,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/apt-key-gpghome.CEEu7a12wO/pubring.orig.gpg' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.654Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6788013",
+                    "timestamp": "2026-01-10T17:10:37.654+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "oXbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "819",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.sig.kdd761",
+                        "sha1_after": "cedc803378c21d8735c7f415a8d76d322ca9fb0d",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "deleted",
+                        "md5_after": "07a7e6f6efdc30fc46e061a9230a86ae",
+                        "sha256_after": "b8a4ea3ff4da03484b93dc73539c656f074723e79ffe7903a64c385d5863cb18",
+                        "inode_after": 1920
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 40,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/apt.sig.kdd761' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.660Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6790116",
+                    "timestamp": "2026-01-10T17:10:37.660+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "lHbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sshd",
+                        "timestamp": "Jan 10 17:10:36"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "0",
+                        "dstuser": "ubuntu(uid=1000)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 108,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:10:36 ip-172-31-28-229 sshd[4386]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by (uid=0)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.614Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768065037.6780615",
+                    "timestamp": "2026-01-10T17:10:37.614+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "mnbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "82",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt-key-gpghome.CEEu7a12wO/gpg.1.sh",
+                        "sha1_after": "84918770d1144ce60bb4d22fcb619c11159b3502",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-r--r--",
+                        "event": "added",
+                        "md5_after": "911f903b45f9d38fc60a5b19d8388c12",
+                        "sha256_after": "9d2378dbc34a1ddbe075b19232dff129bb7b5d32fc7e81f752cc76eaa6bdad46",
+                        "inode_after": 546229
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 48,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/apt-key-gpghome.CEEu7a12wO/gpg.1.sh' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.636Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6785142",
+                    "timestamp": "2026-01-10T17:10:37.636+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "m3bjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "5708",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt-key-gpghome.CEEu7a12wO/pubring.orig.gpg",
+                        "sha1_after": "46807649900c143f529e1eebfed2aff829c15254",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-r--r--",
+                        "event": "added",
+                        "md5_after": "5fd1f2a3e03302c7ba20bcd6d7c55f70",
+                        "sha256_after": "4c11d8cc267738a9e44c081fb74faba4b3ca2bebdd776fa9179aa9fe9e136cfe",
+                        "inode_after": 546228
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 49,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/apt-key-gpghome.CEEu7a12wO/pubring.orig.gpg' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.643Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6785860",
+                    "timestamp": "2026-01-10T17:10:37.643+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "pXbjqJsBpsB0GyOkhByU",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "127166",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.data.1Yu1FO",
+                        "sha1_after": "3fbcf3b3a15892f38f0eee74f0385568b9993089",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "deleted",
+                        "md5_after": "672714d85608b1ff78e9a625c3f5d944",
+                        "sha256_after": "507dde970621df52cf6e53b64e2f5548ae2efed2604d4c22393ca9e988bef260",
+                        "inode_after": 1941
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 42,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/apt.data.1Yu1FO' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:38.673Z",
+                    "location": "syscheck",
+                    "id": "1768065038.6792894",
+                    "timestamp": "2026-01-10T17:10:38.673+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "kHbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "11089",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.conf.oTeLiu",
+                        "sha1_after": "60efe9e2fdfffb428222481a304ed9fca13168a1",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "added",
+                        "md5_after": "8afc11d26f321a464e393333cd84afda",
+                        "sha256_after": "c5f43b49a2d38a734dde284694ccf68fc2e91c7cd23692b15e37cd36f3d25573",
+                        "inode_after": 1750
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 44,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/apt.conf.oTeLiu' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.541Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6777809",
+                    "timestamp": "2026-01-10T17:10:37.541+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "knbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "819",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.sig.kdd761",
+                        "sha1_after": "cedc803378c21d8735c7f415a8d76d322ca9fb0d",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "added",
+                        "md5_after": "07a7e6f6efdc30fc46e061a9230a86ae",
+                        "sha256_after": "b8a4ea3ff4da03484b93dc73539c656f074723e79ffe7903a64c385d5863cb18",
+                        "inode_after": 1920
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 46,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/apt.sig.kdd761' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.555Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6779208",
+                    "timestamp": "2026-01-10T17:10:37.555+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "lnbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "predecoder": {
+                        "hostname": "ip-172-31-28-229",
+                        "program_name": "sudo",
+                        "timestamp": "Jan 10 17:10:37"
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "data": {
+                        "uid": "1000",
+                        "dstuser": "root(uid=0)"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 3,
+                        "pci_dss": [
+                            "10.2.5"
+                        ],
+                        "hipaa": [
+                            "164.312.b"
+                        ],
+                        "tsc": [
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "PAM: Login session opened.",
+                        "groups": [
+                            "pam",
+                            "syslog",
+                            "authentication_success"
+                        ],
+                        "nist_800_53": [
+                            "AU.14",
+                            "AC.7"
+                        ],
+                        "gdpr": [
+                            "IV_32.2"
+                        ],
+                        "firedtimes": 109,
+                        "mitre": {
+                            "technique": [
+                                "Valid Accounts"
+                            ],
+                            "id": [
+                                "T1078"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Persistence",
+                                "Privilege Escalation",
+                                "Initial Access"
+                            ]
+                        },
+                        "id": "5501",
+                        "gpg13": [
+                            "7.8",
+                            "7.9"
+                        ]
+                    },
+                    "decoder": {
+                        "parent": "pam",
+                        "name": "pam"
+                    },
+                    "full_log": "Jan 10 17:10:37 ip-172-31-28-229 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.623Z",
+                    "location": "/var/log/auth.log",
+                    "id": "1768065037.6781575",
+                    "timestamp": "2026-01-10T17:10:37.623+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "mHbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "size_before": "0",
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "3975",
+                        "gid_after": "65534",
+                        "md5_before": "d41d8cd98f00b204e9800998ecf8427e",
+                        "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                        "mode": "realtime",
+                        "path": "/tmp/apt-key-gpghome.CEEu7a12wO/pubring.gpg",
+                        "sha1_after": "5af40d86c1b61d76c5ae61e54b7ebfdc28f47ed6",
+                        "changed_attributes": [
+                            "size",
+                            "md5",
+                            "sha1",
+                            "sha256"
+                        ],
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-r--r--",
+                        "event": "modified",
+                        "md5_after": "788d601d9a7d6373c13286287b15b69f",
+                        "sha1_before": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+                        "sha256_after": "9cef7e5e025dbe106ce9e11b9b44a686f335ebd5a28a7ab36b198634385273d4",
+                        "inode_after": 546227
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Integrity checksum changed.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_modified",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 56,
+                        "mitre": {
+                            "technique": [
+                                "Stored Data Manipulation"
+                            ],
+                            "id": [
+                                "T1565.001"
+                            ],
+                            "tactic": [
+                                "Impact"
+                            ]
+                        },
+                        "id": "550",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_integrity_changed"
+                    },
+                    "full_log": "File '/tmp/apt-key-gpghome.CEEu7a12wO/pubring.gpg' modified\nMode: realtime\nChanged attributes: size,md5,sha1,sha256\nSize changed from '0' to '3975'\nOld md5sum was: 'd41d8cd98f00b204e9800998ecf8427e'\nNew md5sum is : '788d601d9a7d6373c13286287b15b69f'\nOld sha1sum was: 'da39a3ee5e6b4b0d3255bfef95601890afd80709'\nNew sha1sum is : '5af40d86c1b61d76c5ae61e54b7ebfdc28f47ed6'\nOld sha256sum was: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'\nNew sha256sum is : '9cef7e5e025dbe106ce9e11b9b44a686f335ebd5a28a7ab36b198634385273d4'\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.627Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6782743",
+                    "timestamp": "2026-01-10T17:10:37.627+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "mXbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "size_before": "3975",
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "5708",
+                        "gid_after": "65534",
+                        "md5_before": "788d601d9a7d6373c13286287b15b69f",
+                        "sha256_before": "9cef7e5e025dbe106ce9e11b9b44a686f335ebd5a28a7ab36b198634385273d4",
+                        "mode": "realtime",
+                        "path": "/tmp/apt-key-gpghome.CEEu7a12wO/pubring.gpg",
+                        "sha1_after": "46807649900c143f529e1eebfed2aff829c15254",
+                        "changed_attributes": [
+                            "size",
+                            "md5",
+                            "sha1",
+                            "sha256"
+                        ],
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-r--r--",
+                        "event": "modified",
+                        "md5_after": "5fd1f2a3e03302c7ba20bcd6d7c55f70",
+                        "sha1_before": "5af40d86c1b61d76c5ae61e54b7ebfdc28f47ed6",
+                        "sha256_after": "4c11d8cc267738a9e44c081fb74faba4b3ca2bebdd776fa9179aa9fe9e136cfe",
+                        "inode_after": 546227
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "Integrity checksum changed.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_modified",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 57,
+                        "mitre": {
+                            "technique": [
+                                "Stored Data Manipulation"
+                            ],
+                            "id": [
+                                "T1565.001"
+                            ],
+                            "tactic": [
+                                "Impact"
+                            ]
+                        },
+                        "id": "550",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_integrity_changed"
+                    },
+                    "full_log": "File '/tmp/apt-key-gpghome.CEEu7a12wO/pubring.gpg' modified\nMode: realtime\nChanged attributes: size,md5,sha1,sha256\nSize changed from '3975' to '5708'\nOld md5sum was: '788d601d9a7d6373c13286287b15b69f'\nNew md5sum is : '5fd1f2a3e03302c7ba20bcd6d7c55f70'\nOld sha1sum was: '5af40d86c1b61d76c5ae61e54b7ebfdc28f47ed6'\nNew sha1sum is : '46807649900c143f529e1eebfed2aff829c15254'\nOld sha256sum was: '9cef7e5e025dbe106ce9e11b9b44a686f335ebd5a28a7ab36b198634385273d4'\nNew sha256sum is : '4c11d8cc267738a9e44c081fb74faba4b3ca2bebdd776fa9179aa9fe9e136cfe'\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.630Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6783941",
+                    "timestamp": "2026-01-10T17:10:37.630+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "nXbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "5708",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt-key-gpghome.CEEu7a12wO/pubring.gpg",
+                        "sha1_after": "46807649900c143f529e1eebfed2aff829c15254",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-r--r--",
+                        "event": "deleted",
+                        "md5_after": "5fd1f2a3e03302c7ba20bcd6d7c55f70",
+                        "sha256_after": "4c11d8cc267738a9e44c081fb74faba4b3ca2bebdd776fa9179aa9fe9e136cfe",
+                        "inode_after": 546227
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 36,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/apt-key-gpghome.CEEu7a12wO/pubring.gpg' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.650Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6787298",
+                    "timestamp": "2026-01-10T17:10:37.650+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "n3bjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "11089",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.conf.oTeLiu",
+                        "sha1_after": "60efe9e2fdfffb428222481a304ed9fca13168a1",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "deleted",
+                        "md5_after": "8afc11d26f321a464e393333cd84afda",
+                        "sha256_after": "c5f43b49a2d38a734dde284694ccf68fc2e91c7cd23692b15e37cd36f3d25573",
+                        "inode_after": 1750
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 38,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/apt.conf.oTeLiu' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.655Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6788733",
+                    "timestamp": "2026-01-10T17:10:37.655+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "oHbjqJsBpsB0GyOkfBzI",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "269218",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.data.MfDsyJ",
+                        "sha1_after": "38368103f4511b8ba603ab16d12943e1e0f352ab",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "deleted",
+                        "md5_after": "90fec01f0911e377758807bc0525cebe",
+                        "sha256_after": "269a3a900ff8b8bc9bc3c6743f9927d90c4b81ad34b35c2753f8d9aadff926da",
+                        "inode_after": 1941
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 39,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/apt.data.MfDsyJ' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.657Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6789424",
+                    "timestamp": "2026-01-10T17:10:37.657+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "onbjqJsBpsB0GyOkgByr",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "11089",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.conf.Zm6E0P",
+                        "sha1_after": "60efe9e2fdfffb428222481a304ed9fca13168a1",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "added",
+                        "md5_after": "8afc11d26f321a464e393333cd84afda",
+                        "sha256_after": "c5f43b49a2d38a734dde284694ccf68fc2e91c7cd23692b15e37cd36f3d25573",
+                        "inode_after": 1750
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 50,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/apt.conf.Zm6E0P' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.662Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6790804",
+                    "timestamp": "2026-01-10T17:10:37.662+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "o3bjqJsBpsB0GyOkgByr",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "127166",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.data.1Yu1FO",
+                        "sha1_after": "3fbcf3b3a15892f38f0eee74f0385568b9993089",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "added",
+                        "md5_after": "672714d85608b1ff78e9a625c3f5d944",
+                        "sha256_after": "507dde970621df52cf6e53b64e2f5548ae2efed2604d4c22393ca9e988bef260",
+                        "inode_after": 1941
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "firedtimes": 51,
+                        "mail": false,
+                        "level": 5,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File added to the system.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_added",
+                            "syscheck_file"
+                        ],
+                        "id": "554",
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gpg13": [
+                            "4.11"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_new_entry"
+                    },
+                    "full_log": "File '/tmp/apt.data.1Yu1FO' added\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:37.667Z",
+                    "location": "syscheck",
+                    "id": "1768065037.6791503",
+                    "timestamp": "2026-01-10T17:10:37.667+0000"
+                }
+            },
+            {
+                "_index": "wazuh-alerts-4.x-2026.01.10",
+                "_id": "pHbjqJsBpsB0GyOkhByU",
+                "_score": 1.0,
+                "_source": {
+                    "syscheck": {
+                        "uname_after": "_apt",
+                        "mtime_after": "2026-01-10T17:10:37",
+                        "size_after": "11089",
+                        "gid_after": "65534",
+                        "mode": "realtime",
+                        "path": "/tmp/apt.conf.Zm6E0P",
+                        "sha1_after": "60efe9e2fdfffb428222481a304ed9fca13168a1",
+                        "gname_after": "nogroup",
+                        "uid_after": "105",
+                        "perm_after": "rw-------",
+                        "event": "deleted",
+                        "md5_after": "8afc11d26f321a464e393333cd84afda",
+                        "sha256_after": "c5f43b49a2d38a734dde284694ccf68fc2e91c7cd23692b15e37cd36f3d25573",
+                        "inode_after": 1750
+                    },
+                    "agent": {
+                        "ip": "172.31.28.229",
+                        "name": "wazuh-agent",
+                        "id": "002"
+                    },
+                    "manager": {
+                        "name": "ip-172-31-30-117"
+                    },
+                    "rule": {
+                        "mail": false,
+                        "level": 7,
+                        "pci_dss": [
+                            "11.5"
+                        ],
+                        "hipaa": [
+                            "164.312.c.1",
+                            "164.312.c.2"
+                        ],
+                        "tsc": [
+                            "PI1.4",
+                            "PI1.5",
+                            "CC6.1",
+                            "CC6.8",
+                            "CC7.2",
+                            "CC7.3"
+                        ],
+                        "description": "File deleted.",
+                        "groups": [
+                            "ossec",
+                            "syscheck",
+                            "syscheck_entry_deleted",
+                            "syscheck_file"
+                        ],
+                        "nist_800_53": [
+                            "SI.7"
+                        ],
+                        "gdpr": [
+                            "II_5.1.f"
+                        ],
+                        "firedtimes": 41,
+                        "mitre": {
+                            "technique": [
+                                "File Deletion",
+                                "Data Destruction"
+                            ],
+                            "id": [
+                                "T1070.004",
+                                "T1485"
+                            ],
+                            "tactic": [
+                                "Defense Evasion",
+                                "Impact"
+                            ]
+                        },
+                        "id": "553",
+                        "gpg13": [
+                            "4.11"
+                        ]
+                    },
+                    "decoder": {
+                        "name": "syscheck_deleted"
+                    },
+                    "full_log": "File '/tmp/apt.conf.Zm6E0P' deleted\nMode: realtime\n",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2026-01-10T17:10:38.672Z",
+                    "location": "syscheck",
+                    "id": "1768065038.6792203",
+                    "timestamp": "2026-01-10T17:10:38.672+0000"
+                }
+            }
+        ]
+    }
+}
