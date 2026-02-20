@@ -6,13 +6,13 @@
 // Allow holding mutex guard across await in tests - this is intentional for test serialization
 #![allow(clippy::await_holding_lock)]
 
-use std::process::{Child, Command, Stdio};
+use once_cell::sync::Lazy;
+use serde_json::{json, Value};
 use std::io::{BufRead, BufReader, Write};
+use std::process::{Child, Command, Stdio};
+use std::sync::Mutex;
 use std::time::Duration;
 use tokio::time::sleep;
-use serde_json::{json, Value};
-use once_cell::sync::Lazy;
-use std::sync::Mutex;
 
 mod mock_wazuh_server;
 use mock_wazuh_server::MockWazuhServer;
@@ -26,7 +26,9 @@ struct McpServerProcess {
 }
 
 impl McpServerProcess {
-    fn start_with_mock_wazuh(mock_server: &MockWazuhServer) -> Result<Self, Box<dyn std::error::Error>> {
+    fn start_with_mock_wazuh(
+        mock_server: &MockWazuhServer,
+    ) -> Result<Self, Box<dyn std::error::Error>> {
         let mut child = Command::new("cargo")
             .args(["run", "--bin", "mcp-server-wazuh"])
             .env("WAZUH_INDEXER_HOST", mock_server.host())
@@ -81,10 +83,10 @@ impl Drop for McpServerProcess {
 #[tokio::test]
 async fn test_mcp_server_initialization() -> Result<(), Box<dyn std::error::Error>> {
     let _guard = TEST_MUTEX.lock().unwrap();
-    
+
     let mock_server = MockWazuhServer::new();
     let mut mcp_server = McpServerProcess::start_with_mock_wazuh(&mock_server)?;
-    
+
     // Give the server time to start
     sleep(Duration::from_millis(500)).await;
 
@@ -109,7 +111,7 @@ async fn test_mcp_server_initialization() -> Result<(), Box<dyn std::error::Erro
     assert_eq!(response["jsonrpc"], "2.0");
     assert_eq!(response["id"], 1);
     assert!(response["result"].is_object());
-    
+
     let result = &response["result"];
     assert_eq!(result["protocolVersion"], "2024-11-05");
     assert!(result["capabilities"].is_object());
@@ -122,10 +124,10 @@ async fn test_mcp_server_initialization() -> Result<(), Box<dyn std::error::Erro
 #[tokio::test]
 async fn test_tools_list() -> Result<(), Box<dyn std::error::Error>> {
     let _guard = TEST_MUTEX.lock().unwrap();
-    
+
     let mock_server = MockWazuhServer::new();
     let mut mcp_server = McpServerProcess::start_with_mock_wazuh(&mock_server)?;
-    
+
     sleep(Duration::from_millis(500)).await;
 
     // Initialize first
@@ -162,18 +164,19 @@ async fn test_tools_list() -> Result<(), Box<dyn std::error::Error>> {
     assert_eq!(response["jsonrpc"], "2.0");
     assert_eq!(response["id"], 2);
     assert!(response["result"]["tools"].is_array());
-    
+
     let tools = response["result"]["tools"].as_array().unwrap();
     assert!(!tools.is_empty());
-    
+
     // Check for our Wazuh alert summary tool
-    let alert_tool = tools.iter()
+    let alert_tool = tools
+        .iter()
         .find(|tool| tool["name"] == "get_wazuh_alert_summary")
         .expect("get_wazuh_alert_summary tool should be present");
-    
+
     assert!(alert_tool["description"].is_string());
     assert!(alert_tool["inputSchema"].is_object());
-    
+
     // Verify input schema structure
     let input_schema = &alert_tool["inputSchema"];
     assert_eq!(input_schema["type"], "object");
@@ -186,10 +189,10 @@ async fn test_tools_list() -> Result<(), Box<dyn std::error::Error>> {
 #[tokio::test]
 async fn test_get_wazuh_alert_summary_success() -> Result<(), Box<dyn std::error::Error>> {
     let _guard = TEST_MUTEX.lock().unwrap();
-    
+
     let mock_server = MockWazuhServer::new();
     let mut mcp_server = McpServerProcess::start_with_mock_wazuh(&mock_server)?;
-    
+
     sleep(Duration::from_millis(500)).await;
 
     // Initialize
@@ -231,19 +234,19 @@ async fn test_get_wazuh_alert_summary_success() -> Result<(), Box<dyn std::error
     assert_eq!(response["jsonrpc"], "2.0");
     assert_eq!(response["id"], 3);
     assert!(response["result"].is_object());
-    
+
     let result = &response["result"];
     assert!(result["content"].is_array());
     assert_eq!(result["isError"], false);
-    
+
     let content = result["content"].as_array().unwrap();
     assert!(!content.is_empty());
-    
+
     // Verify content format
     for item in content {
         assert_eq!(item["type"], "text");
         assert!(item["text"].is_string());
-        
+
         let text = item["text"].as_str().unwrap();
         assert!(text.contains("Alert ID:"));
         assert!(text.contains("Time:"));
@@ -258,10 +261,10 @@ async fn test_get_wazuh_alert_summary_success() -> Result<(), Box<dyn std::error
 #[tokio::test]
 async fn test_get_wazuh_alert_summary_empty_results() -> Result<(), Box<dyn std::error::Error>> {
     let _guard = TEST_MUTEX.lock().unwrap();
-    
+
     let mock_server = MockWazuhServer::with_empty_alerts();
     let mut mcp_server = McpServerProcess::start_with_mock_wazuh(&mock_server)?;
-    
+
     sleep(Duration::from_millis(500)).await;
 
     // Initialize
@@ -300,11 +303,11 @@ async fn test_get_wazuh_alert_summary_empty_results() -> Result<(), Box<dyn std:
     // Verify response
     assert_eq!(response["jsonrpc"], "2.0");
     assert_eq!(response["id"], 3);
-    
+
     let result = &response["result"];
     assert!(result["content"].is_array());
     assert_eq!(result["isError"], false);
-    
+
     let content = result["content"].as_array().unwrap();
     assert_eq!(content.len(), 1);
     assert_eq!(content[0]["type"], "text");
@@ -316,10 +319,10 @@ async fn test_get_wazuh_alert_summary_empty_results() -> Result<(), Box<dyn std:
 #[tokio::test]
 async fn test_get_wazuh_alert_summary_api_error() -> Result<(), Box<dyn std::error::Error>> {
     let _guard = TEST_MUTEX.lock().unwrap();
-    
+
     let mock_server = MockWazuhServer::with_alerts_error();
     let mut mcp_server = McpServerProcess::start_with_mock_wazuh(&mock_server)?;
-    
+
     sleep(Duration::from_millis(500)).await;
 
     // Initialize
@@ -360,15 +363,15 @@ async fn test_get_wazuh_alert_summary_api_error() -> Result<(), Box<dyn std::err
     // Verify error response
     assert_eq!(response["jsonrpc"], "2.0");
     assert_eq!(response["id"], 3);
-    
+
     let result = &response["result"];
     assert!(result["content"].is_array());
     assert_eq!(result["isError"], true);
-    
+
     let content = result["content"].as_array().unwrap();
     assert_eq!(content.len(), 1);
     assert_eq!(content[0]["type"], "text");
-    
+
     let error_text = content[0]["text"].as_str().unwrap();
     assert!(error_text.contains("Error retrieving alerts from Wazuh"));
 
@@ -378,10 +381,10 @@ async fn test_get_wazuh_alert_summary_api_error() -> Result<(), Box<dyn std::err
 #[tokio::test]
 async fn test_invalid_tool_call() -> Result<(), Box<dyn std::error::Error>> {
     let _guard = TEST_MUTEX.lock().unwrap();
-    
+
     let mock_server = MockWazuhServer::new();
     let mut mcp_server = McpServerProcess::start_with_mock_wazuh(&mock_server)?;
-    
+
     sleep(Duration::from_millis(500)).await;
 
     // Initialize
@@ -428,10 +431,10 @@ async fn test_invalid_tool_call() -> Result<(), Box<dyn std::error::Error>> {
 #[tokio::test]
 async fn test_parameter_validation() -> Result<(), Box<dyn std::error::Error>> {
     let _guard = TEST_MUTEX.lock().unwrap();
-    
+
     let mock_server = MockWazuhServer::new();
     let mut mcp_server = McpServerProcess::start_with_mock_wazuh(&mock_server)?;
-    
+
     sleep(Duration::from_millis(500)).await;
 
     // Initialize
@@ -474,8 +477,7 @@ async fn test_parameter_validation() -> Result<(), Box<dyn std::error::Error>> {
     assert_eq!(response["id"], 3);
     // The response might be an error or a successful response with error content
     // depending on how rmcp handles parameter validation
-    assert!(response["error"].is_object() || 
-            (response["result"]["isError"] == true));
+    assert!(response["error"].is_object() || (response["result"]["isError"] == true));
 
     Ok(())
 }
@@ -483,10 +485,10 @@ async fn test_parameter_validation() -> Result<(), Box<dyn std::error::Error>> {
 #[tokio::test]
 async fn test_malformed_alert_data_handling() -> Result<(), Box<dyn std::error::Error>> {
     let _guard = TEST_MUTEX.lock().unwrap();
-    
+
     let mock_server = MockWazuhServer::with_malformed_alerts();
     let mut mcp_server = McpServerProcess::start_with_mock_wazuh(&mock_server)?;
-    
+
     sleep(Duration::from_millis(500)).await;
 
     // Initialize
@@ -527,22 +529,26 @@ async fn test_malformed_alert_data_handling() -> Result<(), Box<dyn std::error::
     // Should handle malformed data gracefully
     assert_eq!(response["jsonrpc"], "2.0");
     assert_eq!(response["id"], 3);
-    
+
     let result = &response["result"];
     assert!(result["content"].is_array());
     // Should not error out, but handle missing fields gracefully
     assert_eq!(result["isError"], false);
-    
+
     let content = result["content"].as_array().unwrap();
     assert!(!content.is_empty());
-    
+
     // Verify that missing fields are handled with defaults
     for item in content {
         assert_eq!(item["type"], "text");
         let text = item["text"].as_str().unwrap();
         // Should contain default values for missing fields
         assert!(text.contains("Alert ID:"));
-        assert!(text.contains("Unknown") || text.contains("missing_fields") || text.contains("partial_data"));
+        assert!(
+            text.contains("Unknown")
+                || text.contains("missing_fields")
+                || text.contains("partial_data")
+        );
     }
 
     Ok(())
