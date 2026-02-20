@@ -1,25 +1,28 @@
 //! Wazuh Manager vulnerability tools
-//! 
+//!
 //! This module contains tools for retrieving and analyzing vulnerability information
 //! from the Wazuh Manager.
 
+use super::ToolModule;
 use rmcp::{
-    ErrorData as McpError,
     model::{CallToolResult, Content},
-    schemars,
+    schemars, ErrorData as McpError,
 };
 use std::sync::Arc;
 use tokio::sync::Mutex;
 use wazuh_client::{VulnerabilityClient, VulnerabilitySeverity};
-use super::ToolModule;
 
 #[derive(Debug, serde::Deserialize, schemars::JsonSchema)]
 pub struct GetVulnerabilitiesSummaryParams {
     #[schemars(description = "Maximum number of vulnerabilities to retrieve (default: 10000)")]
     pub limit: Option<u32>,
-    #[schemars(description = "Agent ID to filter vulnerabilities by (required, e.g., \"0\", \"1\", \"001\")")]
+    #[schemars(
+        description = "Agent ID to filter vulnerabilities by (required, e.g., \"0\", \"1\", \"001\")"
+    )]
     pub agent_id: String,
-    #[schemars(description = "Severity level to filter by (Low, Medium, High, Critical) (optional)")]
+    #[schemars(
+        description = "Severity level to filter by (Low, Medium, High, Critical) (optional)"
+    )]
     pub severity: Option<String>,
     #[schemars(description = "CVE ID to search for (optional)")]
     pub cve: Option<String>,
@@ -27,7 +30,9 @@ pub struct GetVulnerabilitiesSummaryParams {
 
 #[derive(Debug, serde::Deserialize, schemars::JsonSchema)]
 pub struct GetCriticalVulnerabilitiesParams {
-    #[schemars(description = "Agent ID to get critical vulnerabilities for (required, e.g., \"0\", \"1\", \"001\")")]
+    #[schemars(
+        description = "Agent ID to get critical vulnerabilities for (required, e.g., \"0\", \"1\", \"001\")"
+    )]
     pub agent_id: String,
     #[schemars(description = "Maximum number of vulnerabilities to retrieve (default: 300)")]
     pub limit: Option<u32>,
@@ -40,7 +45,9 @@ pub struct VulnerabilityTools {
 
 impl VulnerabilityTools {
     pub fn new(vulnerability_client: Arc<Mutex<VulnerabilityClient>>) -> Self {
-        Self { vulnerability_client }
+        Self {
+            vulnerability_client,
+        }
     }
 
     fn format_agent_id(agent_id_str: &str) -> Result<String, String> {

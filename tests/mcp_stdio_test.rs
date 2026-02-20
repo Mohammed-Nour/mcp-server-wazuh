@@ -1,13 +1,13 @@
 //! Tests for MCP protocol communication via stdio
-//! 
+//!
 //! These tests verify the basic MCP protocol implementation without
 //! requiring a Wazuh connection.
 
-use std::process::{Command, Stdio};
+use serde_json::{json, Value};
 use std::io::{BufRead, BufReader, Write};
+use std::process::{Command, Stdio};
 use std::time::Duration;
 use tokio::time::sleep;
-use serde_json::{json, Value};
 
 struct McpStdioClient {
     child: std::process::Child,
@@ -74,7 +74,7 @@ impl Drop for McpStdioClient {
 #[tokio::test]
 async fn test_mcp_protocol_initialization() -> Result<(), Box<dyn std::error::Error>> {
     let mut client = McpStdioClient::start()?;
-    
+
     // Give the server time to start
     sleep(Duration::from_millis(500)).await;
 
@@ -118,7 +118,7 @@ async fn test_mcp_protocol_initialization() -> Result<(), Box<dyn std::error::Er
 #[tokio::test]
 async fn test_mcp_tools_list_without_wazuh() -> Result<(), Box<dyn std::error::Error>> {
     let mut client = McpStdioClient::start()?;
-    
+
     sleep(Duration::from_millis(500)).await;
 
     // Initialize first
@@ -155,13 +155,13 @@ async fn test_mcp_tools_list_without_wazuh() -> Result<(), Box<dyn std::error::E
     assert_eq!(response["jsonrpc"], "2.0");
     assert_eq!(response["id"], 2);
     assert!(response["result"].is_object());
-    
+
     let result = &response["result"];
     assert!(result["tools"].is_array());
-    
+
     let tools = result["tools"].as_array().unwrap();
     assert!(!tools.is_empty());
-    
+
     // Verify tool structure
     for tool in tools {
         assert!(tool["name"].is_string());
@@ -175,7 +175,7 @@ async fn test_mcp_tools_list_without_wazuh() -> Result<(), Box<dyn std::error::E
 #[tokio::test]
 async fn test_invalid_json_rpc_request() -> Result<(), Box<dyn std::error::Error>> {
     let mut client = McpStdioClient::start()?;
-    
+
     sleep(Duration::from_millis(500)).await;
 
     // 1. Initialize the connection first
@@ -190,7 +190,7 @@ async fn test_invalid_json_rpc_request() -> Result<(), Box<dyn std::error::Error
         }
     });
     let _init_response = client.send_and_receive(&init_request)?; // Read and ignore/assert init response
-    // assert!(_init_response["result"].is_object()); // Optional: assert successful init
+                                                                  // assert!(_init_response["result"].is_object()); // Optional: assert successful init
 
     // 2. Send initialized notification
     let initialized_notification = json!({
@@ -222,16 +222,19 @@ async fn test_invalid_json_rpc_request() -> Result<(), Box<dyn std::error::Error
     });
 
     let result = client.send_and_receive(&list_tools_request);
-    
+
     // Assert that the operation failed, indicating the connection was likely closed.
     assert!(result.is_err(), "Server should have closed the connection after the invalid request, leading to an error here.");
-    
+
     // Optionally, check the error type more specifically if needed, e.g., for EOF.
     if let Err(e) = result {
         let error_message = e.to_string().to_lowercase();
         assert!(
-            error_message.contains("eof") || error_message.contains("broken pipe") || error_message.contains("connection reset"),
-            "Expected EOF, broken pipe, or connection reset error, but got: {}", e
+            error_message.contains("eof")
+                || error_message.contains("broken pipe")
+                || error_message.contains("connection reset"),
+            "Expected EOF, broken pipe, or connection reset error, but got: {}",
+            e
         );
     }
 
@@ -295,7 +298,7 @@ async fn test_unsupported_method() -> Result<(), Box<dyn std::error::Error>> {
 #[tokio::test]
 async fn test_concurrent_requests() -> Result<(), Box<dyn std::error::Error>> {
     let mut client = McpStdioClient::start()?;
-    
+
     sleep(Duration::from_millis(500)).await;
 
     // Initialize
@@ -346,7 +349,7 @@ async fn test_concurrent_requests() -> Result<(), Box<dyn std::error::Error>> {
         response1["id"].as_i64().unwrap(),
         response2["id"].as_i64().unwrap(),
     ];
-    
+
     assert!(ids.contains(&10));
     assert!(ids.contains(&20));
 

@@ -1,5 +1,5 @@
 //! Stats tools for Wazuh MCP Server
-//! 
+//!
 //! This module contains tools for retrieving various statistics from Wazuh components,
 //! including manager logs, remoted daemon stats, log collector stats, and weekly statistics.
 
@@ -266,9 +266,7 @@ impl StatsTools {
 
                 let formatted_text = format!(
                     "Log Collector Stats for Agent: {}\n\n{}\n\n{}",
-                    agent_id,
-                    global_period_info,
-                    interval_period_info
+                    agent_id, global_period_info, interval_period_info
                 );
 
                 tracing::info!(
@@ -490,4 +488,3 @@ impl StatsTools {
 }
 
 impl ToolModule for StatsTools {}
-

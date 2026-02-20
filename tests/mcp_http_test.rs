@@ -3,10 +3,10 @@
 //! These tests verify the Streamable HTTP transport implementation.
 //! Run with: cargo test --features http --test mcp_http_test
 
+use serde_json::{json, Value};
 use std::process::{Child, Command, Stdio};
 use std::time::Duration;
 use tokio::time::sleep;
-use serde_json::{json, Value};
 
 struct McpHttpServer {
     child: Child,
@@ -24,12 +24,17 @@ impl McpHttpServer {
         let child = Command::new("cargo")
             .args([
                 "run",
-                "--features", "http",
-                "--bin", "mcp-server-wazuh",
+                "--features",
+                "http",
+                "--bin",
+                "mcp-server-wazuh",
                 "--",
-                "--transport", "http",
-                "--host", "127.0.0.1",
-                "--port", &port.to_string(),
+                "--transport",
+                "http",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                &port.to_string(),
             ])
             .env("WAZUH_API_HOST", "nonexistent.example.com")
             .env("WAZUH_API_PORT", "9999")
@@ -47,7 +52,11 @@ impl McpHttpServer {
             .spawn()?;
 
         // Wait for server to start
-        let server = McpHttpServer { child, base_url: base_url.clone(), port };
+        let server = McpHttpServer {
+            child,
+            base_url: base_url.clone(),
+            port,
+        };
 
         // Poll until the server is ready (max 30 seconds for cargo build + startup)
         let client = reqwest::Client::new();
@@ -80,7 +89,11 @@ impl McpHttpServer {
             }
 
             if i % 10 == 0 {
-                eprintln!("Waiting for HTTP server to start... (attempt {}/{})", i + 1, max_retries);
+                eprintln!(
+                    "Waiting for HTTP server to start... (attempt {}/{})",
+                    i + 1,
+                    max_retries
+                );
             }
         }
 
@@ -115,7 +128,8 @@ impl McpHttpClient {
     }
 
     async fn send_request(&mut self, message: &Value) -> Result<Value, Box<dyn std::error::Error>> {
-        let mut request = self.client
+        let mut request = self
+            .client
             .post(format!("{}/mcp", self.base_url))
             .header("Content-Type", "application/json")
             // MCP Streamable HTTP spec requires accepting both JSON and SSE
@@ -143,7 +157,8 @@ impl McpHttpClient {
         let text = response.text().await?;
 
         // Handle SSE format - the response is in SSE format with "data:" prefix
-        let json_str = text.lines()
+        let json_str = text
+            .lines()
             .filter(|line| line.starts_with("data:"))
             .map(|line| line.trim_start_matches("data:").trim())
             .filter(|s| !s.is_empty())
@@ -179,7 +194,8 @@ impl McpHttpClient {
         });
 
         // Notifications don't expect a response, but we send it anyway
-        let mut request = self.client
+        let mut request = self
+            .client
             .post(format!("{}/mcp", self.base_url))
             .header("Content-Type", "application/json")
             .header("Accept", "application/json, text/event-stream");
@@ -228,8 +244,16 @@ mod http_tests {
         // Verify JSON-RPC 2.0 compliance
         assert_eq!(response["jsonrpc"], "2.0");
         assert_eq!(response["id"], 1);
-        assert!(response["result"].is_object(), "Expected result object, got: {:?}", response);
-        assert!(response["error"].is_null(), "Unexpected error: {:?}", response["error"]);
+        assert!(
+            response["result"].is_object(),
+            "Expected result object, got: {:?}",
+            response
+        );
+        assert!(
+            response["error"].is_null(),
+            "Unexpected error: {:?}",
+            response["error"]
+        );
 
         // Verify MCP initialize response structure
         let result = &response["result"];
@@ -249,7 +273,10 @@ mod http_tests {
         assert!(server_info["version"].is_string());
 
         // Verify session ID was set
-        assert!(client.session_id.is_some(), "Session ID should be set after initialization");
+        assert!(
+            client.session_id.is_some(),
+            "Session ID should be set after initialization"
+        );
 
         Ok(())
     }
@@ -274,7 +301,11 @@ mod http_tests {
         // Verify response structure
         assert_eq!(response["jsonrpc"], "2.0");
         assert_eq!(response["id"], 2);
-        assert!(response["result"].is_object(), "Expected result object, got: {:?}", response);
+        assert!(
+            response["result"].is_object(),
+            "Expected result object, got: {:?}",
+            response
+        );
 
         let result = &response["result"];
         assert!(result["tools"].is_array(), "Expected tools array");
@@ -285,8 +316,14 @@ mod http_tests {
         // Verify tool structure
         for tool in tools {
             assert!(tool["name"].is_string(), "Tool should have name");
-            assert!(tool["description"].is_string(), "Tool should have description");
-            assert!(tool["inputSchema"].is_object(), "Tool should have inputSchema");
+            assert!(
+                tool["description"].is_string(),
+                "Tool should have description"
+            );
+            assert!(
+                tool["inputSchema"].is_object(),
+                "Tool should have inputSchema"
+            );
         }
 
         Ok(())
@@ -311,7 +348,10 @@ mod http_tests {
 
         // Subsequent requests should work with the same session
         let response = client.list_tools().await?;
-        assert!(response["result"].is_object(), "Should get valid response with session");
+        assert!(
+            response["result"].is_object(),
+            "Should get valid response with session"
+        );
 
         Ok(())
     }
@@ -375,7 +415,11 @@ mod http_tests {
             .send()
             .await?;
 
-        assert!(response.status().is_success(), "Expected success status, got: {}", response.status());
+        assert!(
+            response.status().is_success(),
+            "Expected success status, got: {}",
+            response.status()
+        );
 
         Ok(())
     }

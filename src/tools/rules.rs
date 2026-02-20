@@ -1,17 +1,16 @@
 //! Wazuh Manager rule tools
-//! 
+//!
 //! This module contains tools for retrieving and analyzing Wazuh security rules
 //! from the Wazuh Manager.
 
+use super::ToolModule;
 use rmcp::{
-    ErrorData as McpError,
     model::{CallToolResult, Content},
-    tool,
+    tool, ErrorData as McpError,
 };
 use std::sync::Arc;
 use tokio::sync::Mutex;
 use wazuh_client::RulesClient;
-use super::ToolModule;
 
 #[derive(Debug, serde::Deserialize, schemars::JsonSchema)]
 pub struct GetRulesSummaryParams {
@@ -44,27 +43,32 @@ impl RuleTools {
         params: GetRulesSummaryParams,
     ) -> Result<CallToolResult, McpError> {
         let limit = params.limit.unwrap_or(300);
-        
+
         tracing::info!(
-            limit = %limit, 
-            level = ?params.level, 
-            group = ?params.group, 
-            filename = ?params.filename, 
+            limit = %limit,
+            level = ?params.level,
+            group = ?params.group,
+            filename = ?params.filename,
             "Retrieving Wazuh rules summary"
         );
 
         let mut rules_client = self.rules_client.lock().await;
 
-        match rules_client.get_rules(
-            Some(limit),
-            None, // offset
-            params.level,
-            params.group.as_deref(),
-            params.filename.as_deref(),
-        ).await {
+        match rules_client
+            .get_rules(
+                Some(limit),
+                None, // offset
+                params.level,
+                params.group.as_deref(),
+                params.filename.as_deref(),
+            )
+            .await
+        {
             Ok(rules) => {
                 if rules.is_empty() {
-                    tracing::info!("No Wazuh rules found matching criteria. Returning standard message.");
+                    tracing::info!(
+                        "No Wazuh rules found matching criteria. Returning standard message."
+                    );
                     return Self::not_found_result("Wazuh rules matching the specified criteria");
                 }
 
@@ -126,7 +130,11 @@ impl RuleTools {
                     })
                     .collect();
 
-                tracing::info!("Successfully processed {} rules into {} MCP content items", num_rules, mcp_content_items.len());
+                tracing::info!(
+                    "Successfully processed {} rules into {} MCP content items",
+                    num_rules,
+                    mcp_content_items.len()
+                );
                 Self::success_result(mcp_content_items)
             }
             Err(e) => {
@@ -139,4 +147,3 @@ impl RuleTools {
 }
 
 impl ToolModule for RuleTools {}
-

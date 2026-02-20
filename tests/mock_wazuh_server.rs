@@ -1,5 +1,5 @@
 //! Mock Wazuh API server for testing
-//! 
+//!
 //! This module provides a configurable mock server that simulates the Wazuh Indexer API
 //! for testing purposes. It supports various response scenarios including success,
 //! empty results, and error conditions.
@@ -14,7 +14,7 @@ pub struct MockWazuhServer {
 impl MockWazuhServer {
     pub fn new() -> Self {
         let server = MockServer::start();
-        
+
         // Setup default authentication endpoint
         server.mock(|when, then| {
             when.method(POST).path("/security/user/authenticate");
@@ -38,7 +38,7 @@ impl MockWazuhServer {
 
     pub fn with_empty_alerts() -> Self {
         let server = MockServer::start();
-        
+
         server.mock(|when, then| {
             when.method(POST).path("/security/user/authenticate");
             then.status(200)
@@ -65,7 +65,7 @@ impl MockWazuhServer {
 
     pub fn with_auth_error() -> Self {
         let server = MockServer::start();
-        
+
         server.mock(|when, then| {
             when.method(POST).path("/security/user/authenticate");
             then.status(401)
@@ -80,7 +80,7 @@ impl MockWazuhServer {
 
     pub fn with_alerts_error() -> Self {
         let server = MockServer::start();
-        
+
         server.mock(|when, then| {
             when.method(POST).path("/security/user/authenticate");
             then.status(200)
@@ -105,7 +105,7 @@ impl MockWazuhServer {
 
     pub fn with_malformed_alerts() -> Self {
         let server = MockServer::start();
-        
+
         server.mock(|when, then| {
             when.method(POST).path("/security/user/authenticate");
             then.status(200)
@@ -258,7 +258,7 @@ mod tests {
     async fn test_mock_server_auth_endpoint() {
         let mock_server = MockWazuhServer::new();
         let client = reqwest::Client::new();
-        
+
         let response = client
             .post(format!("{}/security/user/authenticate", mock_server.url()))
             .json(&json!({"username": "admin", "password": "admin"}))
@@ -275,7 +275,7 @@ mod tests {
     async fn test_mock_server_alerts_endpoint() {
         let mock_server = MockWazuhServer::new();
         let client = reqwest::Client::new();
-        
+
         let response = client
             .post(format!("{}/wazuh-alerts*/_search", mock_server.url()))
             .json(&json!({"query": {"match_all": {}}}))
