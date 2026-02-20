@@ -1,5 +1,5 @@
 //! Tools module for Wazuh MCP Server
-//! 
+//!
 //! This module contains all the tool implementations organized by Wazuh component domains.
 //! Each submodule handles a specific area of Wazuh functionality.
 
@@ -8,6 +8,12 @@ pub mod alerts;
 pub mod rules;
 pub mod stats;
 pub mod vulnerabilities;
+
+// Phase 2 modules - Active Response & Metrics
+pub mod metrics;
+pub mod notifications;
+pub mod response;
+
 
 use rmcp::model::{CallToolResult, Content};
 use rmcp::ErrorData as McpError;
@@ -60,4 +66,3 @@ impl ToolUtils {
         }
     }
 }
-
