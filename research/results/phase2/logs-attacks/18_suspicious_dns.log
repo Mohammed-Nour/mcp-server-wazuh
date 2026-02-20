@@ -1,0 +1,11 @@
+===============================================================================
+[1;33mATTACK #18: Suspicious DNS Queries[0m
+===============================================================================
+Mode: ec2-54-204-182-4.compute-1.amazonaws.com
+Logging: off (iptables LOG on agent OUTPUT udp/53)
+Category: Command & Control
+
+[0;32m[*] Attack started at: 2026-02-16T14:26:10+03:00[0m
+[*] Issuing suspicious DNS lookups...
+
+[1;33m[!] MODE=ssh but no key found; aborting[0m

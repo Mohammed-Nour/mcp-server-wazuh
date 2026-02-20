@@ -1,0 +1,308 @@
+===============================================================================
+[1;33mATTACK FP-4: Legitimate System Update[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: FalsePositive
+Executor: local (this machine)
+Command: sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
+Note: This is expected maintenance, not malicious
+
+[0;32m[*] System update started at: 2026-02-16T14:27:07+03:00[0m
+[*] Executing on admin host via SSH
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[*] Running package update/upgrade...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3226 kB]
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Hit:6 https://ppa.launchpadcontent.net/oisf/suricata-stable/ubuntu jammy InRelease
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1254 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2959 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [14.1 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1017 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [22.6 kB]
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Fetched 8877 kB in 2s (4683 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libsvn1 libbson-1.0-0 libmongoc-1.0-0
+Learn more about Ubuntu Pro on AWS at https://ubuntu.com/aws/pro
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+The following packages will be upgraded:
+  libfreerdp2-2 libwinpr2-2
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+2 standard LTS security updates
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Need to get 920 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libfreerdp2-2 amd64 2.6.1+dfsg1-3ubuntu2.10 [565 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libwinpr2-2 amd64 2.6.1+dfsg1-3ubuntu2.10 [355 kB]
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_TIME = "en_GB.UTF-8",
+	LC_MONETARY = "en_GB.UTF-8",
+	LC_ADDRESS = "en_GB.UTF-8",
+	LC_TELEPHONE = "en_GB.UTF-8",
+	LC_NAME = "en_GB.UTF-8",
+	LC_MEASUREMENT = "en_GB.UTF-8",
+	LC_IDENTIFICATION = "en_GB.UTF-8",
+	LC_NUMERIC = "en_GB.UTF-8",
+	LC_PAPER = "en_GB.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+locale: Cannot set LC_ALL to default locale: No such file or directory
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Fetched 920 kB in 0s (26.7 MB/s)
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 99734 files and directories currently installed.)
+Preparing to unpack .../libfreerdp2-2_2.6.1+dfsg1-3ubuntu2.10_amd64.deb ...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Unpacking libfreerdp2-2:amd64 (2.6.1+dfsg1-3ubuntu2.10) over (2.6.1+dfsg1-3ubuntu2.9) ...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Preparing to unpack .../libwinpr2-2_2.6.1+dfsg1-3ubuntu2.10_amd64.deb ...
+Unpacking libwinpr2-2:amd64 (2.6.1+dfsg1-3ubuntu2.10) over (2.6.1+dfsg1-3ubuntu2.9) ...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Setting up libwinpr2-2:amd64 (2.6.1+dfsg1-3ubuntu2.10) ...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Setting up libfreerdp2-2:amd64 (2.6.1+dfsg1-3ubuntu2.10) ...
+Processing triggers for man-db (2.10.2-1) ...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+Processing triggers for libc-bin (2.35-0ubuntu3.13) ...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_TIME = "en_GB.UTF-8",
+	LC_MONETARY = "en_GB.UTF-8",
+	LC_ADDRESS = "en_GB.UTF-8",
+	LC_TELEPHONE = "en_GB.UTF-8",
+	LC_NAME = "en_GB.UTF-8",
+	LC_MEASUREMENT = "en_GB.UTF-8",
+	LC_IDENTIFICATION = "en_GB.UTF-8",
+	LC_NUMERIC = "en_GB.UTF-8",
+	LC_PAPER = "en_GB.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+
+===============================================================================
+[0;32m[✓] System update completed[0m
+===============================================================================
+End Time: 2026-02-16T14:27:28+03:00
+Duration: 20.925871841 seconds
+
+Expected Wazuh alerts: FIM changes, package manager activity (benign)
+Mitigation guidance: correlate with maintenance window/release notes
+
+Data for CSV:
+  attack_id: FP-4
+  attack_name: Legitimate System Update
+  category: FalsePositive
+  attack_start_time: 2026-02-16T14:27:07+03:00
+  attack_end_time: 2026-02-16T14:27:28+03:00

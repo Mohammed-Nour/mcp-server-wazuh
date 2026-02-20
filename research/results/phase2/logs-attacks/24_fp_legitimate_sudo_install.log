@@ -1,0 +1,49 @@
+===============================================================================
+[1;33mATTACK FP-6: Legitimate Sudo Package Install[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: FalsePositive
+Executor: local (this machine)
+Package: nginx
+
+[0;32m[*] Sudo install started at: 2026-02-16T14:27:53+03:00[0m
+[*] Executing on target host via SSH
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[*] Installing package with sudo (benign developer action)...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.18.0-6ubuntu14.8).
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+
+===============================================================================
+[0;32m[✓] Sudo install completed[0m
+===============================================================================
+End Time: 2026-02-16T14:28:01+03:00
+Duration: 7.756301691 seconds
+
+Expected Wazuh alerts: sudo usage + package install (benign)
+Mitigation guidance: correlate with developer change/approval logs
+
+Data for CSV:
+  attack_id: FP-6
+  attack_name: Legitimate Sudo Package Install
+  category: FalsePositive
+  attack_start_time: 2026-02-16T14:27:53+03:00
+  attack_end_time: 2026-02-16T14:28:01+03:00

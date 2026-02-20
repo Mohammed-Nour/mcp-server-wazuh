@@ -1,0 +1,32 @@
+===============================================================================
+[1;33mATTACK FP-3: Legitimate Cron Job (logrotate)[0m
+===============================================================================
+Target: ec2-54-204-182-4.compute-1.amazonaws.com
+Category: FalsePositive
+Note: benign scheduled maintenance activity
+
+[0;32m[*] Cron simulation started at: 2026-02-16T14:26:55+03:00[0m
+[*] Executing on admin host via SSH -> target
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[*] Running logrotate manually to mimic scheduled cron...
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'malicious' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'preload' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+
+===============================================================================
+[0;32m[✓] Cron simulation completed[0m
+===============================================================================
+End Time: 2026-02-16T14:26:58+03:00
+Duration: 2.651335451 seconds
+
+Expected Wazuh alerts: logrotate execution; potential FIM touches on rotated logs
+Mitigation guidance: whitelist scheduled logrotate cron
+
+Data for CSV:
+  attack_id: FP-3
+  attack_name: Legitimate Cron Job (logrotate)
+  category: FalsePositive
+  attack_start_time: 2026-02-16T14:26:55+03:00
+  attack_end_time: 2026-02-16T14:26:58+03:00
