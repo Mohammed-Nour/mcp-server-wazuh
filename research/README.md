@@ -1,27 +1,30 @@
-# Research Attack Simulation Scripts
+# Wazuh incident-response experiments
 
-This folder contains all scripts needed for the research methodology to measure incident response metrics with the Wazuh MCP Server.
+I use these scripts to study incident response with the Wazuh MCP Server. The folder contains 24 scenarios: 18 attack simulations and six scenarios for legitimate activity, along with scripts to collect alerts and analyze the results.
 
-## Folder Structure
+## Folder structure
 
-```logs
+```text
 research/
-├── attacks/                    # Attack simulation scripts (20 scenarios)
+├── attacks/                    # 24 scripts: 18 attack + 6 intended benign
 │   ├── 01_ssh_brute_force.sh
 │   ├── 02_web_brute_force.sh
 │   ├── ...
-│   └── 18_suspicious_dns.sh
+│   ├── 18_suspicious_dns.sh
+│   ├── 19_fp_legitimate_failed_ssh_login.sh
+│   ├── ...
+│   └── 24_fp_legitimate_sudo_install.sh
 ├── scripts/                    # Helper and analysis scripts
-│   ├── config.env              # Environment and credential variables
+│   ├── config.env              # Create locally; not supplied in the repository
 │   ├── collect_alerts_from_wazuh.sh # Pull alerts for a given attack window into phase folders
 │   ├── analyze_metrics.py      # Calculate MTTD/MTTR/FP rate from CSV
-│   └── run_all_attacks.sh      # Run all attacks sequentially with optional immediate alert collection
-    └── build_attack_results.py 
+│   ├── run_all_attacks.sh      # Run scenarios sequentially, optionally collecting alerts
+│   └── build_attack_results.py # Build CSVs from collected logs and alerts
 ├── results/
 │   ├── phase0/                 # Example completed phase (do not modify)
 │   │   ├── alerts-from-wazuh/  # attack_<id>_alerts.json per attack
 │   │   ├── logs-attacks/       # <id>_*.log from each attack
-│   │   ├── metrics/            # response_times.json (optional)
+│   │   ├── metrics/            # Generated CSVs and optional response timing data
 │   │   └── mitigations-evidence/ # manual evidence storage
 │   ├── phase1/                 # Baseline run outputs live here
 │   └── phase2/                 # Enhanced run outputs live here
@@ -30,13 +33,13 @@ research/
 
 ## Prerequisites
 
-### On Attack Machine (your local or separate instance)
+### On the attack machine
 ```bash
 sudo apt update
 sudo apt install -y hydra nmap nikto netcat curl wget sshpass jq bc
 ```
 
-### On Target Agent Instance
+### On the target agent instance
 ```bash
 # Install vulnerable services for testing
 sudo apt install -y openssh-server apache2 vsftpd
@@ -44,49 +47,77 @@ sudo apt install -y openssh-server apache2 vsftpd
 
 ## Usage
 
-### 1. Configure Environment
-Edit `scripts/config.env` with your settings:
+### 1. Configure the environment
+From the `research/` directory, create `scripts/config.env` locally with your isolated lab settings. Do not commit credentials:
 ```bash
 TARGET_IP="your-agent-instance-ip"
 TARGET_USER="your-user"
 TARGET_SSH_KEY="your-ssh-key"
 
-WAZUH_INDEXER="your-wazuh-indexer-ip"
+WAZUH_INDEXER="https://your-wazuh-indexer-host:9200"
 WAZUH_INDEXER_USER="wazuh"
 WAZUH_INDEXER_PASS="your-password"
 
-RESULTS_DIR="../results"
+RESULTS_DIR="/absolute/path/to/mcp-server-wazuh/research/results"
 
-CURRENT_PHASE="0"
+CURRENT_PHASE="1"
 ```
 
-### 2. Run Individual Attack
+The runner changes directories while it works, so use an absolute `RESULTS_DIR` to keep its logs and the collector's alerts in the same place. Keep it pointed at this repository's `research/results` directory, which the CSV builder uses.
+
+### 2. Run an individual scenario
+
+Run these commands from the repository root:
+
 ```bash
-cd attacks
+cd research/attacks
 ./01_ssh_brute_force.sh <target_ip>
 ```
 
-### 3. Run All Attacks
+### 3. Run all scenarios
+
+In a shell at the repository root:
+
 ```bash
-cd scripts
+cd research/scripts
 ./run_all_attacks.sh
 ```
 
-### 4. Collect Results
+This runs all 24 scripts, including the six intended benign scenarios. It also attempts to collect alerts after each script unless `COLLECT_IMMEDIATE=0` is set.
+
+### 4. Collect alerts separately
+
+In a shell at the repository root:
+
 ```bash
-cd scripts
+cd research/scripts
 ./collect_alerts_from_wazuh.sh <attack_id> <attack_start_timestamp> [attack_end_timestamp]
 ```
 
-This saves alerts to `results/phase<N>/alerts-from-wazuh/attack_<id>_alerts.json` and appends the per-phase `attack_results.csv` (created from `templates/attack_results.csv` if missing).
+The collector saves JSON to `results/phase<N>/alerts-from-wazuh/attack_<id>_alerts.json`. It queries alerts by time window, so review the results for unrelated activity. It does not create a metrics CSV.
 
-### 5. Analyze Results
+### 5. Build and analyze the results
+
+In a shell at the repository root:
+
 ```bash
-cd scripts
-python3 analyze_metrics.py --phase 1 --results ../results/phase1/attack_results_generated.csv
+cd research/scripts
+CURRENT_PHASE=1 python3 build_attack_results.py
 ```
 
-## Attack Scenarios
+The builder writes `attack_results_generated.csv` and `attack_alerts_flat.csv` to `research/results/phase1/metrics/`. It rebuilds these files, so keep a copy of any manual edits first. Response timings and classifications can be supplied in that phase's `metrics/response_times.json`.
+
+Review the generated CSV, fill in any missing classifications or timing data from the experiment records, then run:
+
+```bash
+python3 analyze_metrics.py --phase 1 --results ../results/phase1/metrics/attack_results_generated.csv
+```
+
+Use phase `2` in both commands when analyzing phase 2.
+
+## Attack scenarios
+
+The table lists the expected rules and levels used in the experiment. Check the collected alerts for the actual values, since they depend on the Wazuh configuration.
 
 | # | Attack | Category | Expected Rule | Level |
 |---|--------|----------|---------------|-------|
@@ -109,13 +140,34 @@ python3 analyze_metrics.py --phase 1 --results ../results/phase1/attack_results_
 | 17 | Log Tampering / Deletion | Log Tampering | 554, 60611 | 12 |
 | 18 | Suspicious DNS | Command & Control | 5302 | 8 |
 
-## Metrics Measured
+## Intended benign scenarios
 
-- **MTTD (Mean Time to Detect)**: Time from attack start to alert generation
-- **MTTR (Mean Time to Respond)**: Time from alert to remediation complete
-- **False Positive Rate**: Percentage of alerts that are false positives
-- **Detection Rate**: Percentage of attacks that generated alerts
-- **Analysis Time**: Human time spent analyzing alerts
+| # | Scenario | Script |
+|---|----------|--------|
+| 19 | Legitimate failed SSH login | [19_fp_legitimate_failed_ssh_login.sh](attacks/19_fp_legitimate_failed_ssh_login.sh) |
+| 20 | Authorized administrator port scan | [20_fp_admin_port_scan.sh](attacks/20_fp_admin_port_scan.sh) |
+| 21 | Legitimate cron job | [21_fp_legitimate_cron_job.sh](attacks/21_fp_legitimate_cron_job.sh) |
+| 22 | System update | [22_fp_system_update.sh](attacks/22_fp_system_update.sh) |
+| 23 | Authorized SSH key addition | [23_fp_ssh_key_addition.sh](attacks/23_fp_ssh_key_addition.sh) |
+| 24 | Legitimate package installation with sudo | [24_fp_legitimate_sudo_install.sh](attacks/24_fp_legitimate_sudo_install.sh) |
+
+I included these scenarios to test how the system handles legitimate activity. The `fp` prefix identifies the scenario; it does not mean every resulting alert is a false positive. Check the activity, its authorization, and the system decision before assigning a classification.
+
+Check which scenarios have saved records in each phase before comparing the results.
+
+## Reading the metrics
+
+The analysis script reports detection and response timings, along with classification counts and rates:
+
+- MTTD: average time from scenario start to the first recorded alert.
+- MTTR: average time from an alert to the recorded end of remediation.
+- Analysis time: average duration between the recorded analysis start and end.
+- `detection_rate_pct`: percentage of CSV rows with an alert, including benign scenarios.
+- `false_positive_rate_pct`: percentage of all rows whose classification contains `false-positive`.
+
+The last value uses all rows as its denominator, rather than the conventional FP / (FP + TN). The script also matches classification text literally: use `false-positive` for that label. Its precision and false-negative calculations need review before using them in a report: labels containing `true` count toward true positives, and a row with no alert can also be counted again if labeled `false negative`.
+
+Missing timing or classification fields do not establish a successful response. The script reports an average of zero when it has no timing samples, so check the underlying records before interpreting a zero as a measured result.
 
 ## Safety Notes
 
