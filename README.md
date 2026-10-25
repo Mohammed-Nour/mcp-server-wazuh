@@ -1,5 +1,19 @@
 # Wazuh MCP Server - Talk to your SIEM
 
+## My research in this fork
+
+I use this fork for my research on AI-assisted incident response with Wazuh. The MCP server comes from [gbrigandi/mcp-server-wazuh](https://github.com/gbrigandi/mcp-server-wazuh). My research scripts and experiment results are in [research/](research/README.md).
+
+- [Scenario scripts](research/attacks): 18 attack simulations and six scenarios for legitimate activity.
+- [Collection and analysis scripts](research/scripts): collect Wazuh alerts and build metrics from the saved records.
+- [Experiment results](research/results) and [phase comparison](research/results/phase_comparison_analysis.md).
+
+The `fp` scripts describe intended benign activity. Whether an alert is a false positive still depends on what happened in the experiment; the filename alone does not establish that.
+
+The documentation below is for the upstream server. Its release, Docker image, and clone links point to the upstream project. To work with the research files in this fork, clone `https://github.com/Mohammed-Nour/mcp-server-wazuh.git`.
+
+---
+
 A Rust-based server designed to bridge the gap between a Wazuh Security Information and Event Management (SIEM) system and applications requiring contextual security data, specifically tailored for the Claude Desktop Integration using the Model Context Protocol (MCP).
 
 ## Overview
