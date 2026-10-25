@@ -4,7 +4,9 @@ import argparse
 import csv
 import datetime as dt
 import json
+import math
 import os
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -32,7 +34,8 @@ def load_rows(path: Path):
 
 def to_float(val):
     try:
-        return float(val)
+        value = float(val)
+        return value if math.isfinite(value) and value >= 0 else None
     except Exception:
         return None
 
@@ -42,6 +45,21 @@ def parse_time(val):
         return dt.datetime.fromisoformat(val.replace('Z', '+00:00'))
     except Exception:
         return None
+
+
+def normalize_classification(value):
+    label = re.sub(r"[\s_-]+", "-", (value or "").strip().lower())
+    return {"tp": "true-positive", "tn": "true-negative",
+            "fp": "false-positive", "fn": "false-negative"}.get(label, label or "unknown")
+
+
+def elapsed_seconds(start, end):
+    if start is None or end is None:
+        return None
+    try:
+        return to_float((end - start).total_seconds())
+    except TypeError:
+        return None  # Mixed timezone-aware and naive timestamps cannot be compared.
 
 
 def summarize(rows):
@@ -55,7 +73,6 @@ def summarize(rows):
     dwell_times = []
     alerts = 0
     no_alerts = 0
-    tp = fp = fn_labeled = 0
 
     for r in rows:
         if r.get("alert_generated", "").lower().startswith("y"):
@@ -72,15 +89,8 @@ def summarize(rows):
         rm_min = to_float(r.get("remediation_time_minutes", ""))
         if rm_min is not None:
             remediation_times.append(rm_min)
-        cls_raw = r.get("classification", "").strip().lower() or "unknown"
-        classifications[cls_raw] += 1
-        # accept hyphenated or spaced variants
-        if "false-positive" in cls_raw:
-            fp += 1
-        elif "true" in cls_raw:
-            tp += 1
-        elif "false negative" in cls_raw:
-            fn_labeled += 1
+        classification = normalize_classification(r.get("classification"))
+        classifications[classification] += 1
 
         atk_start = parse_time(r.get("attack_start_time", ""))
         alert_time = parse_time(r.get("alert_time", ""))
@@ -88,33 +98,41 @@ def summarize(rows):
         r_start = parse_time(r.get("remediation_start_time", ""))
         r_end = parse_time(r.get("remediation_end_time", ""))
 
-        if alert_time and a_start:
-            mtta_times.append((a_start - alert_time).total_seconds())
-        if alert_time and r_start:
-            mttc_times.append((r_start - alert_time).total_seconds())
-        if alert_time and r_end:
-            total_response_times.append((r_end - alert_time).total_seconds())
-        if atk_start and r_end:
-            dwell_times.append((r_end - atk_start).total_seconds())
+        for values, start, end in (
+            (mtta_times, alert_time, a_start),
+            (mttc_times, alert_time, r_start),
+            (total_response_times, alert_time, r_end),
+            (dwell_times, atk_start, r_end),
+        ):
+            elapsed = elapsed_seconds(start, end)
+            if elapsed is not None:
+                values.append(elapsed)
 
-    total = len(rows) if rows else 1
-    detection_rate = alerts / total * 100
-    fn_rate = (no_alerts + fn_labeled) / total * 100
-    fp_rate = (fp / total) * 100 if total else 0
-    precision = tp / (tp + fp) * 100 if (tp + fp) else 0
+    tp = classifications.get("true-positive", 0)
+    tn = classifications.get("true-negative", 0)
+    fp = classifications.get("false-positive", 0)
+    fn = classifications.get("false-negative", 0)
+    classified = tp + tn + fp + fn
+
+    def rate(numerator, denominator):
+        return numerator / denominator * 100 if denominator else None
 
     def avg(values):
-        return sum(values) / len(values) if values else 0
+        return sum(values) / len(values) if values else None
 
     total_response_avg = avg(total_response_times)
     dwell_avg = avg(dwell_times)
 
     return {
         "sample_size": len(rows),
-        "detection_rate_pct": detection_rate,
-        "false_negative_rate_pct": fn_rate,
-        "false_positive_rate_pct": fp_rate,
-        "precision_pct": precision,
+        "classified_sample_size": classified,
+        "unclassified_samples": len(rows) - classified,
+        "confusion_matrix": {"tp": tp, "tn": tn, "fp": fp, "fn": fn},
+        "detection_rate_pct": rate(tp, tp + fn),
+        "false_negative_rate_pct": rate(fn, tp + fn),
+        "false_positive_rate_pct": rate(fp, fp + tn),
+        "precision_pct": rate(tp, tp + fp),
+        "alert_row_rate_pct": rate(alerts, len(rows)),
         "mttd_sec": avg(detection_times),
         "analysis_time_min": avg(analysis_times),
         "remediation_time_min": avg(remediation_times),
@@ -123,10 +141,20 @@ def summarize(rows):
         "mttr_sec": total_response_avg,
         "total_response_sec": total_response_avg,  # kept for backward compatibility
         "dwell_time_sec": dwell_avg,
+        "timing_sample_counts": {
+            "mttd": len(detection_times), "analysis": len(analysis_times),
+            "remediation": len(remediation_times), "mtta": len(mtta_times),
+            "mttc": len(mttc_times), "mttr": len(total_response_times),
+            "dwell": len(dwell_times),
+        },
         "classifications": dict(classifications),
         "alerts": alerts,
         "no_alerts": no_alerts,
     }
+
+
+def display(value):
+    return f"{value:.2f}" if value is not None else "n/a"
 
 
 def main():
@@ -145,17 +173,19 @@ def main():
 
     print("=== Metrics Summary ===")
     print(f"Samples: {summary['sample_size']}")
-    print(f"Detection rate: {summary['detection_rate_pct']:.2f}%")
-    print(f"False negative rate: {summary['false_negative_rate_pct']:.2f}%")
-    print(f"False positive rate: {summary['false_positive_rate_pct']:.2f}%")
-    print(f"Precision: {summary['precision_pct']:.2f}%")
-    print(f"MTTD: {summary['mttd_sec']:.2f} sec")
-    print(f"MTTA: {summary['mtta_sec']:.2f} sec")
-    print(f"MTTC: {summary['mttc_sec']:.2f} sec")
-    print(f"MTTR: {summary['mttr_sec']:.2f} sec (alert → remediation_end)")
-    print(f"Dwell time: {summary['dwell_time_sec']:.2f} sec (attack_start → remediation_end)")
-    print(f"Analysis time (avg): {summary['analysis_time_min']:.2f} min")
-    print(f"Remediation time (avg): {summary['remediation_time_min']:.2f} min")
+    print(f"Classified samples: {summary['classified_sample_size']}")
+    print(f"Unclassified samples excluded from classification rates: {summary['unclassified_samples']}")
+    print(f"Detection rate: {display(summary['detection_rate_pct'])}%")
+    print(f"False negative rate: {display(summary['false_negative_rate_pct'])}%")
+    print(f"False positive rate: {display(summary['false_positive_rate_pct'])}%")
+    print(f"Precision: {display(summary['precision_pct'])}%")
+    print(f"MTTD: {display(summary['mttd_sec'])} sec")
+    print(f"MTTA: {display(summary['mtta_sec'])} sec")
+    print(f"MTTC: {display(summary['mttc_sec'])} sec")
+    print(f"MTTR: {display(summary['mttr_sec'])} sec (alert → remediation_end)")
+    print(f"Dwell time: {display(summary['dwell_time_sec'])} sec (attack_start → remediation_end)")
+    print(f"Analysis time (avg): {display(summary['analysis_time_min'])} min")
+    print(f"Remediation time (avg): {display(summary['remediation_time_min'])} min")
     print("Classifications:")
     for cls, count in summary['classifications'].items():
         print(f"  - {cls}: {count}")

@@ -63,7 +63,7 @@ RESULTS_DIR="/absolute/path/to/mcp-server-wazuh/research/results"
 CURRENT_PHASE="1"
 ```
 
-The runner changes directories while it works, so use an absolute `RESULTS_DIR` to keep its logs and the collector's alerts in the same place. Keep it pointed at this repository's `research/results` directory, which the CSV builder uses.
+The runner and collector resolve relative `RESULTS_DIR` paths against `research/`. The legacy value `../results` also resolves to `research/results`. Use this directory when you plan to run the CSV builder, which reads it directly. An absolute path works too.
 
 ### 2. Run an individual scenario
 
@@ -162,12 +162,25 @@ The analysis script reports detection and response timings, along with classific
 - MTTD: average time from scenario start to the first recorded alert.
 - MTTR: average time from an alert to the recorded end of remediation.
 - Analysis time: average duration between the recorded analysis start and end.
-- `detection_rate_pct`: percentage of CSV rows with an alert, including benign scenarios.
-- `false_positive_rate_pct`: percentage of all rows whose classification contains `false-positive`.
+- `detection_rate_pct`: TP / (TP + FN), using classified attack scenarios.
+- `false_negative_rate_pct`: FN / (TP + FN).
+- `false_positive_rate_pct`: FP / (FP + TN), using classified benign scenarios.
+- `precision_pct`: TP / (TP + FP).
+- `alert_row_rate_pct`: percentage of all CSV rows with an alert, regardless of classification.
 
-The last value uses all rows as its denominator, rather than the conventional FP / (FP + TN). The script also matches classification text literally: use `false-positive` for that label. Its precision and false-negative calculations need review before using them in a report: labels containing `true` count toward true positives, and a row with no alert can also be counted again if labeled `false negative`.
+Classifications must be `true-positive`, `true-negative`, `false-positive`, or `false-negative`. Spaces, underscores, case differences, and the short forms TP/TN/FP/FN are accepted. Other labels count as unclassified and are excluded from classification-based rates; the summary reports their number separately. A missing alert does not establish a false negative without a classification from the experiment records.
 
-Missing timing or classification fields do not establish a successful response. The script reports an average of zero when it has no timing samples, so check the underlying records before interpreting a zero as a measured result.
+Missing timing or classification fields do not establish a successful response. A rate with no denominator or a timing average with no valid samples is `null` in JSON and `n/a` in the console. Negative and non-finite timing values are excluded; `timing_sample_counts` shows how many samples contributed to each average. Timestamp pairs with incompatible timezone information are also excluded.
+
+These rate definitions differ from older saved summaries. Regenerate summaries from reviewed classifications before comparing runs; existing experiment outputs are kept unchanged.
+
+Run the regression tests from the repository root:
+
+```bash
+python3 -m unittest discover -s research/tests -v
+```
+
+The runner tests use harmless stub scenarios and a fake alert collector transport. They do not run the attack scripts or contact Wazuh.
 
 ## Safety Notes
 

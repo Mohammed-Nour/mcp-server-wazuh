@@ -7,16 +7,9 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 source "$SCRIPT_DIR/config.env" 2>/dev/null || true
 
-TARGET="${1:-$TARGET_IP}"
+TARGET="${1:-${TARGET_IP:-}}"
 PHASE="${CURRENT_PHASE:-1}"
-RESULTS_DIR="${RESULTS_DIR:-$PROJECT_ROOT/results}"
 INTER_DELAY="${2:-${ATTACK_INTER_SCRIPT_DELAY:-60}}"
-
-# Normalize RESULTS_DIR to an absolute path before changing directories
-PHASE_DIR="$RESULTS_DIR/phase${PHASE}"
-
-LOG_DIR="$PHASE_DIR/logs-attacks"
-mkdir -p "$LOG_DIR"
 
 if [ -z "$TARGET" ]; then
   echo "Usage: $0 <target_ip> [delay_seconds]"
@@ -27,6 +20,18 @@ if ! [[ "$INTER_DELAY" =~ ^[0-9]+$ ]]; then
   echo "[!] Invalid delay '$INTER_DELAY' (must be integer seconds)"
   exit 1
 fi
+
+# Match the collector: resolve relative paths against research/, including the
+# legacy ../results setting, before changing to the attacks directory.
+if [ "${RESULTS_DIR:-}" = "../results" ]; then
+  RESULTS_DIR="$PROJECT_ROOT/results"
+else
+  RESULTS_DIR="${RESULTS_DIR:-$PROJECT_ROOT/results}"
+fi
+RESULTS_DIR="$(cd "$PROJECT_ROOT" && mkdir -p "$RESULTS_DIR" && cd "$RESULTS_DIR" && pwd)"
+PHASE_DIR="$RESULTS_DIR/phase${PHASE}"
+LOG_DIR="$PHASE_DIR/logs-attacks"
+mkdir -p "$LOG_DIR"
 
 cd "$PROJECT_ROOT/attacks" || exit 1
 
